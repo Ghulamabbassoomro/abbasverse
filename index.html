@@ -1,195 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABBASVERSE | Ghulam Abbas Soomro</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        darkBg: '#0A0A0A',
-                        offWhite: '#F5F5F5',
-                        sandGold: '#C2A878',
-                        mutedGray: '#8C8C8C'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
-        body { background-color: #0A0A0A; color: #F5F5F5; font-family: 'Inter', sans-serif; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abbasverse</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="selection:bg-sandGold selection:text-darkBg overflow-x-hidden">
+<body>
 
-    <section class="relative h-screen w-full flex flex-col justify-between p-8 md:p-16 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-darkBg z-0"></div>
-        
-        <div class="relative z-10 flex justify-between items-center w-full">
-            <span class="text-xs tracking-[0.4em] font-light uppercase text-sandGold">Established 2017</span>
-            <div class="space-x-6 text-xs tracking-widest uppercase font-light">
-                <a href="#about" class="hover:text-sandGold transition duration-300">Identity</a>
-                <a href="#work" class="hover:text-sandGold transition duration-300">Verses</a>
-                <a href="#connect" class="hover:text-sandGold transition duration-300">Connect</a>
-            </div>
-        </div>
+<nav>
+  <div class="logo"><a href="index.html" style="opacity:1;">ABBASVERSE</a></div>
+  <div class="nav-links">
+    <a href="photography.html">Photography</a>
+    <a href="films.html">Films</a>
+    <a href="writing.html">Writing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-        <div class="relative z-10 text-center my-auto space-y-4">
-            <h1 class="text-5xl md:text-8xl tracking-[0.25em] font-light font-serif uppercase">ABBASVERSE</h1>
-            <p class="text-xs md:text-sm tracking-[0.5em] font-light uppercase text-mutedGray max-w-xl mx-auto leading-relaxed">
-                Stories through light, motion, and memory.
-            </p>
-        </div>
+<div class="container">
+  <h1 style="font-size: 48px; margin-top: 80px; font-weight: 300; letter-spacing: 2px;">
+    Ghulam Abbas Soomro
+  </h1>
 
-        <div class="relative z-10 flex flex-col md:flex-row justify-between items-center w-full text-xs tracking-widest uppercase font-light text-mutedGray gap-4">
-            <div class="flex items-center gap-4">
-                <span>Germany</span>
-                <span class="text-sandGold">•</span>
-                <span>Pakistan</span>
-            </div>
-            <a href="#about" class="animate-bounce text-sandGold hover:text-offWhite transition">
-                Explore <i class="fa-solid fa-arrow-down ml-1"></i>
-            </a>
-            <div class="flex gap-4">
-                <span class="text-offWhite font-normal">Active Archive</span>
-            </div>
-        </div>
-    </section>
+  <p style="font-size: 18px; opacity: 0.8; font-weight: 300; letter-spacing: 0.5px;">
+    Filmmaker · Photographer · Writer · Media Artist  
+    <br><br>
+    Working across Germany & Pakistan since 2017
+  </p>
 
-    <section id="about" class="py-32 px-6 max-w-5xl mx-auto border-t border-white/5">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-7 space-y-6">
-                <span class="text-xs tracking-[0.4em] text-sandGold uppercase font-light">The Narrative</span>
-                <h2 class="text-3xl md:text-4xl font-serif font-light leading-snug">
-                    Ghulam Abbas Soomro is a multidisciplinary media professional operating across film sets, editorial landscapes, and performance art.
-                </h2>
-                <p class="text-mutedGray font-light leading-relaxed text-sm">
-                    Active since 2017 as an Assistant Director on major television and film productions, an editorial fashion photographer, scriptwriter, and digital archivist preserving traditional cultural echoes. Translating concepts seamlessly between industrial frameworks and abstract, conceptual spaces.
-                </p>
-                <div class="pt-4 flex flex-wrap gap-4 text-xs tracking-wider uppercase font-light">
-                    <span class="px-3 py-1 border border-white/10 rounded-full bg-white/5"><i class="fa-brands fa-imdb text-sandGold mr-1"></i> IMDb Credited</span>
-                    <span class="px-3 py-1 border border-white/10 rounded-full bg-white/5">Festival Selected Director</span>
-                    <span class="px-3 py-1 border border-white/10 rounded-full bg-white/5">Media Culture Consultant</span>
-                </div>
-            </div>
-            <div class="md:col-span-5 bg-neutral-900 border border-white/10 aspect-[3/4] flex items-center justify-center relative group overflow-hidden">
-                <div class="text-center p-6 space-y-2 z-10">
-                    <p class="text-xs uppercase tracking-widest text-sandGold">Portrait / Still</p>
-                    <p class="text-[10px] text-mutedGray italic">Replace with your premium editorial shot</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <hr>
 
-    <section id="work" class="py-24 px-6 bg-black/40 border-t border-white/5">
-        <div class="max-w-6xl mx-auto space-y-16">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-                <div>
-                    <span class="text-xs tracking-[0.4em] text-sandGold uppercase font-light">Curated Frameworks</span>
-                    <h3 class="text-3xl font-serif font-light uppercase tracking-widest mt-2">The Ecosystem</h3>
-                </div>
-                <p class="text-xs text-mutedGray tracking-widest uppercase font-light max-w-xs">
-                    Select a universe dimension below to explore specific archives, reels, and project briefs.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="border border-white/5 bg-darkBg p-8 hover:border-sandGold/50 transition duration-500 group flex flex-col justify-between h-80">
-                    <div>
-                        <span class="text-xs text-mutedGray font-light">01 // VISUAL</span>
-                        <h4 class="text-xl font-serif font-light tracking-wide mt-4 group-hover:text-sandGold transition">Frames</h4>
-                        <p class="text-xs text-mutedGray font-light mt-2 leading-relaxed">Editorial & Fashion, Abstract Art, Landscape, Cultural Events Coverage.</p>
-                    </div>
-                    <span class="text-xs tracking-widest uppercase font-light text-sandGold group-hover:translate-x-2 transition-transform duration-300 block">Explore Archive →</span>
-                </div>
-
-                <div class="border border-white/5 bg-darkBg p-8 hover:border-sandGold/50 transition duration-500 group flex flex-col justify-between h-80">
-                    <div>
-                        <span class="text-xs text-mutedGray font-light">02 // MOTION</span>
-                        <h4 class="text-xl font-serif font-light tracking-wide mt-4 group-hover:text-sandGold transition">Motion</h4>
-                        <p class="text-xs text-mutedGray font-light mt-2 leading-relaxed">Festival-Selected Directing, IMDb Assistant Director Credits, Cinematography Reels.</p>
-                    </div>
-                    <span class="text-xs tracking-widest uppercase font-light text-sandGold group-hover:translate-x-2 transition-transform duration-300 block">View Reels →</span>
-                </div>
-
-                <div class="border border-white/5 bg-darkBg p-8 hover:border-sandGold/50 transition duration-500 group flex flex-col justify-between h-80">
-                    <div>
-                        <span class="text-xs text-mutedGray font-light">03 // TEXT</span>
-                        <h4 class="text-xl font-serif font-light tracking-wide mt-4 group-hover:text-sandGold transition">Words</h4>
-                        <p class="text-xs text-mutedGray font-light mt-2 leading-relaxed">Screenplays, Traditional & Contemporary Poetry, Media Culture Exposes.</p>
-                    </div>
-                    <span class="text-xs tracking-widest uppercase font-light text-sandGold group-hover:translate-x-2 transition-transform duration-300 block">Read Loglines →</span>
-                </div>
-
-                <div class="border border-white/5 bg-darkBg p-8 hover:border-sandGold/50 transition duration-500 group flex flex-col justify-between h-80">
-                    <div>
-                        <span class="text-xs text-mutedGray font-light">04 // PRESENCE</span>
-                        <h4 class="text-xl font-serif font-light tracking-wide mt-4 group-hover:text-sandGold transition">Stage</h4>
-                        <p class="text-xs text-mutedGray font-light mt-2 leading-relaxed">Acting Clips, Audition Monologues, Experimental Art Performance Biography.</p>
-                    </div>
-                    <span class="text-xs tracking-widest uppercase font-light text-sandGold group-hover:translate-x-2 transition-transform duration-300 block">See Footage →</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 max-w-5xl mx-auto border-t border-white/5">
-        <div class="space-y-12">
-            <div class="text-center md:text-left">
-                <span class="text-xs tracking-[0.4em] text-sandGold uppercase font-light">Real-Time Broadcast</span>
-                <h3 class="text-2xl font-serif font-light uppercase tracking-widest mt-2">Current Signals</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="space-y-3">
-                    <span class="text-[10px] tracking-wider bg-sandGold/10 text-sandGold px-2 py-0.5 uppercase font-light">Festival News</span>
-                    <h5 class="text-sm font-semibold tracking-wide">Short Film Circuit</h5>
-                    <p class="text-xs text-mutedGray font-light leading-relaxed">Student short film officially selected for screening across multiple competitive film festivals.</p>
-                </div>
-                <div class="space-y-3">
-                    <span class="text-[10px] tracking-wider bg-white/10 text-offWhite px-2 py-0.5 uppercase font-light">Photography</span>
-                    <h5 class="text-sm font-semibold tracking-wide">Germany Editorial Shoot</h5>
-                    <p class="text-xs text-mutedGray font-light leading-relaxed">New high-end magazine style project focusing on clean, minimalist geometric layouts.</p>
-                </div>
-                <div class="space-y-3">
-                    <span class="text-[10px] tracking-wider bg-white/10 text-offWhite px-2 py-0.5 uppercase font-light">Digital Feed</span>
-                    <h5 class="text-sm font-semibold tracking-wide">YouTube Cinematography</h5>
-                    <p class="text-xs text-mutedGray font-light leading-relaxed">New sequence breakdowns and editing experiments uploaded straight from the archive.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="connect" class="py-32 px-6 bg-neutral-950 border-t border-white/5 text-center">
-        <div class="max-w-2xl mx-auto space-y-8">
-            <span class="text-xs tracking-[0.4em] text-sandGold uppercase font-light">Collaboration & Commissions</span>
-            <h2 class="text-4xl md:text-5xl font-serif font-light tracking-wide">Have a story to tell?</h2>
-            <p class="text-xs md:text-sm text-mutedGray font-light tracking-widest uppercase max-w-md mx-auto leading-relaxed">
-                Available for worldwide assignments, premium fashion editorials, cinematic direction, and creative consultation.
-            </p>
-            
-            <div class="pt-6 flex flex-wrap justify-center items-center gap-8 text-sm tracking-widest font-light">
-                <a href="mailto:your-email@example.com" class="hover:text-sandGold transition"><i class="fa-solid fa-envelope text-sandGold mr-2"></i> Email</a>
-                <a href="https://instagram.com" target="_blank" class="hover:text-sandGold transition"><i class="fa-brands fa-instagram text-sandGold mr-2"></i> Instagram</a>
-                <a href="https://youtube.com" target="_blank" class="hover:text-sandGold transition"><i class="fa-brands fa-youtube text-sandGold mr-2"></i> YouTube</a>
-                <a href="https://linkedin.com" target="_blank" class="hover:text-sandGold transition"><i class="fa-brands fa-linkedin-in text-sandGold mr-2"></i> LinkedIn</a>
-                <a href="https://imdb.com" target="_blank" class="hover:text-sandGold transition"><i class="fa-brands fa-imdb text-sandGold mr-2"></i> IMDb</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="p-8 text-center text-[10px] tracking-[0.3em] uppercase text-mutedGray border-t border-white/5 font-light">
-        © 2026 Abbasverse. All Rights Reserved.
-    </footer>
+  <h2 style="font-weight: 400; letter-spacing: 1px;">Selected Work</h2>
+  <p style="opacity: 0.6; margin-bottom: 40px;">Recent editorial photography, films, and cultural visual media experiments.</p>
+  
+  <div style="background: rgba(255,255,255,0.02); padding: 30px; border: 1px solid rgba(255,255,255,0.05);">
+    <h3 style="margin-top: 0; color: #C2A878;">Latest Broadcast</h3>
+    <p style="font-size: 14px; opacity: 0.7;">Short film selections running across active international festivals, fresh creative editorial series captured in Germany, and recent social project features for FaSTDa Racing media rollouts.</p>
+  </div>
+</div>
 
 </body>
 </html>
