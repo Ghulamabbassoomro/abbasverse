@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Inter:wght@200;300;400&display=swap');
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #050505; /* Deep luxury matte black */
+  background: #050505;
   color: #f5f5f5;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
@@ -13,75 +13,48 @@ body {
 a {
   color: #f5f5f5;
   text-decoration: none;
-  opacity: 0.6;
+  opacity: 0.5;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   letter-spacing: 2px;
 }
 
 a:hover {
   opacity: 1;
-  color: #C2A878; /* Premium desert sand gold */
+  color: #C2A878;
 }
 
-/* Immersive Navigation Header */
+/* Elegant, Minimal Header */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 40px;
+  padding: 40px 60px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   box-sizing: border-box;
   z-index: 100;
-  background: linear-gradient(to bottom, rgba(5,5,5,0.7), transparent);
+  background: linear-gradient(to bottom, rgba(5,5,5,0.4), transparent);
 }
 
 .logo a {
   font-family: 'Cinzel', serif;
-  font-size: 14px;
-  letter-spacing: 5px;
+  font-size: 13px;
+  letter-spacing: 4px;
   font-weight: 500;
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .nav-links a {
-  margin-left: 28px;
-  font-size: 10.5px;
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 2.5px;
-}
-
-.container {
-  max-width: 1150px;
-  margin: auto;
-  padding: 140px 24px;
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  margin: 60px 0;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Cinzel', serif;
-  font-weight: 400;
-  letter-spacing: 3px;
-  color: #f5f5f5;
-}
-
-.text-accent {
+  margin-left: 30px;
   font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  color: #C2A878;
-  display: block;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
-/* Homepage Hero & Cinematic CSS Slideshow */
+/* Immersive 5-Image Slideshow Loop */
 .hero-wrapper {
   position: relative;
   height: 100vh;
@@ -115,27 +88,28 @@ h1, h2, h3, h4 {
   background-repeat: no-repeat;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 24s linear infinite;
+  animation: imageAnimation 30s linear infinite; /* 5 images * 6s per slide */
 }
 
-/* Flawless timings for a smooth 4-image crossfade loop */
+/* Perfect 20% intervals for 5 images to prevent skipping or blank frames */
 .slideshow li:nth-child(1) { animation-delay: 0s; }
 .slideshow li:nth-child(2) { animation-delay: 6s; }
 .slideshow li:nth-child(3) { animation-delay: 12s; }
 .slideshow li:nth-child(4) { animation-delay: 18s; }
+.slideshow li:nth-child(5) { animation-delay: 24s; }
 
 @keyframes imageAnimation { 
-  0% { opacity: 0; animation-timing-function: ease-in; }
-  8% { opacity: 0.35; } /* Muted image presence keeps text legible */
-  25% { opacity: 0.35; }
-  33% { opacity: 0; }
+  0% { opacity: 0; }
+  6% { opacity: 0.45; }  /* Gentle fade in */
+  20% { opacity: 0.45; } /* Retain visibility */
+  26% { opacity: 0; }    /* Smooth crossfade to next */
   100% { opacity: 0; }
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, transparent 10%, #050505 98%);
+  background: radial-gradient(circle at center, transparent 20%, #050505 95%);
   z-index: 2;
 }
 
@@ -144,62 +118,28 @@ h1, h2, h3, h4 {
   z-index: 3;
   text-align: center;
   padding: 0 24px;
+  max-width: 800px;
 }
 
-/* Asset Container Cards */
-.media-card {
-  margin-bottom: 80px;
-  background: #0a0a0a;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  position: relative;
+h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  color: #f5f5f5;
+  text-transform: uppercase;
 }
 
-.media-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: grayscale(20%);
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.media-card:hover img {
-  filter: grayscale(0%);
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Cinema framing */
-  height: 0;
-  overflow: hidden;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 60px;
-}
-
-@media(max-width: 900px) {
-  .grid-2 { grid-template-columns: 1fr; }
-  nav { flex-direction: column; gap: 15px; padding: 25px; text-align: center; }
-  .nav-links a { margin: 0 8px; font-size: 9px; }
+.container {
+  max-width: 950px;
+  margin: auto;
+  padding: 100px 40px;
+  text-align: center;
 }
 
 footer {
-  padding: 60px 40px;
+  padding: 40px;
   text-align: center;
   font-size: 9px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.25;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  opacity: 0.2;
 }
