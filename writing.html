@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghulam Abbas Khan Soomro — Writing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#14100c;color:#e8e2d8;
+  font-family:'Montserrat',sans-serif;font-weight:300;
+  overflow-x:hidden;cursor:none;
+}
+#cur,#cur-ring{position:fixed;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+#cur{width:8px;height:8px;background:#e8e2d8;mix-blend-mode:difference;}
+#cur-ring{width:36px;height:36px;border:1px solid rgba(232,226,216,0.3);transition:width .35s,height .35s,border-color .35s;}
+body.hovering #cur-ring{width:60px;height:60px;border-color:rgba(232,226,216,0.6);}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:800;
+  display:flex;justify-content:space-between;align-items:center;padding:1.8rem 3rem;
+  background:rgba(20,16,12,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,226,216,0.07);
+}
+.logo{font-family:'Playfair Display',serif;font-size:14px;color:#e8e2d8;text-decoration:none;letter-spacing:.3em;text-transform:uppercase;}
+
+header{padding:10rem 3rem 4rem;max-width:1000px;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,6rem);font-weight:400;line-height:1.1;}
+h1 em{font-style:italic;color:rgba(200,170,100,0.5);}
+
+.write-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:6rem;padding:0 3rem 10rem;}
+.literary-block{margin-bottom:5rem;}
+.section-tag{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(200,170,100,0.5);margin-bottom:1.5rem;display:block;}
+.poem{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;line-height:2.2;
+  color:rgba(232,226,216,0.8);white-space:pre-line;border-left:1px solid rgba(200,170,100,0.3);
+  padding-left:2.5rem;margin-bottom:4rem;
+}
+.script-excerpt{
+  font-family:'Courier New', Courier, monospace;font-size:.9rem;background:rgba(232,226,216,0.02);
+  border:1px solid rgba(232,226,216,0.08);padding:3rem;line-height:1.6;color:rgba(232,226,216,0.7);
+}
+.char{text-align:center;text-transform:uppercase;margin:1.5rem 0 0.2rem;letter-spacing:0.1em;}
+.parenthetical{text-align:center;font-style:italic;font-size:.8rem;margin-bottom:.2rem;}
+.dialogue{max-width:300px;margin:0 auto 1.5rem;text-align:left;}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<nav>
+  <a href="index.html" class="logo">Abbasverse</a>
+  <a href="index.html" style="font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;color:rgba(232,226,216,0.5);">Back to gateway</a>
+</nav>
+
+<header>
+  <h1>Script &<br><em>Verse</em></h1>
+</header>
+
+<div class="write-grid">
+  <div>
+    <div class="literary-block">
+      <span class="section-tag">Verse Portfolio</span>
+      <div class="poem">
+        I carry two countries in one passport.
+        Two languages in one silence.
+        Three cameras and a notebook
+        that has never learned to sleep.
+
+        The frame does not lie.
+        It only chooses what to leave out.
+      </div>
+    </div>
+
+    <div class="literary-block">
+      <span class="section-tag">Screenplay Sample</span>
+      <div class="script-excerpt">
+        FADE IN:
+        <br><br>
+        INT. SHADOWED STUDIO - NIGHT
+        <br><br>
+        A lone figure stands looking at a massive grid of glowing photographic transparencies.
+        <br>
+        This is ABBAS. Deliberate. Watching.
+        <br>
+        He speaks into a recorder.
+        <div class="char">ABBAS</div>
+        <div class="parenthetical">(softly)</div>
+        <div class="dialogue">Every frame holds a structural choice. We only choose what we let them see.</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <span class="section-tag">The Philosophy</span>
+    <p style="font-size:.85rem;line-height:1.9;color:rgba(232,226,216,0.5);">Writing is the base platform for everything I direct. Screenplays, treatments, poetry, and reflective notes allow me to build structural parameters before ever picking up a camera block.</p>
+  </div>
+</div>
+
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function updateRing(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(updateRing);})();
+
+document.querySelectorAll('a').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{document.body.classList.add('hovering');});
+  el.addEventListener('mouseleave',()=>{document.body.classList.remove('hovering');});
+});
+</script>
+</body>
+</html>
