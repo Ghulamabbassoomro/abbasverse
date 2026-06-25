@@ -132,7 +132,6 @@ nav.solid{
   21%{opacity:0;}100%{opacity:0;}
 }
 
-/* transparent dark overlay — lets images show through */
 .hero-ov{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
@@ -211,12 +210,11 @@ h1.hero-name em{
 
 /* ═══════════════════════════════════════════
    TRANSPARENT SCROLL SECTIONS
-   — sections have glass / blurred bg
 ═══════════════════════════════════════════ */
 .glass-sec{
   position:relative;
   background:rgba(14,12,10,0.55);
-  backdrop-filter:blur(0px); /* subtle — mostly transparent */
+  backdrop-filter:blur(0px);
 }
 
 /* ═══════════════════════════════════════════
@@ -399,7 +397,6 @@ h1.hero-name em{
   letter-spacing:.3em;color:rgba(232,226,216,0.25);
   text-transform:uppercase;margin-bottom:1.2rem;
 }
-/* YouTube embed placeholder */
 .yt-embed{
   width:100%;aspect-ratio:16/9;
   background:rgba(255,255,255,0.03);
@@ -608,13 +605,12 @@ footer{
 .footer-right a:hover{color:rgba(232,226,216,0.55);}
 
 /* ═══════════════════════════════════════════
-   SCROLL REVEAL
+   SCROLL REVEAL & UTILITIES
 ═══════════════════════════════════════════ */
 .rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.23,1,.32,1),transform .9s cubic-bezier(.23,1,.32,1);}
 .rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
 .rv.in{opacity:1;transform:translateY(0);}
 
-/* shared utility */
 .cta-link{
   display:inline-flex;align-items:center;gap:.7rem;margin-top:2rem;
   font-family:'Montserrat',sans-serif;font-size:8.5px;font-weight:400;
@@ -637,15 +633,15 @@ footer{
 ══════════════════════════════ -->
 <nav id="nav">
   <div class="nav-wordmarks">
-    <span>Filmmaker</span>
+    <span class="active-wm">Filmmaker</span>
     <span>Photographer</span>
     <span>Writer</span>
   </div>
   <a href="#" class="nav-center">Abbasverse</a>
   <div class="nav-right">
-    <a href="#photography">Photography</a>
-    <a href="#filmmaker">Film</a>
-    <a href="#writer">Writing</a>
+    <a href="photography.html">Photography</a>
+    <a href="film.html">Film</a>
+    <a href="writing.html">Writing</a>
     <a href="#hire" class="nav-hire">Hire me</a>
   </div>
 </nav>
@@ -706,7 +702,6 @@ footer{
       <a href="#hire" class="cta-link"><span class="cl"></span>Work with me</a>
     </div>
     <div class="rv d1">
-      <!-- REPLACE src with your portrait image -->
       <div class="who-portrait">
         <img src="assets/portrait.jpg" alt="Ghulam Abbas Khan Soomro" loading="lazy"
           onerror="this.parentElement.style.background='rgba(232,226,216,0.05)';this.style.display='none'">
@@ -728,7 +723,6 @@ footer{
     </div>
   </div>
 
-  <!-- PHOTO EXHIBITION GRID -->
   <div class="photo-exhibition rv d1">
     <!-- Left: slideshow column -->
     <div class="ph-slide-col" style="min-height:65vh">
@@ -783,41 +777,33 @@ footer{
     <!-- Film list -->
     <div class="rv d1">
       <p style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;letter-spacing:.4em;color:rgba(232,226,216,0.25);text-transform:uppercase;margin-bottom:1.5rem;">Selected projects</p>
-      <!-- ↓ REPLACE with your actual films + links -->
       <ul class="film-list-items">
-        <li class="fli">
+        <li class="fli" onclick="changeVideo('W9m8bYkZf5g')">
           <span class="fli-n">001</span>
           <div class="fli-info">
-            <span class="fli-t">Your Short Film Title</span>
-            <div class="fli-meta"><span>Writer · Director</span><span>2023</span></div>
+            <span class="fli-t">The Girl In White</span>
+            <div class="fli-meta"><span>Writer · Director</span><span>2026</span></div>
           </div>
         </li>
-        <li class="fli">
+        <li class="fli" onclick="changeVideo('917Jb_OlyP0')">
           <span class="fli-n">002</span>
           <div class="fli-info">
-            <span class="fli-t">Your Short Film Title</span>
-            <div class="fli-meta"><span>Director</span><span>2022</span></div>
+            <span class="fli-t">FaSTDa Racing Rollout</span>
+            <div class="fli-meta"><span>Lead Editor · Technical Lead</span><span>2026</span></div>
           </div>
         </li>
-        <li class="fli">
+        <li class="fli" onclick="changeVideo('W9m8bYkZf5g')">
           <span class="fli-n">003</span>
           <div class="fli-info">
-            <span class="fli-t">Your Short Film Title</span>
-            <div class="fli-meta"><span>Assistant Director</span><span>2021</span></div>
+            <span class="fli-t">Documentary Folklife Project</span>
+            <div class="fli-meta"><span>Director · Editor</span><span>2025</span></div>
           </div>
         </li>
-        <li class="fli">
+        <li class="fli" onclick="changeVideo('917Jb_OlyP0')">
           <span class="fli-n">004</span>
           <div class="fli-info">
-            <span class="fli-t">Your Short Film Title</span>
-            <div class="fli-meta"><span>Writer · Producer</span><span>2020</span></div>
-          </div>
-        </li>
-        <li class="fli">
-          <span class="fli-n">005</span>
-          <div class="fli-info">
-            <span class="fli-t">Your Short Film Title</span>
-            <div class="fli-meta"><span>Director · DP</span><span>2019</span></div>
+            <span class="fli-t">Abstract Synthesis Loop</span>
+            <div class="fli-meta"><span>Visual Media Designer</span><span>2024</span></div>
           </div>
         </li>
       </ul>
@@ -825,14 +811,10 @@ footer{
     </div>
     <!-- Film embed / poster -->
     <div class="rv d2">
-      <p class="film-embed-note">Watch</p>
-      <!-- PASTE your YouTube iframe here — replace src with your video ID -->
-      <div class="yt-embed">
-        <!-- Example: <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
-        <span>Paste YouTube embed here</span>
-      </div>
-      <div class="yt-embed" style="margin-top:3px">
-        <span>Paste YouTube embed here</span>
+      <p class="film-embed-note">Interactive Player</p>
+      <div class="yt-embed" id="videoPlayer">
+        <!-- Default video embed (replace W9m8bYkZf5g with your main Youtube video ID) -->
+        <iframe src="https://www.youtube.com/embed/W9m8bYkZf5g" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -849,19 +831,11 @@ footer{
     </p>
   </div>
   <div class="cine-grid rv d1">
-    <!-- PASTE your YouTube embeds here — replace YOUR_VIDEO_ID -->
     <div class="cine-cell">
-      <div class="cine-cell-ph">Paste YouTube embed</div>
-      <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+      <iframe src="https://www.youtube.com/embed/W9m8bYkZf5g" allowfullscreen></iframe>
     </div>
     <div class="cine-cell">
-      <div class="cine-cell-ph">Paste YouTube embed</div>
-    </div>
-    <div class="cine-cell">
-      <div class="cine-cell-ph">Paste YouTube embed</div>
-    </div>
-    <div class="cine-cell">
-      <div class="cine-cell-ph">Paste YouTube embed</div>
+      <iframe src="https://www.youtube.com/embed/917Jb_OlyP0" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -876,7 +850,6 @@ footer{
   <div class="writer-grid">
     <div class="rv d1">
       <p class="poetry-label">Poetry · Verse</p>
-      <!-- PASTE your poem text here — it will display exactly as typed -->
       <div class="poetry-box">I carry two countries in one passport.
 Two languages in one silence.
 Three cameras and a notebook
@@ -885,7 +858,7 @@ that has never learned to sleep.
 The frame does not lie.
 It only chooses what to leave out.
 
-— paste your poem here —</div>
+— Ghulam Abbas Khan Soomro</div>
     </div>
     <div class="rv d2">
       <p style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;letter-spacing:.4em;color:rgba(200,170,100,0.45);text-transform:uppercase;margin-bottom:1.5rem;">Screenwriting · Essays</p>
@@ -901,138 +874,123 @@ It only chooses what to leave out.
 <section id="actor">
   <div class="rv">
     <div class="section-big-word">Actor<em>?</em></div>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:rgba(232,226,216,0.3);margin-top:.8rem;max-width:500px;line-height:1.7;">
-      Occasionally. But always with intention.
-    </p>
   </div>
   <div class="actor-grid">
     <div class="rv d1">
-      <!-- REPLACE with your actual acting credits -->
+      <p style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;letter-spacing:.4em;color:rgba(232,226,216,0.3);text-transform:uppercase;margin-bottom:1.5rem;">On-Screen Records</p>
       <ul class="actor-projects">
         <li class="ap">
           <div class="ap-dot"></div>
           <div>
-            <span class="ap-title">Project or production title here</span>
-            <span class="ap-meta">Role · Year · Director</span>
+            <span class="ap-title">Commercial Campaign Lead</span>
+            <span class="ap-meta">Germany // 2025</span>
           </div>
         </li>
         <li class="ap">
           <div class="ap-dot"></div>
           <div>
-            <span class="ap-title">Project or production title here</span>
-            <span class="ap-meta">Role · Year · Director</span>
-          </div>
-        </li>
-        <li class="ap">
-          <div class="ap-dot"></div>
-          <div>
-            <span class="ap-title">Project or production title here</span>
-            <span class="ap-meta">Role · Year · Director</span>
+            <span class="ap-title">Indie Drama Short Film</span>
+            <span class="ap-meta">Pakistan // 2024</span>
           </div>
         </li>
       </ul>
     </div>
     <div class="rv d2">
-      <!-- Paste a screenshot or embed here -->
-      <div class="yt-embed" style="border-color:rgba(232,226,216,0.08)">
-        <span>Paste acting reel or screenshot</span>
-      </div>
+      <p style="font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.4);">
+        Stepping in front of the lens provides a profound understanding of performance mechanics. Acting refines my perspective as a director, letting me speak the language of actors on set fluently.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- MARQUEE -->
+<!-- ══════════════════════════════
+     HIRE / CONTACT
+══════════════════════════════ -->
+<section id="hire">
+  <div class="hire-ghost-text">COMMISSION</div>
+  <div class="hire-eyebrow">Aesthetic Projects</div>
+  <h2 class="hire-heading">Let's create something<br>that lasts.</h2>
+  <p class="hire-sub">Available for global assignments, screenplays, editorial curation, and visual production.</p>
+  <a href="mailto:your-email@domain.com" class="hire-btn"><span>Initiate Project →</span></a>
+</section>
+
+<!-- ══════════════════════════════
+     MARQUEE
+══════════════════════════════ -->
 <div class="marquee-wrap">
   <div class="marquee-track">
     <span>Filmmaker</span><span class="rs">·</span>
     <span>Photographer</span><span class="rs">·</span>
-    <span>Screenwriter</span><span class="rs">·</span>
-    <span>Poet</span><span class="rs">·</span>
+    <span>Writer</span><span class="rs">·</span>
     <span>Media Artist</span><span class="rs">·</span>
-    <span>Actor</span><span class="rs">·</span>
     <span>Germany</span><span class="rs">·</span>
     <span>Pakistan</span><span class="rs">·</span>
-    <span>Available for hire</span><span class="rs">·</span>
-    <span>IMDb</span><span class="rs">·</span>
-    <span>Since 2017</span><span class="rs">·</span>
     <span>Filmmaker</span><span class="rs">·</span>
     <span>Photographer</span><span class="rs">·</span>
-    <span>Screenwriter</span><span class="rs">·</span>
-    <span>Poet</span><span class="rs">·</span>
-    <span>Media Artist</span><span class="rs">·</span>
-    <span>Actor</span><span class="rs">·</span>
-    <span>Germany</span><span class="rs">·</span>
-    <span>Pakistan</span><span class="rs">·</span>
-    <span>Available for hire</span><span class="rs">·</span>
-    <span>IMDb</span><span class="rs">·</span>
-    <span>Since 2017</span><span class="rs">·</span>
+    <span>Writer</span><span class="rs">·</span>
   </div>
 </div>
 
 <!-- ══════════════════════════════
-     HIRE
+     FOOTER
 ══════════════════════════════ -->
-<section id="hire">
-  <div class="hire-ghost-text">Collaborate</div>
-  <p class="hire-eyebrow rv">Work with me</p>
-  <h2 class="hire-heading rv d1">Let's make<br>something real.</h2>
-  <p class="hire-sub rv d2">Photographer, filmmaker, writer, creative director. Based between Germany and Pakistan. Open to commissions, collaborations, long-term projects. If you have something in mind — reach out.</p>
-  <a href="mailto:your@email.com" class="hire-btn rv d3">Get in touch</a>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-left">
-    <div>&copy; 2024 Ghulam Abbas Khan Soomro</div>
-    <div>
-      <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
-      <a href="impressum.html">Impressum</a>
-    </div>
+    &copy; 2026 Ghulam Abbas Khan Soomro.<br>
+    All Rights Reserved.
   </div>
   <div class="footer-mid">Abbasverse</div>
   <div class="footer-right">
-    <a href="https://instagram.com/YOURUSERNAME" target="_blank">Instagram</a>
-    <a href="https://imdb.com/name/YOURID" target="_blank">IMDb</a>
-    <a href="https://youtube.com/YOURCHANNEL" target="_blank">YouTube</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://imdb.com" target="_blank">IMDb</a>
+    <a href="https://vimeo.com" target="_blank">Vimeo</a>
   </div>
 </footer>
 
 <script>
-/* CURSOR */
+// CUSTOM INTERACTIVE CURSOR
 const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function t(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(t);})();
-document.querySelectorAll('a,button,.ph-cell,.ex-panel,.fli,.ap').forEach(el=>{
-  el.addEventListener('mouseenter',()=>document.body.classList.add('hovering'));
-  el.addEventListener('mouseleave',()=>document.body.classList.remove('hovering'));
+(function updateRing(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(updateRing);})();
+
+document.querySelectorAll('a,button,.fli,.ph-cell,.ex-panel').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{document.body.classList.add('hovering');});
+  el.addEventListener('mouseleave',()=>{document.body.classList.remove('hovering');});
 });
 
-/* HERO DOTS */
-const hdots=document.querySelectorAll('.hdot');
-let hi=0;
-setInterval(()=>{hdots[hi].classList.remove('on');hi=(hi+1)%6;hdots[hi].classList.add('on');},6000);
-hdots.forEach(d=>d.addEventListener('click',()=>{hdots[hi].classList.remove('on');hi=+d.dataset.i;hdots[hi].classList.add('on');}));
-
-/* PHOTOGRAPHY SLIDESHOW */
-const phSlides=document.querySelectorAll('.ph-slide');
-let pi=0;
+// HERO BACKGROUND INTERPOLATION
+const slides=document.querySelectorAll('.hslide'),dots=document.querySelectorAll('.hdot');
+let activeIndex=0;
 setInterval(()=>{
-  phSlides[pi].classList.remove('on');
-  pi=(pi+1)%phSlides.length;
-  phSlides[pi].classList.add('on');
-},4000);
+  dots[activeIndex].classList.remove('on');
+  activeIndex=(activeIndex+1)%slides.length;
+  dots[activeIndex].classList.add('on');
+},6000);
 
-/* NAV ON SCROLL */
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('solid',scrollY>60);
-});
+// PHOTO SIDEBAR CYCLE
+const phSlides=document.querySelectorAll('.ph-slide');
+let phIndex=0;
+setInterval(()=>{
+  phSlides[phIndex].classList.remove('on');
+  phIndex=(phIndex+1)%phSlides.length;
+  phSlides[phIndex].classList.add('on');
+},5000);
 
-/* SCROLL REVEAL */
-const obs=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting)e.target.classList.add('in');
-}),{threshold:.07});
-document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+// YT DYNAMIC VIDEO SWITCHER
+function changeVideo(id){
+  const container = document.getElementById('videoPlayer');
+  container.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1" allowfullscreen></iframe>`;
+}
+
+// SCROLL INTERSECTIONS Observer
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});
+},{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>observer.observe(el));
+
+// SOLID HEADER EFFECT
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('solid',scrollY>50);});
 </script>
 </body>
 </html>
