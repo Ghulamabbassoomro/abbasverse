@@ -1,60 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frames | Abbasverse</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghulam Abbas Khan Soomro — Photography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#0e0c0a;color:#e8e2d8;
+  font-family:'Montserrat',sans-serif;font-weight:300;
+  overflow-x:hidden;cursor:none;
+}
+#cur,#cur-ring{position:fixed;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+#cur{width:8px;height:8px;background:#e8e2d8;mix-blend-mode:difference;}
+#cur-ring{width:36px;height:36px;border:1px solid rgba(232,226,216,0.3);transition:width .35s,height .35s,border-color .35s;}
+body.hovering #cur-ring{width:60px;height:60px;border-color:rgba(232,226,216,0.6);}
+
+/* NAVIGATION */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:800;
+  display:flex;justify-content:space-between;align-items:center;padding:1.8rem 3rem;
+  background:rgba(14,12,10,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,226,216,0.07);
+}
+.logo{font-family:'Playfair Display',serif;font-size:14px;color:#e8e2d8;text-decoration:none;letter-spacing:.3em;text-transform:uppercase;}
+
+/* HEADER */
+header{padding:10rem 3rem 4rem;max-width:1200px;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,6rem);font-weight:400;line-height:1.1;}
+h1 em{font-style:italic;color:rgba(232,226,216,0.45);}
+p.desc{max-width:480px;font-size:.85rem;line-height:1.9;color:rgba(232,226,216,0.5);margin-top:1.5rem;}
+
+/* PHOTO FILTERING TABS */
+.filter-tabs{display:flex;gap:2rem;padding:0 3rem;margin-bottom:3rem;}
+.tab{font-size:9px;text-transform:uppercase;letter-spacing:.3em;color:rgba(232,226,216,0.3);cursor:pointer;transition:color .3s;}
+.tab.active,.tab:hover{color:#e8e2d8;}
+
+/* MASONRY GALLERY */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
+  gap:20px;padding:0 3rem 8rem;
+}
+.photo-card{
+  position:relative;overflow:hidden;background:#141210;
+  border:1px solid rgba(232,226,216,0.05);cursor:pointer;
+}
+.photo-card img{width:100%;display:block;transition:transform .8s cubic-bezier(.23,1,.32,1);filter:grayscale(10%);}
+.photo-card:hover img{transform:scale(1.03);filter:grayscale(0%);}
+.photo-card .info{
+  position:absolute;bottom:0;left:0;right:0;padding:1.5rem;
+  background:linear-gradient(to top, #0e0c0a, transparent);
+  opacity:0;transition:opacity .4s;
+}
+.photo-card:hover .info{opacity:1;}
+.photo-card .info span{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:rgba(232,226,216,0.6);}
+
+/* MODAL VIEWER */
+#modal{
+  position:fixed;inset:0;background:rgba(14,12,10,0.95);z-index:1000;
+  display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .4s;
+}
+#modal img{max-width:90%;max-height:85vh;object-fit:contain;border:1px solid rgba(232,226,216,0.1);}
+#modal.active{display:flex;opacity:1;}
+#modal-close{position:absolute;top:2rem;right:3rem;font-size:10px;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;}
+</style>
 </head>
 <body>
 
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
 <nav>
-  <div class="logo"><a href="index.html" style="opacity:1;">ABBASVERSE</a></div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="films.html">Motion</a>
-    <a href="writing.html">Words</a>
-    <a href="about.html">Identity</a>
-    <a href="contact.html">Connect</a>
+  <a href="index.html" class="logo">Abbasverse</a>
+  <div style="display:flex;gap:2rem;">
+    <a href="index.html" style="font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;color:rgba(232,226,216,0.5);">Back to gateway</a>
   </div>
 </nav>
 
-<div class="container">
-  <span class="text-reveal">Verse Dimension // 01</span>
-  <h1 style="font-size: 36px; margin-top: 10px;">FRAMES</h1>
-  <p style="opacity: 0.5; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Editorial · Fashion · Documentary · Abstract Art</p>
-  <hr>
+<header>
+  <h1>Selected<br><em>Photography</em></h1>
+  <p class="desc">A gallery of deliberate frames tracking fashion editorial textures, abstract geometric divides, and industrial documentary records across Germany and Pakistan.</p>
+</header>
 
-  <div style="margin-bottom: 100px;">
-    <div class="media-block">
-      <img src="assets/editorial_germany_1.jpg" alt="Germany Editorial Shoot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div style="display: none; height: 500px; width: 100%; background: #0e0e0e; align-items: center; justify-content: center; border: 1px dashed rgba(255,255,255,0.05);">
-        <p style="opacity: 0.3; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">[ Place high-end Germany editorial frame here ]</p>
-      </div>
-    </div>
-    <div style="display: flex; justify-content: space-between; align-items: baseline; opacity: 0.7; font-size: 12px; letter-spacing: 1px;">
-      <span>01. Editorial Session // Darmstadt, Germany</span>
-      <span style="color: #C2A878; font-style: italic;">Fashion & Geometry</span>
-    </div>
+<div class="filter-tabs">
+  <span class="tab active" onclick="filterGallery('all')">All Frames</span>
+  <span class="tab" onclick="filterGallery('editorial')">Editorial</span>
+  <span class="tab" onclick="filterGallery('portrait')">Portraits</span>
+  <span class="tab" onclick="filterGallery('abstract')">Abstracts</span>
+</div>
+
+<div class="gallery-grid">
+  <div class="photo-card" data-cat="editorial" onclick="openModal('assets/slide1.jpg')">
+    <img src="assets/slide1.jpg" alt="Exhibition Capture">
+    <div class="info"><span>Editorial Plate</span></div>
   </div>
-
-  <div style="margin-bottom: 100px; max-width: 800px; margin-left: auto;">
-    <div class="media-block">
-      <img src="assets/abstract_landscape.jpg" alt="Abstract Landscape" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div style="display: none; height: 450px; width: 100%; background: #0e0e0e; align-items: center; justify-content: center; border: 1px dashed rgba(255,255,255,0.05);">
-        <p style="opacity: 0.3; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">[ Place Abstract / Landscape / Cultural Frame here ]</p>
-      </div>
-    </div>
-    <div style="display: flex; justify-content: space-between; align-items: baseline; opacity: 0.7; font-size: 12px; letter-spacing: 1px;">
-      <span>02. Visual Abstractions // Cultural Footprints</span>
-      <span style="color: #C2A878; font-style: italic;">Fine Art Archive</span>
-    </div>
+  <div class="photo-card" data-cat="portrait" onclick="openModal('assets/slide2.jpg')">
+    <img src="assets/slide2.jpg" alt="Exhibition Capture">
+    <div class="info"><span>Portrait File</span></div>
+  </div>
+  <div class="photo-card" data-cat="abstract" onclick="openModal('assets/slide3.jpg')">
+    <img src="assets/slide3.jpg" alt="Exhibition Capture">
+    <div class="info"><span>Abstract Form</span></div>
+  </div>
+  <div class="photo-card" data-cat="editorial" onclick="openModal('assets/slide4.jpg')">
+    <img src="assets/slide4.jpg" alt="Exhibition Capture">
+    <div class="info"><span>Industrial Landscape</span></div>
+  </div>
+  <div class="photo-card" data-cat="portrait" onclick="openModal('assets/slide5.jpg')">
+    <img src="assets/slide5.jpg" alt="Exhibition Capture">
+    <div class="info"><span>Experimental Study</span></div>
   </div>
 </div>
 
-<footer>
-  © 2026 Abbasverse. All Rights Reserved.
-</footer>
+<div id="modal" onclick="closeModal()">
+  <span id="modal-close">Close (Click outside)</span>
+  <img src="" id="modalImg" alt="Wide view">
+</div>
 
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function updateRing(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(updateRing);})();
+
+document.querySelectorAll('a,.tab,.photo-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{document.body.classList.add('hovering');});
+  el.addEventListener('mouseleave',()=>{document.body.classList.remove('hovering');});
+});
+
+function filterGallery(cat){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.photo-card').forEach(card=>{
+    if(cat==='all' || card.dataset.cat===cat){
+      card.style.display='block';
+    } else {
+      card.style.display='none';
+    }
+  });
+}
+
+function openModal(src){
+  const modal=document.getElementById('modal'),mImg=document.getElementById('modalImg');
+  mImg.src=src;
+  modal.classList.add('active');
+}
+function closeModal(){
+  document.getElementById('modal').classList.remove('active');
+}
+</script>
 </body>
 </html>
