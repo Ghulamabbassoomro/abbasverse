@@ -3,623 +3,328 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ghulam Abbas Khan Soomro — Filmmaker · Photographer · Writer</title>
+
+<!-- ═══ SEO ═══ -->
+<title>Ghulam Abbas Khan Soomro — Filmmaker · Photographer · Writer | Germany & Pakistan</title>
+<meta name="description" content="Ghulam Abbas Khan Soomro — Filmmaker, Photographer, Screenwriter, Media Artist and Actor based in Germany and Pakistan. Available for photography commissions, film projects, and creative direction. Active since 2017.">
+<meta name="keywords" content="photographer germany, photographer pakistan, filmmaker germany, screenwriter germany, cinematographer germany, media artist germany, photographer frankfurt, filmmaker pakistan, actor germany, visual storyteller, ghulam abbas khan soomro, abbasverse, editorial photographer germany, documentary filmmaker, short film director germany">
+<meta name="author" content="Ghulam Abbas Khan Soomro">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://abbasverse.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abbasverse.com/">
+<meta property="og:title" content="Ghulam Abbas Khan Soomro — Filmmaker · Photographer · Writer">
+<meta property="og:description" content="Filmmaker, Photographer, Screenwriter and Media Artist based in Germany and Pakistan. Active since 2017.">
+<meta property="og:image" content="https://abbasverse.com/assets/slide1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Ghulam Abbas Khan Soomro",
+  "url":"https://abbasverse.com",
+  "jobTitle":["Filmmaker","Photographer","Screenwriter","Media Artist","Actor"],
+  "description":"Filmmaker, Photographer, Screenwriter and Media Artist based in Germany and Pakistan.",
+  "address":[{"@type":"PostalAddress","addressCountry":"DE"},{"@type":"PostalAddress","addressCountry":"PK"}],
+  "sameAs":["https://www.instagram.com/ghulamabbasphotography","https://www.imdb.com/name/nm18201027"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@200;300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
 <style>
-/* ═══════════════════════════════════════════
-   BASE
-═══════════════════════════════════════════ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{
-  background:#0e0c0a;
-  color:#e8e2d8;
-  font-family:'Montserrat',sans-serif;
-  font-weight:300;
-  overflow-x:hidden;
-  cursor:none;
-}
+body{background:#0e0c0a;color:#e8e2d8;font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;}
 
-/* ═══════════════════════════════════════════
-   CURSOR
-═══════════════════════════════════════════ */
-#cur{
-  position:fixed;width:8px;height:8px;
-  background:#e8e2d8;border-radius:50%;
-  pointer-events:none;z-index:9999;
-  transform:translate(-50%,-50%);
-  mix-blend-mode:difference;
-  transition:transform .1s;
-}
-#cur-ring{
-  position:fixed;width:36px;height:36px;
-  border:1px solid rgba(232,226,216,0.3);
-  border-radius:50%;pointer-events:none;z-index:9998;
-  transform:translate(-50%,-50%);
-  transition:width .35s,height .35s,border-color .35s,background .35s;
-}
-body.hovering #cur-ring{
-  width:60px;height:60px;
-  border-color:rgba(232,226,216,0.6);
-}
+/* CURSOR */
+#cur{position:fixed;width:8px;height:8px;background:#e8e2d8;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
+#cur-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(232,226,216,0.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .35s,height .35s,border-color .35s;}
+body.hovering #cur-ring{width:56px;height:56px;border-color:rgba(232,226,216,0.6);}
 
-/* ═══════════════════════════════════════════
-   GRAIN OVERLAY (global)
-═══════════════════════════════════════════ */
-.grain{
-  position:fixed;inset:0;z-index:900;pointer-events:none;
-  opacity:.035;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:160px;
-}
+/* GRAIN */
+.grain{position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px;}
 
-/* ═══════════════════════════════════════════
-   NAV
-═══════════════════════════════════════════ */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:800;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:1.8rem 3rem;
-  transition:background .6s,backdrop-filter .6s;
-}
-nav.solid{
-  background:rgba(14,12,10,0.85);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(232,226,216,0.07);
-}
-.nav-wordmarks{
-  display:flex;flex-direction:column;gap:.2rem;
-}
-.nav-wordmarks span{
-  font-family:'Montserrat',sans-serif;font-size:7.5px;
-  font-weight:600;letter-spacing:.45em;
-  color:rgba(232,226,216,0.3);text-transform:uppercase;
-  line-height:1.2;
-}
-.nav-wordmarks span.active-wm{color:rgba(232,226,216,0.7);}
-.nav-center{
-  font-family:'Playfair Display',serif;
-  font-size:12px;font-weight:400;letter-spacing:.5em;
-  color:rgba(232,226,216,0.5);text-transform:uppercase;
-  text-decoration:none;
-}
-.nav-right{
-  display:flex;align-items:center;gap:2.5rem;
-}
-.nav-right a{
-  font-family:'Montserrat',sans-serif;font-size:8.5px;font-weight:400;
-  letter-spacing:.3em;color:rgba(232,226,216,0.4);
-  text-decoration:none;text-transform:uppercase;
-  transition:color .3s;
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;justify-content:space-between;align-items:center;padding:1.6rem 3rem;transition:background .5s,backdrop-filter .5s;}
+nav.solid{background:rgba(14,12,10,0.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,226,216,0.07);}
+.nav-wordmarks{display:flex;flex-direction:column;gap:.2rem;}
+.nav-wordmarks span{font-size:7px;font-weight:600;letter-spacing:.45em;color:rgba(232,226,216,0.25);text-transform:uppercase;line-height:1.3;}
+.nav-wordmarks span.hi{color:rgba(232,226,216,0.65);}
+.nav-center{font-family:'Playfair Display',serif;font-size:13px;font-weight:400;letter-spacing:.5em;color:rgba(232,226,216,0.5);text-transform:uppercase;text-decoration:none;}
+.nav-right{display:flex;align-items:center;gap:2.2rem;}
+.nav-right a{font-size:9px;font-weight:400;letter-spacing:.28em;color:rgba(232,226,216,0.4);text-decoration:none;text-transform:uppercase;transition:color .3s;}
 .nav-right a:hover{color:rgba(232,226,216,0.9);}
-.nav-hire{
-  border:1px solid rgba(232,226,216,0.2);
-  padding:.5rem 1.2rem;
-  transition:border-color .3s,color .3s !important;
-}
-.nav-hire:hover{
-  border-color:rgba(232,226,216,0.6) !important;
-  color:rgba(232,226,216,0.9) !important;
-}
+.nav-hire{border:1px solid rgba(232,226,216,0.2);padding:.45rem 1.1rem;transition:border-color .3s,color .3s !important;}
+.nav-hire:hover{border-color:rgba(232,226,216,0.55) !important;color:rgba(232,226,216,0.9) !important;}
 
-/* ═══════════════════════════════════════════
-   SECTION 1 — HERO (DARK + TRANSPARENT)
-═══════════════════════════════════════════ */
-#hero{
-  position:relative;height:100vh;overflow:hidden;
-  background:#0e0c0a;
-}
+/* ════════════════════════════
+   HERO
+════════════════════════════ */
+#hero{position:relative;height:100vh;overflow:hidden;background:#0e0c0a;}
 .hero-slides{position:absolute;inset:0;z-index:0;}
-.hslide{
-  position:absolute;inset:0;
-  background-size:cover;background-position:center;
-  opacity:0;animation:hfade 36s infinite;
-  transform:scale(1.06);
-}
+.hslide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:hfade 36s infinite;transform:scale(1.06);}
 .hslide:nth-child(1){background-image:url('assets/slide1.jpg');animation-delay:0s;}
 .hslide:nth-child(2){background-image:url('assets/slide2.jpg');animation-delay:6s;}
 .hslide:nth-child(3){background-image:url('assets/slide3.jpg');animation-delay:12s;}
 .hslide:nth-child(4){background-image:url('assets/slide4.jpg');animation-delay:18s;}
 .hslide:nth-child(5){background-image:url('assets/slide5.jpg');animation-delay:24s;}
 .hslide:nth-child(6){background-image:url('assets/slide6.jpg');animation-delay:30s;}
-@keyframes hfade{
-  0%{opacity:0;transform:scale(1.06);}
-  5%{opacity:1;transform:scale(1.03);}
-  15%{opacity:1;transform:scale(1.00);}
-  21%{opacity:0;}100%{opacity:0;}
+@keyframes hfade{0%{opacity:0;transform:scale(1.06);}5%{opacity:1;transform:scale(1.03);}15%{opacity:1;transform:scale(1);}21%{opacity:0;}100%{opacity:0;}}
+.hero-ov{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(14,12,10,0.88) 0%,rgba(14,12,10,0.35) 50%,rgba(14,12,10,0.2) 75%,rgba(14,12,10,0.55) 100%),linear-gradient(to bottom,rgba(14,12,10,0.45) 0%,transparent 20%,transparent 68%,rgba(14,12,10,0.95) 100%);}
+
+.hero-body{position:relative;z-index:2;height:100%;display:flex;align-items:center;padding:0 3.5rem;}
+.hero-left{max-width:600px;}
+
+/* Germany · Pakistan · Since 2017 — bigger, highlighted */
+.hero-geo{display:flex;align-items:center;gap:.7rem;margin-bottom:1.6rem;flex-wrap:wrap;}
+.hero-geo .geo-word{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(1rem,1.6vw,1.4rem);font-weight:400;
+  color:#e8e2d8;letter-spacing:.04em;
+}
+.hero-geo .geo-sep{color:rgba(232,226,216,0.2);font-size:.9rem;}
+.hero-geo .geo-yr{
+  font-family:'Montserrat',sans-serif;font-size:10px;font-weight:400;
+  letter-spacing:.45em;color:rgba(232,226,216,0.5);text-transform:uppercase;
+  border:1px solid rgba(232,226,216,0.2);padding:.25rem .75rem;
 }
 
-.hero-ov{
-  position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:
-    linear-gradient(to right, rgba(14,12,10,0.82) 0%, rgba(14,12,10,0.3) 45%, rgba(14,12,10,0.15) 70%, rgba(14,12,10,0.5) 100%),
-    linear-gradient(to bottom, rgba(14,12,10,0.4) 0%, transparent 20%, transparent 70%, rgba(14,12,10,0.9) 100%);
+h1.hero-name{font-family:'Playfair Display',serif;font-size:clamp(3.8rem,7.5vw,8.5rem);font-weight:700;line-height:.88;letter-spacing:-.01em;color:#e8e2d8;}
+h1.hero-name em{display:block;font-style:italic;font-weight:400;color:rgba(232,226,216,0.42);font-size:.58em;letter-spacing:.05em;margin-top:.12em;}
+
+/* Abbasverse word — bigger, present */
+.hero-abbasverse{
+  font-family:'Playfair Display',serif;font-size:clamp(.75rem,1.2vw,1.1rem);
+  font-weight:400;letter-spacing:.55em;text-transform:uppercase;
+  color:rgba(232,226,216,0.28);margin-top:1.2rem;margin-bottom:.6rem;
 }
 
-.hero-body{
-  position:relative;z-index:2;
-  height:100%;display:flex;align-items:center;
-  padding:0 3rem;
-}
-.hero-left{max-width:520px;}
-.hero-geo{
-  display:flex;align-items:center;gap:.8rem;
-  margin-bottom:1.8rem;
-}
-.hero-geo span{
-  font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:400;
-  letter-spacing:.5em;color:rgba(232,226,216,0.35);text-transform:uppercase;
-}
-.hero-geo .sep{color:rgba(232,226,216,0.15);}
-.hero-geo .yr{
-  border:1px solid rgba(232,226,216,0.15);
-  padding:.2rem .6rem;font-size:7px;letter-spacing:.35em;
-}
-
-h1.hero-name{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(3.5rem,7vw,7.5rem);
-  font-weight:700;line-height:.88;letter-spacing:-.01em;
-  color:#e8e2d8;
-}
-h1.hero-name em{
-  display:block;font-style:italic;font-weight:400;
-  color:rgba(232,226,216,0.45);font-size:.6em;
-  letter-spacing:.04em;margin-top:.1em;
-}
-.hero-disciplines{
-  margin-top:1.4rem;
-  display:flex;flex-direction:column;gap:.35rem;
-}
-.hero-disciplines span{
-  font-family:'Montserrat',sans-serif;font-size:8.5px;font-weight:300;
-  letter-spacing:.45em;color:rgba(232,226,216,0.45);text-transform:uppercase;
+/* disciplines — bigger */
+.hero-disciplines{display:flex;flex-direction:column;gap:.4rem;margin-top:.3rem;}
+.hero-disciplines .disc-row{
+  font-family:'Montserrat',sans-serif;font-size:clamp(9px,1.1vw,13px);
+  font-weight:300;letter-spacing:.4em;color:rgba(232,226,216,0.55);text-transform:uppercase;
 }
 .hero-disciplines .bio-line{
   font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:1.05rem;font-weight:300;
-  color:rgba(232,226,216,0.35);letter-spacing:.03em;margin-top:.4rem;
+  font-size:clamp(1rem,1.3vw,1.2rem);font-weight:300;
+  color:rgba(232,226,216,0.32);letter-spacing:.03em;margin-top:.5rem;
 }
 
-.hero-counter{
-  position:absolute;right:3rem;top:50%;transform:translateY(-50%);
-  z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;
-}
-.hdot{
-  width:2px;height:2px;border-radius:50%;
-  background:rgba(232,226,216,0.2);cursor:pointer;
-  transition:background .5s,transform .5s,border-radius .4s;
-}
+.hero-counter{position:absolute;right:3rem;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:7px;}
+.hdot{width:2px;height:2px;border-radius:50%;background:rgba(232,226,216,0.2);cursor:pointer;transition:background .5s,transform .5s,border-radius .4s;}
 .hdot.on{background:#e8e2d8;transform:scaleY(3.5);border-radius:1px;}
-
-.hero-scroll{
-  position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);
-  z-index:2;display:flex;flex-direction:column;align-items:center;gap:.5rem;
-  font-family:'Montserrat',sans-serif;font-size:7px;letter-spacing:.5em;
-  color:rgba(232,226,216,0.25);text-transform:uppercase;
-}
-.hero-scroll-bar{
-  width:.5px;height:44px;
-  background:linear-gradient(to bottom,rgba(232,226,216,0),rgba(232,226,216,0.4));
-  animation:sb 2.5s ease-in-out infinite;
-}
+.hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.4rem;font-size:7px;letter-spacing:.5em;color:rgba(232,226,216,0.25);text-transform:uppercase;}
+.hero-scroll-bar{width:.5px;height:44px;background:linear-gradient(to bottom,rgba(232,226,216,0),rgba(232,226,216,0.4));animation:sb 2.5s ease-in-out infinite;}
 @keyframes sb{0%,100%{height:44px;opacity:.4}50%{height:62px;opacity:1}}
 
-/* ═══════════════════════════════════════════
-   TRANSPARENT SCROLL SECTIONS
-═══════════════════════════════════════════ */
-.glass-sec{
-  position:relative;
-  background:rgba(14,12,10,0.55);
-  backdrop-filter:blur(0px);
-}
+/* ════════════════════════════
+   WHO AM I — fixed portrait size
+════════════════════════════ */
+#who{background:linear-gradient(to bottom,#0e0c0a,rgba(14,12,10,0.95));padding:7rem 3.5rem;}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
 
-/* ═══════════════════════════════════════════
-   SECTION 2 — WHO AM I (dark → transparent)
-═══════════════════════════════════════════ */
-#who{
-  background:linear-gradient(to bottom,#0e0c0a 0%,rgba(14,12,10,0.92) 100%);
-  padding:8rem 3rem;
-}
-.who-grid{
-  display:grid;grid-template-columns:1fr 1.6fr;
-  gap:6rem;align-items:center;
-}
+/* LEFT col: text is primary, bold, instant */
+.who-text-col{}
 .who-label{
-  font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;
-  letter-spacing:.5em;color:rgba(232,226,216,0.3);text-transform:uppercase;
-  margin-bottom:1.5rem;
-  display:flex;align-items:center;gap:.8rem;
+  font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;
+  letter-spacing:.55em;color:rgba(232,226,216,0.55);text-transform:uppercase;
+  display:flex;align-items:center;gap:.8rem;margin-bottom:1.4rem;
 }
-.who-label::before{content:'';width:24px;height:1px;background:rgba(232,226,216,0.25);}
+.who-label::before{content:'';width:20px;height:1px;background:rgba(232,226,216,0.4);}
 .who-title{
   font-family:'Playfair Display',serif;
-  font-size:clamp(1.8rem,3.5vw,3.2rem);
-  font-weight:400;line-height:1.1;
-  color:#e8e2d8;
+  font-size:clamp(3.8rem,7.5vw,8rem);
+  font-weight:900;line-height:.88;letter-spacing:-.02em;color:#e8e2d8;
+  margin-bottom:.8rem;
 }
-.who-title em{font-style:italic;color:rgba(232,226,216,0.45);}
-.who-portrait{
-  width:100%;aspect-ratio:3/4;overflow:hidden;
+.who-subtitle{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(1.1rem,1.8vw,1.6rem);font-weight:400;
+  color:rgba(232,226,216,0.38);line-height:1.2;margin-bottom:1.8rem;
+}
+.who-body{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.1rem;font-weight:300;line-height:1.85;
+  color:rgba(232,226,216,0.5);max-width:440px;
+}
+
+/* RIGHT col: portrait — contained, aligned */
+.who-portrait-wrap{
+  width:100%;
+  max-height:520px; /* prevents going taller than the text */
+  overflow:hidden;position:relative;
+}
+.who-portrait-wrap img{
+  width:100%;height:100%;object-fit:cover;object-position:top;display:block;
+  filter:grayscale(10%);transition:filter .6s,transform 8s ease;
+}
+.who-portrait-wrap:hover img{filter:grayscale(0%);transform:scale(1.02);}
+.who-portrait-wrap::after{content:'';position:absolute;inset:0;border:1px solid rgba(232,226,216,0.08);pointer-events:none;}
+
+.cta-link{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.8rem;font-size:9px;font-weight:400;letter-spacing:.35em;color:rgba(232,226,216,0.4);text-decoration:none;text-transform:uppercase;transition:color .3s,gap .3s;}
+.cta-link .cl{width:22px;height:1px;background:rgba(232,226,216,0.3);transition:width .4s cubic-bezier(.23,1,.32,1);}
+.cta-link:hover{color:rgba(232,226,216,0.85);}
+.cta-link:hover .cl{width:40px;}
+
+/* ════════════════════════════
+   PHOTOGRAPHER — light bg
+════════════════════════════ */
+#photography{background:linear-gradient(to bottom,#0e0c0a 0%,#ece7df 7%,#ece7df 93%,#0e0c0a 100%);padding:6rem 0;}
+
+.photo-header{
+  padding:0 3.5rem 3rem;
+  display:grid;grid-template-columns:1fr auto;
+  gap:3rem;align-items:end;
+}
+.section-big-word{font-family:'Playfair Display',serif;font-size:clamp(4.5rem,11vw,12rem);font-weight:900;line-height:.85;letter-spacing:-.02em;color:#1a1714;opacity:.88;}
+.section-big-word em{font-style:italic;font-weight:400;color:rgba(26,23,20,0.3);}
+.section-right-note{max-width:280px;text-align:right;font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:300;line-height:1.85;color:rgba(26,23,20,0.5);}
+
+/* photo grid: slideshow left (slides 1–12), two statics right (slides 2,4,6) */
+.photo-exhibition{display:grid;grid-template-columns:1fr 1fr;gap:3px;max-height:520px;}
+.ph-slide-col{position:relative;overflow:hidden;}
+.ph-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease;}
+.ph-slide.on{opacity:1;}
+.ph-right-col{display:grid;grid-template-rows:1fr 1fr 1fr;gap:3px;}
+.ph-cell{overflow:hidden;cursor:pointer;}
+.ph-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.23,1,.32,1),filter .5s;filter:saturate(.9);}
+.ph-cell:hover img{transform:scale(1.05);filter:saturate(1.1);}
+.ph-cta{padding:2rem 3.5rem 0;text-align:right;}
+.ph-cta a{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;letter-spacing:.4em;color:rgba(26,23,20,0.45);text-decoration:none;text-transform:uppercase;border-bottom:1px solid rgba(26,23,20,0.2);padding-bottom:.2rem;transition:color .3s;}
+.ph-cta a:hover{color:rgba(26,23,20,0.85);}
+
+/* ════════════════════════════
+   EXHIBITION STRIP
+════════════════════════════ */
+#exhibition{background:#0e0c0a;display:flex;height:65vh;overflow:hidden;gap:2px;}
+.ex-panel{flex:1;overflow:hidden;cursor:pointer;position:relative;transition:flex .8s cubic-bezier(.23,1,.32,1);}
+.ex-panel:hover{flex:2.2;}
+.ex-panel img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.23,1,.32,1),filter .6s;filter:grayscale(20%) brightness(.82);}
+.ex-panel:hover img{transform:scale(1.04);filter:grayscale(0%) brightness(1);}
+.ex-label{position:absolute;bottom:1.4rem;left:1.2rem;font-size:7.5px;font-weight:300;letter-spacing:.45em;color:rgba(232,226,216,0);text-transform:uppercase;transition:color .5s;}
+.ex-panel:hover .ex-label{color:rgba(232,226,216,0.5);}
+
+/* ════════════════════════════
+   FILMMAKER — dark red
+════════════════════════════ */
+#filmmaker{background:linear-gradient(to bottom,#0e0c0a,#1c0b09 25%,#180807 70%,#0e0c0a);padding:8rem 3.5rem;}
+#filmmaker .section-big-word{color:#e8e2d8;}
+#filmmaker .section-big-word em{color:rgba(180,50,35,0.55);}
+
+/* Girl in White — festival highlight */
+.giw-section{
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;
+  margin-top:4rem;padding:3rem;
+  border:1px solid rgba(180,50,35,0.18);
+  background:rgba(180,50,35,0.04);
   position:relative;
 }
-.who-portrait img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  filter:grayscale(15%);
-  transition:filter .6s,transform 8s ease;
-}
-.who-portrait:hover img{filter:grayscale(0%);transform:scale(1.03);}
-.who-portrait::after{
-  content:'';position:absolute;inset:0;
-  border:1px solid rgba(232,226,216,0.1);pointer-events:none;
-}
-.who-text{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:1.15rem;font-weight:300;line-height:1.85;
-  color:rgba(232,226,216,0.55);margin-top:1.8rem;
-}
+.giw-section::before{content:'FESTIVAL SELECTION';position:absolute;top:-1px;left:2.5rem;font-size:7px;font-weight:600;letter-spacing:.5em;color:rgba(180,50,35,0.6);background:#1c0b09;padding:0 .8rem;text-transform:uppercase;}
+.giw-poster{aspect-ratio:2/3;overflow:hidden;background:rgba(232,226,216,0.04);display:flex;align-items:center;justify-content:center;}
+.giw-poster img{width:100%;height:100%;object-fit:cover;display:block;}
+.giw-poster-ph{font-size:8px;letter-spacing:.3em;color:rgba(232,226,216,0.2);text-transform:uppercase;text-align:center;}
+.giw-info{display:flex;flex-direction:column;justify-content:center;}
+.giw-tag{font-size:8px;font-weight:600;letter-spacing:.5em;color:rgba(180,50,35,0.7);text-transform:uppercase;margin-bottom:1rem;}
+.giw-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;color:#e8e2d8;line-height:1;margin-bottom:.5rem;}
+.giw-title em{font-style:italic;font-weight:400;color:rgba(232,226,216,0.45);display:block;font-size:.6em;letter-spacing:.05em;margin-top:.3rem;}
+.giw-detail{font-size:.82rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.4);margin-top:1.2rem;}
+.giw-detail span{display:block;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:rgba(180,50,35,0.5);margin-bottom:.3rem;}
 
-/* ═══════════════════════════════════════════
-   SECTION 3 — PHOTOGRAPHER (LIGHT BG)
-═══════════════════════════════════════════ */
-#photography{
-  background:linear-gradient(to bottom,#0e0c0a 0%,#ede8e0 8%,#ede8e0 92%,#0e0c0a 100%);
-  padding:7rem 0;
-}
-.photo-header{
-  padding:0 3rem 4rem;
-  display:flex;align-items:flex-end;justify-content:space-between;
-}
-.section-big-word{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(5rem,13vw,14rem);
-  font-weight:900;line-height:.85;letter-spacing:-.02em;
-  color:#1a1714;opacity:.9;
-}
-.section-big-word em{
-  font-style:italic;font-weight:400;
-  color:rgba(26,23,20,0.35);
-}
-.section-right-note{
-  max-width:320px;text-align:right;
-  font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:300;
-  line-height:1.8;color:rgba(26,23,20,0.55);
-}
-.photo-exhibition{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:3px;
-}
-.ph-slide-col{
-  position:relative;overflow:hidden;
-}
-.ph-slides{position:relative;height:100%;}
-.ph-slide{
-  position:absolute;inset:0;
-  background-size:cover;background-position:center;
-  opacity:0;transition:opacity 1s ease;
-}
-.ph-slide.on{opacity:1;}
-.ph-big-col{
-  display:grid;grid-template-rows:1fr 1fr;gap:3px;
-}
-.ph-cell{overflow:hidden;cursor:pointer;}
-.ph-cell img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  transition:transform .9s cubic-bezier(.23,1,.32,1),filter .5s;
-  filter:saturate(.9);
-}
-.ph-cell:hover img{transform:scale(1.05);filter:saturate(1.1);}
-.ph-cta{
-  padding:3rem 3rem 0;text-align:right;
-}
-.ph-cta a{
-  font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;
-  letter-spacing:.4em;color:rgba(26,23,20,0.5);text-decoration:none;
-  text-transform:uppercase;border-bottom:1px solid rgba(26,23,20,0.25);
-  padding-bottom:.2rem;transition:color .3s,border-color .3s;
-}
-.ph-cta a:hover{color:rgba(26,23,20,0.9);border-color:rgba(26,23,20,0.6);}
-
-/* ═══════════════════════════════════════════
-   EXHIBITION STRIP (no text, full images)
-═══════════════════════════════════════════ */
-#exhibition{
-  background:#0e0c0a;
-  display:flex;height:70vh;overflow:hidden;
-  gap:2px;
-}
-.ex-panel{
-  flex:1;overflow:hidden;cursor:pointer;
-  position:relative;transition:flex .8s cubic-bezier(.23,1,.32,1);
-}
-.ex-panel:hover{flex:2.2;}
-.ex-panel img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  transition:transform .8s cubic-bezier(.23,1,.32,1),filter .6s;
-  filter:grayscale(20%) brightness(.85);
-}
-.ex-panel:hover img{transform:scale(1.04);filter:grayscale(0%) brightness(1);}
-.ex-panel-label{
-  position:absolute;bottom:1.5rem;left:1.2rem;
-  font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:300;
-  letter-spacing:.45em;color:rgba(232,226,216,0);
-  text-transform:uppercase;
-  transition:color .5s;
-}
-.ex-panel:hover .ex-panel-label{color:rgba(232,226,216,0.5);}
-
-/* ═══════════════════════════════════════════
-   SECTION 4 — FILMMAKER (DARK RED VIBE)
-═══════════════════════════════════════════ */
-#filmmaker{
-  background:linear-gradient(to bottom,#0e0c0a,#1a0a08 30%,#160807 70%,#0e0c0a);
-  padding:8rem 3rem;
-}
-#filmmaker .section-big-word{color:#e8e2d8;opacity:.85;}
-#filmmaker .section-big-word em{color:rgba(180,50,35,0.6);}
-.film-split{
-  display:grid;grid-template-columns:1.2fr 1fr;
-  gap:5rem;margin-top:4rem;align-items:start;
-}
+/* Film list + player */
+.film-split{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;margin-top:4rem;align-items:start;}
+.film-section-label{font-size:8px;font-weight:400;letter-spacing:.45em;color:rgba(232,226,216,0.22);text-transform:uppercase;margin-bottom:1.5rem;}
 .film-list-items{list-style:none;}
-.fli{
-  display:grid;grid-template-columns:2.4rem 1fr;
-  gap:1rem;align-items:baseline;
-  padding:1.1rem 0;
-  border-bottom:1px solid rgba(180,50,35,0.12);
-  cursor:pointer;position:relative;
-  transition:padding-left .35s cubic-bezier(.23,1,.32,1);
-}
-.fli:first-child{border-top:1px solid rgba(180,50,35,0.12);}
-.fli:hover{padding-left:.7rem;}
+.fli{display:grid;grid-template-columns:2.4rem 1fr;gap:.8rem;align-items:start;padding:1rem 0;border-bottom:1px solid rgba(180,50,35,0.1);cursor:pointer;transition:padding-left .3s cubic-bezier(.23,1,.32,1);}
+.fli:first-child{border-top:1px solid rgba(180,50,35,0.1);}
+.fli:hover{padding-left:.6rem;}
 .fli:hover .fli-t{color:#c0392b;}
-.fli-n{
-  font-family:'Montserrat',sans-serif;font-size:8px;font-weight:300;
-  letter-spacing:.2em;color:rgba(180,50,35,0.4);
-}
-.fli-info{}
-.fli-t{
-  font-family:'Playfair Display',serif;font-size:1rem;
-  font-weight:400;color:rgba(232,226,216,0.85);
-  transition:color .3s;display:block;
-}
-.fli-meta{
-  font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:300;
-  letter-spacing:.25em;color:rgba(232,226,216,0.3);
-  text-transform:uppercase;margin-top:.2rem;display:flex;gap:1rem;
-}
-.film-embed-col{}
-.film-embed-note{
-  font-family:'Montserrat',sans-serif;font-size:8px;font-weight:300;
-  letter-spacing:.3em;color:rgba(232,226,216,0.25);
-  text-transform:uppercase;margin-bottom:1.2rem;
-}
-.yt-embed{
-  width:100%;aspect-ratio:16/9;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(180,50,35,0.2);
-  position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Montserrat',sans-serif;font-size:8px;
-  color:rgba(232,226,216,0.2);letter-spacing:.3em;text-transform:uppercase;
-}
-.yt-embed iframe{
-  position:absolute;inset:0;width:100%;height:100%;border:none;
-}
+.fli-n{font-size:8px;font-weight:300;letter-spacing:.2em;color:rgba(180,50,35,0.38);padding-top:.15rem;}
+.fli-t{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:400;color:rgba(232,226,216,0.8);transition:color .3s;display:block;margin-bottom:.2rem;}
+.fli-meta{font-size:7.5px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.28);text-transform:uppercase;display:flex;gap:.8rem;flex-wrap:wrap;}
+.fli-cat{font-size:7px;font-weight:600;letter-spacing:.3em;color:rgba(180,50,35,0.45);text-transform:uppercase;margin-bottom:.15rem;}
 
-/* ═══════════════════════════════════════════
-   SECTION 5 — CINEMATOGRAPHER/EDITOR
-═══════════════════════════════════════════ */
-#cine{
-  background:linear-gradient(to bottom,#0e0c0a,#0d0f12 40%,#0d0f12 60%,#0e0c0a);
-  padding:8rem 3rem;
-}
-#cine .section-big-word{
-  color:#e8e2d8;opacity:.8;font-size:clamp(3.5rem,9vw,10rem);
-}
-#cine .section-big-word em{color:rgba(100,140,180,0.4);}
-.cine-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:3px;margin-top:3rem;
-}
-.cine-cell{
-  aspect-ratio:16/9;overflow:hidden;
-  border:1px solid rgba(100,140,180,0.1);
-}
+.film-embed-note{font-size:8px;font-weight:300;letter-spacing:.3em;color:rgba(232,226,216,0.22);text-transform:uppercase;margin-bottom:1rem;}
+.yt-embed{width:100%;aspect-ratio:16/9;background:rgba(255,255,255,0.02);border:1px solid rgba(180,50,35,0.18);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:8px;color:rgba(232,226,216,0.18);letter-spacing:.3em;text-transform:uppercase;}
+.yt-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+
+/* ════════════════════════════
+   CINEMATOGRAPHER / EDITOR
+════════════════════════════ */
+#cine{background:linear-gradient(to bottom,#0e0c0a,#0c0f13 40%,#0c0f13 60%,#0e0c0a);padding:8rem 3.5rem;}
+#cine .section-big-word{color:#e8e2d8;opacity:.8;font-size:clamp(3rem,8vw,9rem);}
+#cine .section-big-word em{color:rgba(90,130,175,0.4);}
+.cine-desc{font-size:.82rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.32);max-width:520px;margin-top:1.2rem;}
+.cine-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:3rem;}
+.cine-cell{aspect-ratio:16/9;overflow:hidden;border:1px solid rgba(90,130,175,0.08);}
 .cine-cell iframe{width:100%;height:100%;border:none;display:block;}
-.cine-cell-ph{
-  width:100%;height:100%;
-  background:rgba(100,140,180,0.04);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Montserrat',sans-serif;font-size:8px;
-  letter-spacing:.3em;color:rgba(100,140,180,0.25);text-transform:uppercase;
-}
 
-/* ═══════════════════════════════════════════
-   SECTION 6 — WRITER (PARCHMENT WARM)
-═══════════════════════════════════════════ */
-#writer{
-  background:linear-gradient(to bottom,#0e0c0a,#2a2318 15%,#2a2318 85%,#0e0c0a);
-  padding:8rem 3rem;
-}
-#writer .section-big-word{color:#e8e2d8;opacity:.8;}
-#writer .section-big-word em{color:rgba(200,170,100,0.4);}
-.writer-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:4rem;margin-top:4rem;align-items:start;
-}
-.poetry-box{
-  background:rgba(232,226,216,0.04);
-  border:1px solid rgba(232,226,216,0.1);
-  border-left:2px solid rgba(200,170,100,0.4);
-  padding:2.5rem;
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:1.1rem;font-weight:300;line-height:2;
-  color:rgba(232,226,216,0.65);
-  min-height:300px;
-  white-space:pre-line;
-}
-.poetry-label{
-  font-family:'Montserrat',sans-serif;font-size:7.5px;
-  font-weight:400;letter-spacing:.45em;
-  color:rgba(200,170,100,0.5);text-transform:uppercase;
-  margin-bottom:1rem;
-}
-.writing-note{
-  font-family:'Montserrat',sans-serif;font-size:.82rem;
-  font-weight:300;line-height:1.85;
-  color:rgba(232,226,216,0.4);
-  margin-top:2rem;
-}
+/* ════════════════════════════
+   WRITER
+════════════════════════════ */
+#writer{background:linear-gradient(to bottom,#0e0c0a,#2b2419 14%,#2b2419 86%,#0e0c0a);padding:8rem 3.5rem;}
+#writer .section-big-word{color:#e8e2d8;opacity:.82;}
+#writer .section-big-word em{color:rgba(200,170,95,0.4);}
+.writer-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:4rem;align-items:start;}
+.poetry-label{font-size:7.5px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.5);text-transform:uppercase;margin-bottom:1rem;}
+.poetry-box{background:rgba(232,226,216,0.03);border:1px solid rgba(232,226,216,0.09);border-left:2px solid rgba(200,170,95,0.4);padding:2.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:300;line-height:2;color:rgba(232,226,216,0.62);min-height:280px;white-space:pre-line;}
+.writing-note{font-size:.82rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.38);margin-top:1.5rem;}
 
-/* ═══════════════════════════════════════════
-   SECTION 7 — ACTOR (DARK, MOODY)
-═══════════════════════════════════════════ */
-#actor{
-  background:linear-gradient(to bottom,#0e0c0a,#111010);
-  padding:8rem 3rem;
-}
-#actor .section-big-word{color:#e8e2d8;opacity:.75;font-size:clamp(4rem,10vw,11rem);}
-#actor .section-big-word em{color:rgba(232,226,216,0.2);}
-.actor-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:4rem;margin-top:4rem;align-items:start;
-}
+/* ════════════════════════════
+   ACTOR
+════════════════════════════ */
+#actor{background:linear-gradient(to bottom,#0e0c0a,#111010);padding:8rem 3.5rem;}
+#actor .section-big-word{color:#e8e2d8;opacity:.72;font-size:clamp(4rem,10vw,11rem);}
+#actor .section-big-word em{color:rgba(232,226,216,0.18);}
+.actor-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:4rem;align-items:start;}
 .actor-projects{list-style:none;}
-.ap{
-  padding:1rem 0;border-bottom:1px solid rgba(232,226,216,0.06);
-  display:grid;grid-template-columns:1.5rem 1fr;gap:1rem;
-}
-.ap-dot{
-  width:4px;height:4px;border-radius:50%;
-  background:rgba(232,226,216,0.2);margin-top:.45rem;
-}
-.ap-title{
-  font-family:'Playfair Display',serif;font-size:.95rem;
-  color:rgba(232,226,216,0.7);display:block;margin-bottom:.2rem;
-}
-.ap-meta{
-  font-family:'Montserrat',sans-serif;font-size:7.5px;font-weight:300;
-  letter-spacing:.25em;color:rgba(232,226,216,0.3);text-transform:uppercase;
-}
+.ap{padding:.9rem 0;border-bottom:1px solid rgba(232,226,216,0.05);display:grid;grid-template-columns:1.4rem 1fr;gap:.8rem;}
+.ap-dot{width:3px;height:3px;border-radius:50%;background:rgba(232,226,216,0.18);margin-top:.5rem;}
+.ap-title{font-family:'Playfair Display',serif;font-size:.9rem;color:rgba(232,226,216,0.65);display:block;margin-bottom:.18rem;}
+.ap-meta{font-size:7.5px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.28);text-transform:uppercase;}
 
-/* ═══════════════════════════════════════════
-   SECTION 8 — HIRE / CONTACT
-═══════════════════════════════════════════ */
-#hire{
-  position:relative;overflow:hidden;
-  background:linear-gradient(to bottom,#0e0c0a,#130e0c);
-  padding:10rem 3rem 8rem;text-align:center;
-  border-top:1px solid rgba(232,226,216,0.06);
-}
-.hire-ghost-text{
-  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  font-family:'Playfair Display',serif;font-weight:900;font-style:italic;
-  font-size:clamp(8rem,22vw,28rem);
-  color:rgba(232,226,216,0.025);white-space:nowrap;pointer-events:none;
-  line-height:1;
-}
-.hire-eyebrow{
-  font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;
-  letter-spacing:.5em;color:rgba(232,226,216,0.3);text-transform:uppercase;
-  margin-bottom:2rem;display:flex;align-items:center;justify-content:center;gap:1rem;
-}
-.hire-eyebrow::before,.hire-eyebrow::after{
-  content:'';width:28px;height:1px;background:rgba(232,226,216,0.2);
-}
-.hire-heading{
-  font-family:'Playfair Display',serif;font-style:italic;
-  font-size:clamp(2.8rem,6vw,6.5rem);font-weight:400;
-  line-height:1;color:#e8e2d8;margin-bottom:1.5rem;
-}
-.hire-sub{
-  font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:300;
-  line-height:1.9;color:rgba(232,226,216,0.4);
-  max-width:480px;margin:0 auto 3.5rem;
-}
-.hire-btn{
-  display:inline-flex;align-items:center;gap:1rem;
-  font-family:'Montserrat',sans-serif;font-size:9px;font-weight:400;
-  letter-spacing:.4em;color:#e8e2d8;text-decoration:none;text-transform:uppercase;
-  border:1px solid rgba(232,226,216,0.25);padding:1.1rem 3rem;
-  position:relative;overflow:hidden;transition:color .5s;
-}
-.hire-btn::before{
-  content:'';position:absolute;inset:0;
-  background:rgba(232,226,216,0.08);
-  transform:scaleX(0);transform-origin:left;
-  transition:transform .5s cubic-bezier(.23,1,.32,1);
-}
+/* ════════════════════════════
+   HIRE
+════════════════════════════ */
+#hire{position:relative;overflow:hidden;background:linear-gradient(to bottom,#0e0c0a,#130e0d);padding:10rem 3.5rem 8rem;text-align:center;border-top:1px solid rgba(232,226,216,0.05);}
+.hire-ghost{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Playfair Display',serif;font-weight:900;font-style:italic;font-size:clamp(7rem,20vw,26rem);color:rgba(232,226,216,0.025);white-space:nowrap;pointer-events:none;line-height:1;}
+.hire-eyebrow{font-size:8px;font-weight:400;letter-spacing:.5em;color:rgba(232,226,216,0.28);text-transform:uppercase;margin-bottom:2rem;display:flex;align-items:center;justify-content:center;gap:1rem;}
+.hire-eyebrow::before,.hire-eyebrow::after{content:'';width:24px;height:1px;background:rgba(232,226,216,0.18);}
+.hire-heading{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(2.8rem,6vw,6.5rem);font-weight:400;line-height:1;color:#e8e2d8;margin-bottom:1.5rem;}
+.hire-sub{font-size:.85rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.38);max-width:460px;margin:0 auto 3.5rem;}
+.hire-btn{display:inline-flex;align-items:center;gap:1rem;font-size:9px;font-weight:400;letter-spacing:.4em;color:#e8e2d8;text-decoration:none;text-transform:uppercase;border:1px solid rgba(232,226,216,0.22);padding:1.1rem 3rem;position:relative;overflow:hidden;transition:border-color .4s;}
+.hire-btn::before{content:'';position:absolute;inset:0;background:rgba(232,226,216,0.07);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.23,1,.32,1);}
 .hire-btn:hover::before{transform:scaleX(1);}
 .hire-btn:hover{border-color:rgba(232,226,216,0.5);}
 
-/* ═══════════════════════════════════════════
-   MARQUEE
-═══════════════════════════════════════════ */
-.marquee-wrap{
-  overflow:hidden;white-space:nowrap;
-  border-top:1px solid rgba(232,226,216,0.06);
-  border-bottom:1px solid rgba(232,226,216,0.06);
-  padding:.9rem 0;background:rgba(14,12,10,0.8);
-}
-.marquee-track{display:inline-block;animation:mqroll 32s linear infinite;}
-.marquee-track span{
-  font-family:'Montserrat',sans-serif;font-size:8px;font-weight:300;
-  letter-spacing:.45em;color:rgba(232,226,216,0.25);
-  text-transform:uppercase;padding:0 2rem;
-}
-.marquee-track .rs{color:rgba(180,50,35,0.6);padding:0 .5rem;letter-spacing:0;}
+/* MARQUEE */
+.mq-wrap{overflow:hidden;white-space:nowrap;border-top:1px solid rgba(232,226,216,0.05);border-bottom:1px solid rgba(232,226,216,0.05);padding:.85rem 0;background:rgba(14,12,10,0.8);}
+.mq-track{display:inline-block;animation:mqroll 32s linear infinite;}
+.mq-track span{font-size:8px;font-weight:300;letter-spacing:.45em;color:rgba(232,226,216,0.22);text-transform:uppercase;padding:0 2rem;}
+.mq-track .rs{color:rgba(180,50,35,0.55);padding:0 .4rem;letter-spacing:0;}
 @keyframes mqroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
-footer{
-  background:#0a0907;
-  padding:2.5rem 3rem;
-  display:grid;grid-template-columns:1fr auto 1fr;
-  align-items:center;
-  border-top:1px solid rgba(232,226,216,0.06);
-}
-.footer-left{
-  font-family:'Montserrat',sans-serif;font-size:.7rem;font-weight:300;
-  color:rgba(232,226,216,0.2);letter-spacing:.05em;line-height:1.7;
-}
+/* FOOTER */
+footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-top:1px solid rgba(232,226,216,0.05);}
+.footer-left{font-size:.7rem;font-weight:300;color:rgba(232,226,216,0.2);letter-spacing:.04em;line-height:1.8;}
 .footer-left a{color:rgba(232,226,216,0.2);text-decoration:none;transition:color .3s;}
 .footer-left a:hover{color:rgba(232,226,216,0.5);}
-.footer-mid{
-  font-family:'Playfair Display',serif;font-size:11px;
-  letter-spacing:.5em;color:rgba(232,226,216,0.2);text-transform:uppercase;
-}
-.footer-right{
-  display:flex;justify-content:flex-end;gap:1.8rem;
-}
-.footer-right a{
-  font-family:'Montserrat',sans-serif;font-size:.7rem;font-weight:300;
-  letter-spacing:.2em;color:rgba(232,226,216,0.2);text-decoration:none;
-  text-transform:uppercase;transition:color .3s;
-}
+.footer-mid{font-family:'Playfair Display',serif;font-size:11px;letter-spacing:.5em;color:rgba(232,226,216,0.18);text-transform:uppercase;}
+.footer-right{display:flex;justify-content:flex-end;gap:1.8rem;}
+.footer-right a{font-size:.7rem;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.2);text-decoration:none;text-transform:uppercase;transition:color .3s;}
 .footer-right a:hover{color:rgba(232,226,216,0.55);}
 
-/* ═══════════════════════════════════════════
-   SCROLL REVEAL & UTILITIES
-═══════════════════════════════════════════ */
-.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.23,1,.32,1),transform .9s cubic-bezier(.23,1,.32,1);}
+/* SCROLL REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.23,1,.32,1),transform .85s cubic-bezier(.23,1,.32,1);}
 .rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
 .rv.in{opacity:1;transform:translateY(0);}
-
-.cta-link{
-  display:inline-flex;align-items:center;gap:.7rem;margin-top:2rem;
-  font-family:'Montserrat',sans-serif;font-size:8.5px;font-weight:400;
-  letter-spacing:.35em;color:rgba(232,226,216,0.4);text-decoration:none;
-  text-transform:uppercase;transition:color .3s,gap .3s;
-}
-.cta-link .cl{width:22px;height:1px;background:rgba(232,226,216,0.3);transition:width .4s cubic-bezier(.23,1,.32,1);}
-.cta-link:hover{color:rgba(232,226,216,0.8);}
-.cta-link:hover .cl{width:40px;}
 </style>
 </head>
 <body>
@@ -628,27 +333,23 @@ footer{
 <div id="cur"></div>
 <div id="cur-ring"></div>
 
-<!-- ══════════════════════════════
-     NAV
-══════════════════════════════ -->
+<!-- NAV -->
 <nav id="nav">
   <div class="nav-wordmarks">
-    <span class="active-wm">Filmmaker</span>
+    <span class="hi">Filmmaker</span>
     <span>Photographer</span>
     <span>Writer</span>
   </div>
   <a href="#" class="nav-center">Abbasverse</a>
   <div class="nav-right">
-    <a href="photography.html">Photography</a>
-    <a href="film.html">Film</a>
-    <a href="writing.html">Writing</a>
+    <a href="#photography">Photography</a>
+    <a href="#filmmaker">Film</a>
+    <a href="#writer">Writing</a>
     <a href="#hire" class="nav-hire">Hire me</a>
   </div>
 </nav>
 
-<!-- ══════════════════════════════
-     HERO
-══════════════════════════════ -->
+<!-- ════ HERO ════ -->
 <section id="hero">
   <div class="hero-slides">
     <div class="hslide"></div>
@@ -662,16 +363,16 @@ footer{
   <div class="hero-body">
     <div class="hero-left">
       <div class="hero-geo">
-        <span>Germany</span><span class="sep">·</span>
-        <span>Pakistan</span><span class="sep">·</span>
-        <span class="yr">Since 2017</span>
+        <span class="geo-word">Germany</span>
+        <span class="geo-sep">·</span>
+        <span class="geo-word">Pakistan</span>
+        <span class="geo-sep">·</span>
+        <span class="geo-yr">Since 2017</span>
       </div>
-      <h1 class="hero-name">
-        Ghulam Abbas<br>
-        <em>Khan Soomro</em>
-      </h1>
+      <h1 class="hero-name">Ghulam Abbas<br><em>Khan Soomro</em></h1>
+      <p class="hero-abbasverse">Abbasverse</p>
       <div class="hero-disciplines">
-        <span>Filmmaker &nbsp;·&nbsp; Photographer &nbsp;·&nbsp; Writer &nbsp;·&nbsp; Media Artist</span>
+        <span class="disc-row">Filmmaker &nbsp;·&nbsp; Photographer &nbsp;·&nbsp; Writer &nbsp;·&nbsp; Media Artist</span>
         <span class="bio-line">Part-time actor. Part-time poet. Full-time storyteller.</span>
       </div>
     </div>
@@ -684,161 +385,226 @@ footer{
     <div class="hdot" data-i="4"></div>
     <div class="hdot" data-i="5"></div>
   </div>
-  <div class="hero-scroll">
-    <div class="hero-scroll-bar"></div>
-    <span>Scroll</span>
-  </div>
+  <div class="hero-scroll"><div class="hero-scroll-bar"></div><span>Scroll</span></div>
 </section>
 
-<!-- ══════════════════════════════
-     WHO AM I
-══════════════════════════════ -->
+<!-- ════ WHO AM I ════ -->
 <section id="who">
   <div class="who-grid">
-    <div class="rv">
-      <p class="who-label">Who is Abbas</p>
-      <h2 class="who-title">I tell stories.<br><em>Through every medium I can find.</em></h2>
-      <p class="who-text">I'm a filmmaker, photographer, writer, and media artist working between Germany and Pakistan. Since 2017 I've been building a body of work across short films, documentary, editorial photography, screenplays, and poetry. I shoot. I direct. I write. I can do all three for your project.</p>
+    <div class="who-text-col rv">
+      <p class="who-label">Who Is ABBAS?</p>
+      <h2 class="who-title">I tell stories.</h2>
+      <p class="who-subtitle">Through every medium I can find.</p>
+      <p class="who-body">I'm a filmmaker, photographer, writer, and media artist working between Germany and Pakistan. Since 2017 I've built a body of work across short films, documentary, editorial photography, screenplays, and poetry. I shoot. I direct. I write. I can do all three for your project.</p>
       <a href="#hire" class="cta-link"><span class="cl"></span>Work with me</a>
     </div>
     <div class="rv d1">
-      <div class="who-portrait">
-        <img src="assets/portrait.jpg" alt="Ghulam Abbas Khan Soomro" loading="lazy"
-          onerror="this.parentElement.style.background='rgba(232,226,216,0.05)';this.style.display='none'">
+      <!-- Add your portrait: assets/portrait.jpg -->
+      <div class="who-portrait-wrap">
+        <img src="assets/portrait.jpg" alt="Ghulam Abbas Khan Soomro — Filmmaker and Photographer based in Germany and Pakistan" loading="lazy" onerror="this.parentElement.style.minHeight='400px';this.parentElement.style.background='rgba(232,226,216,0.04)';this.style.display='none'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     PHOTOGRAPHER (LIGHT)
-══════════════════════════════ -->
+<!-- ════ PHOTOGRAPHER ════ -->
 <section id="photography">
   <div class="photo-header rv">
-    <div>
-      <div class="section-big-word">Photographer<em>?</em></div>
-    </div>
-    <div class="section-right-note">
-      I photograph what the eye almost misses — fashion, editorial, abstract, documentary, landscape. Shot across Germany and Pakistan. Available for commissions.
-    </div>
+    <div class="section-big-word">Photographer<em>?</em></div>
+    <div class="section-right-note">I photograph what the eye almost misses — fashion, editorial, abstract, documentary, landscape. Shot across Germany and Pakistan. Available for commissions.</div>
   </div>
 
+  <!-- Left: slideshow slides 1–12 | Right: slides 2, 4, 6 (three cells) -->
   <div class="photo-exhibition rv d1">
-    <!-- Left: slideshow column -->
-    <div class="ph-slide-col" style="min-height:65vh">
-      <div class="ph-slides" style="height:100%">
-        <div class="ph-slide on" style="background-image:url('assets/slide1.jpg')"></div>
-        <div class="ph-slide" style="background-image:url('assets/slide3.jpg')"></div>
-        <div class="ph-slide" style="background-image:url('assets/slide5.jpg')"></div>
-      </div>
+    <div class="ph-slide-col">
+      <div class="ph-slide on" style="background-image:url('assets/slide1.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide2.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide3.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide4.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide5.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide6.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide7.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide8.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide9.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide10.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide11.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide12.jpg')"></div>
     </div>
-    <!-- Right: static images -->
-    <div class="ph-big-col">
-      <div class="ph-cell"><img src="assets/slide2.jpg" alt="" loading="lazy"></div>
-      <div class="ph-cell"><img src="assets/slide4.jpg" alt="" loading="lazy"></div>
+    <div class="ph-right-col">
+      <div class="ph-cell"><img src="assets/slide2.jpg" alt="Photography by Ghulam Abbas — Germany" loading="lazy"></div>
+      <div class="ph-cell"><img src="assets/slide4.jpg" alt="Photography by Ghulam Abbas — Pakistan" loading="lazy"></div>
+      <div class="ph-cell"><img src="assets/slide6.jpg" alt="Editorial photography Germany" loading="lazy"></div>
     </div>
   </div>
 
-  <div class="ph-cta rv d2">
-    <a href="photography.html">View the full archive →</a>
-  </div>
+  <div class="ph-cta rv d2"><a href="photography.html">View the full archive →</a></div>
 </section>
 
-<!-- ══════════════════════════════
-     EXHIBITION STRIP (pure images)
-══════════════════════════════ -->
+<!-- ════ EXHIBITION STRIP ════ -->
 <section id="exhibition">
-  <div class="ex-panel rv">
-    <img src="assets/slide1.jpg" alt="" loading="lazy">
-    <span class="ex-panel-label">Editorial</span>
-  </div>
-  <div class="ex-panel rv d1">
-    <img src="assets/slide2.jpg" alt="" loading="lazy">
-    <span class="ex-panel-label">Portrait</span>
-  </div>
-  <div class="ex-panel rv d2">
-    <img src="assets/slide3.jpg" alt="" loading="lazy">
-    <span class="ex-panel-label">Abstract</span>
-  </div>
-  <div class="ex-panel rv d3">
-    <img src="assets/slide4.jpg" alt="" loading="lazy">
-    <span class="ex-panel-label">Documentary</span>
-  </div>
+  <div class="ex-panel"><img src="assets/slide1.jpg" alt="Editorial photography" loading="lazy"><span class="ex-label">Editorial</span></div>
+  <div class="ex-panel"><img src="assets/slide3.jpg" alt="Portrait photography" loading="lazy"><span class="ex-label">Portrait</span></div>
+  <div class="ex-panel"><img src="assets/slide5.jpg" alt="Abstract photography" loading="lazy"><span class="ex-label">Abstract</span></div>
+  <div class="ex-panel"><img src="assets/slide2.jpg" alt="Documentary photography Germany" loading="lazy"><span class="ex-label">Documentary</span></div>
 </section>
 
-<!-- ══════════════════════════════
-     FILMMAKER (DARK RED)
-══════════════════════════════ -->
+<!-- ════ FILMMAKER ════ -->
 <section id="filmmaker">
   <div class="rv">
     <div class="section-big-word">Filmmaker<em>?</em></div>
   </div>
-  <div class="film-split">
-    <!-- Film list -->
-    <div class="rv d1">
-      <p style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;letter-spacing:.4em;color:rgba(232,226,216,0.25);text-transform:uppercase;margin-bottom:1.5rem;">Selected projects</p>
-      <ul class="film-list-items">
-        <li class="fli" onclick="changeVideo('lZyTSFhRu18')">
-          <span class="fli-n">001</span>
-          <div class="fli-info">
-            <span class="fli-t">Rainy day</span>
-          </div>
-        </li>
-        <li class="fli" onclick="changeVideo('XxE0W0HoXGo')">
-          <span class="fli-n">002</span>
-          <div class="fli-info">
-            <span class="fli-t">Postcards from Luxembourg</span>
-          </div>
-        </li>
-        <li class="fli" onclick="changeVideo('Z59q-iAj2yU')">
-          <span class="fli-n">003</span>
-          <div class="fli-info">
-            <span class="fli-t">Cinematic Travel Log</span>
-          </div>
-        </li>
-        <li class="fli" onclick="changeVideo('yoC-CkckblY')">
-          <span class="fli-n">004</span>
-          <div class="fli-info">
-            <span class="fli-t">Christmas in Darmstadt</span>
-          </div>
-        </li>
-      </ul>
-      <a href="film.html" class="cta-link" style="color:rgba(180,50,35,0.6)"><span class="cl" style="background:rgba(180,50,35,0.4)"></span>Full filmography</a>
+
+  <!-- THE GIRL IN WHITE — festival highlight -->
+  <div class="giw-section rv d1">
+    <div class="giw-poster">
+      <!-- Add poster: assets/giw-poster.jpg -->
+      <img src="assets/giw-poster.jpg" alt="The Girl in White — Short Film by Ghulam Abbas Khan Soomro" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.giw-poster-ph').style.display='flex'">
+      <div class="giw-poster-ph" style="display:none;flex-direction:column;align-items:center;gap:.8rem;padding:2rem">
+        <span style="font-size:2rem;opacity:.2">◻</span>
+        <span>Add poster:<br>assets/giw-poster.jpg</span>
+      </div>
     </div>
-    <!-- Film embed / poster -->
+    <div class="giw-info">
+      <p class="giw-tag">Short Film · On the Festival Circuit</p>
+      <h3 class="giw-title">The Girl in White<em>Das Mädchen in Weiß</em></h3>
+      <div class="giw-detail">
+        <span>My Role</span>
+        Director &nbsp;·&nbsp; Cinematographer &nbsp;·&nbsp; Editor &nbsp;·&nbsp; Co-Writer
+      </div>
+      <div class="giw-detail" style="margin-top:1.2rem">
+        <span>Language &amp; Genre</span>
+        English / German &nbsp;·&nbsp; Drama
+      </div>
+      <div class="giw-detail" style="margin-top:1.2rem">
+        <span>Festival Selections</span>
+        <span style="display:inline-flex;align-items:center;gap:.5rem;margin-top:.4rem;font-style:normal;font-size:.82rem;color:rgba(232,226,216,0.55);">
+          ✦ Dieburger Filmabend — Selected to screen (1 of 6 films)
+        </span><br>
+        <span style="display:inline-flex;align-items:center;gap:.5rem;margin-top:.3rem;font-style:normal;font-size:.82rem;color:rgba(232,226,216,0.55);">
+          ✦ Lift-Off Global Network Film Festival — Official Selection
+        </span>
+      </div>
+      <div class="giw-detail" style="margin-top:1.2rem">
+        <span>Availability</span>
+        Currently on the festival circuit. Not available online.
+      </div>
+    </div>
+  </div>
+
+  <!-- Selected Projects list + interactive player -->
+  <div class="film-split">
+    <div class="rv d1">
+      <p class="film-section-label">Selected projects</p>
+      <ul class="film-list-items" id="filmList">
+
+        <li class="fli" onclick="playFilm('wWwEkPcEDZE')">
+          <span class="fli-n">001</span>
+          <div style="display:flex;align-items:center;gap:1rem;width:100%">
+            <img src="https://img.youtube.com/vi/wWwEkPcEDZE/mqdefault.jpg" alt="FASTDA Rollout Video thumbnail" style="width:80px;height:45px;object-fit:cover;flex-shrink:0;border:1px solid rgba(180,50,35,0.2);" loading="lazy">
+            <div>
+              <span class="fli-cat">Director</span>
+              <span class="fli-t">FASTDA Racing 26 — Rollout Video</span>
+              <div class="fli-meta"><span>2024</span><span>Documentary</span></div>
+            </div>
+          </div>
+        </li>
+
+        <li class="fli" onclick="playFilm('_oL8oBuGNEw')">
+          <span class="fli-n">002</span>
+          <div>
+            <span class="fli-cat">Director · BTS</span>
+            <span class="fli-t">Documentary BTS — "Tumharey Husn Kay Naam"</span>
+            <div class="fli-meta"><span>2023</span><span>Documentary</span></div>
+          </div>
+        </li>
+
+        <li class="fli" onclick="playFilm('9kepTbUXK88')">
+          <span class="fli-n">003</span>
+          <div>
+            <span class="fli-cat">Writer · Director · Editor</span>
+            <span class="fli-t">Red Sock — Short Film</span>
+            <div class="fli-meta"><span>Short Film</span></div>
+          </div>
+        </li>
+
+        <li class="fli" onclick="playFilm('ETllZwfA-Cs')">
+          <span class="fli-n">004</span>
+          <div>
+            <span class="fli-cat">Writer · Director · Editor</span>
+            <span class="fli-t">Qaid — A Quarantine Short Film</span>
+            <div class="fli-meta"><span>Short Film</span></div>
+          </div>
+        </li>
+
+        <li class="fli" onclick="playFilm('kG-YCHPtKNg')">
+          <span class="fli-n">005</span>
+          <div>
+            <span class="fli-cat">Production Head</span>
+            <span class="fli-t">Tumharey Husn Kay Naam</span>
+            <div class="fli-meta"><span>Music Video</span></div>
+          </div>
+        </li>
+
+        <li class="fli" onclick="playFilm('8frYgvc6Jp0')">
+          <span class="fli-n">006</span>
+          <div>
+            <span class="fli-cat">Assistant Director</span>
+            <span class="fli-t">Naina Ki Sharafat — Web Series</span>
+            <div class="fli-meta"><span>Web Series</span></div>
+          </div>
+        </li>
+
+        <li class="fli" onclick="playFilm('fxCVTFPgzyk')">
+          <span class="fli-n">007</span>
+          <div>
+            <span class="fli-cat">Assistant Director</span>
+            <span class="fli-t">Hangor — Film</span>
+            <div class="fli-meta"><span>Feature Film</span></div>
+          </div>
+        </li>
+
+        <li class="fli" style="cursor:default">
+          <span class="fli-n">008</span>
+          <div>
+            <span class="fli-cat">Assistant Director</span>
+            <span class="fli-t">Fraud — Serial</span>
+            <div class="fli-meta"><span>TV Serial</span></div>
+          </div>
+        </li>
+
+      </ul>
+      <a href="https://www.imdb.com/name/nm18201027" target="_blank" rel="noopener" class="cta-link imdb-link" style="color:rgba(245,197,24,0.7);margin-top:1.5rem;border:1px solid rgba(245,197,24,0.2);padding:.6rem 1rem;display:inline-flex;align-items:center;gap:.8rem;"><span style="font-size:11px;font-weight:700;letter-spacing:.1em;color:rgba(245,197,24,0.85);">IMDb</span><span style="font-size:8px;letter-spacing:.3em;color:rgba(245,197,24,0.55);text-transform:uppercase;">nm18201027 — View full profile</span></a>
+    </div>
+
     <div class="rv d2">
-      <p class="film-embed-note">Interactive Player</p>
+      <p class="film-embed-note">Click any project to watch</p>
       <div class="yt-embed" id="videoPlayer">
-        <!-- Default video embed (replace W9m8bYkZf5g with your main Youtube video ID) -->
-        <iframe src="https://www.youtube.com/embed/lZyTSFhRu18" allowfullscreen></iframe>
+        <iframe id="mainIframe" src="https://www.youtube.com/embed/wWwEkPcEDZE" allowfullscreen title="FASTDA Racing 26 Rollout Video — Ghulam Abbas Khan Soomro"></iframe>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     CINEMATOGRAPHER / EDITOR
-══════════════════════════════ -->
+<!-- ════ CINEMATOGRAPHER / EDITOR ════ -->
 <section id="cine">
   <div class="rv">
-    <div class="section-big-word">Cinematographer<br><em>& Editor?</em></div>
-    <p style="font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.35);max-width:500px;margin-top:1.5rem;">
-      Travel films, aesthetic video essays, visual logs — the work that shows what I see and how I move through the world with a camera.
-    </p>
+    <div class="section-big-word">Cinematographer<br><em>&amp; Editor?</em></div>
+    <p class="cine-desc">Travel films, aesthetic video essays, visual logs — work that shows what I see and how I move through the world with a camera.</p>
   </div>
   <div class="cine-grid rv d1">
-    <div class="cine-cell">
-      <iframe src="https://www.youtube.com/embed/BlU-lymjzzM" allowfullscreen></iframe>
-    </div>
-    <div class="cine-cell">
-      <iframe src="https://www.youtube.com/embed/PzuvSq_ANzk" allowfullscreen></iframe>
-    </div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/lZyTSFhRu18" allowfullscreen title="Cinematography reel — Ghulam Abbas Khan Soomro" loading="lazy"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/XxE0W0HoXGo" allowfullscreen title="Travel film Germany" loading="lazy"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/Z59q-iAj2yU" allowfullscreen title="Cinematic travel log" loading="lazy"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/yoC-CkckblY" allowfullscreen title="Christmas in Darmstadt" loading="lazy"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/BlU-lymjzzM" allowfullscreen title="Cinematography edit" loading="lazy"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/PzuvSq_ANzk" allowfullscreen title="Video essay" loading="lazy"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/QFHCFqL9U1E" allowfullscreen title="Aesthetic reel" loading="lazy"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/BW6G0BniL3s" allowfullscreen title="Short film edit" loading="lazy"></iframe></div>
+    <div class="cine-cell" style="grid-column:span 2"><iframe src="https://www.youtube.com/embed/ZuJ8M4TDLNU" allowfullscreen title="Cinematic reel" loading="lazy"></iframe></div>
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     WRITER (WARM DARK)
-══════════════════════════════ -->
+<!-- ════ WRITER ════ -->
 <section id="writer">
   <div class="rv">
     <div class="section-big-word">Writer<em>?</em></div>
@@ -846,6 +612,7 @@ footer{
   <div class="writer-grid">
     <div class="rv d1">
       <p class="poetry-label">Poetry · Verse</p>
+      <!-- PASTE YOUR POEM HERE — it will display exactly as typed -->
       <div class="poetry-box">I carry two countries in one passport.
 Two languages in one silence.
 Three cameras and a notebook
@@ -854,139 +621,121 @@ that has never learned to sleep.
 The frame does not lie.
 It only chooses what to leave out.
 
-— Ghulam Abbas Khan Soomro</div>
+— paste your poem here —</div>
     </div>
     <div class="rv d2">
-      <p style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;letter-spacing:.4em;color:rgba(200,170,100,0.45);text-transform:uppercase;margin-bottom:1.5rem;">Screenwriting · Essays</p>
-      <p class="writing-note">Screenplays, poetry, essays — writing is where every project begins. Festival-selected short film scripts. Hire work: scripts, content, books. I write for the same reason I shoot: because some things can only be said once, and they need to be said right.</p>
-      <a href="writing.html" class="cta-link" style="color:rgba(200,170,100,0.5)"><span class="cl" style="background:rgba(200,170,100,0.3)"></span>Read the work</a>
+      <p style="font-size:8px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.42);text-transform:uppercase;margin-bottom:1.2rem;">Screenwriting · Essays</p>
+      <p class="writing-note">Screenplays, poetry, essays — writing is where every project begins. Festival-selected short film scripts. Available for hire: scripts, content, books. I write for the same reason I shoot — because some things can only be said once, and they need to be said right.</p>
+      <a href="writing.html" class="cta-link" style="color:rgba(200,170,95,0.45)"><span class="cl" style="background:rgba(200,170,95,0.25)"></span>Read the work</a>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     ACTOR
-══════════════════════════════ -->
+<!-- ════ ACTOR ════ -->
 <section id="actor">
   <div class="rv">
     <div class="section-big-word">Actor<em>?</em></div>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(232,226,216,0.28);margin-top:.7rem;max-width:460px;line-height:1.7;">Occasionally. But always with intention.</p>
   </div>
   <div class="actor-grid">
     <div class="rv d1">
-      <p style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;letter-spacing:.4em;color:rgba(232,226,216,0.3);text-transform:uppercase;margin-bottom:1.5rem;">On-Screen Records</p>
+      <!-- REPLACE with your actual acting credits -->
       <ul class="actor-projects">
-        <li class="ap">
-          <div class="ap-dot"></div>
-          <div>
-            <span class="ap-title">Commercial Campaign Lead</span>
-            <span class="ap-meta">Germany // 2025</span>
-          </div>
-        </li>
-        <li class="ap">
-          <div class="ap-dot"></div>
-          <div>
-            <span class="ap-title">Indie Drama Short Film</span>
-            <span class="ap-meta">Pakistan // 2024</span>
-          </div>
-        </li>
+        <li class="ap"><div class="ap-dot"></div><div><span class="ap-title">Add your acting project here</span><span class="ap-meta">Role · Year · Director</span></div></li>
+        <li class="ap"><div class="ap-dot"></div><div><span class="ap-title">Add your acting project here</span><span class="ap-meta">Role · Year · Director</span></div></li>
+        <li class="ap"><div class="ap-dot"></div><div><span class="ap-title">Add your acting project here</span><span class="ap-meta">Role · Year · Director</span></div></li>
       </ul>
     </div>
     <div class="rv d2">
-      <p style="font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.4);">
-        Stepping in front of the lens provides a profound understanding of performance mechanics. Acting refines my perspective as a director, letting me speak the language of actors on set fluently.
-      </p>
+      <div class="yt-embed" style="border-color:rgba(232,226,216,0.06)"><span>Add acting reel or screenshot here</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     HIRE / CONTACT
-══════════════════════════════ -->
-<section id="hire">
-  <div class="hire-ghost-text">COMMISSION</div>
-  <div class="hire-eyebrow">Aesthetic Projects</div>
-  <h2 class="hire-heading">Let's create something<br>that lasts.</h2>
-  <p class="hire-sub">Available for global assignments, screenplays, editorial curation, and visual production.</p>
-  <a href="mailto:ghulam.soomro@stud.h-da.de" class="hire-btn"><span>Initiate Project →</span></a>
-</section>
-
-<!-- ══════════════════════════════
-     MARQUEE
-══════════════════════════════ -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <span>Filmmaker</span><span class="rs">·</span>
-    <span>Photographer</span><span class="rs">·</span>
-    <span>Writer</span><span class="rs">·</span>
-    <span>Media Artist</span><span class="rs">·</span>
-    <span>Germany</span><span class="rs">·</span>
-    <span>Pakistan</span><span class="rs">·</span>
-    <span>Filmmaker</span><span class="rs">·</span>
-    <span>Photographer</span><span class="rs">·</span>
-    <span>Writer</span><span class="rs">·</span>
+<!-- MARQUEE -->
+<div class="mq-wrap">
+  <div class="mq-track">
+    <span>Filmmaker</span><span class="rs">·</span><span>Photographer</span><span class="rs">·</span><span>Screenwriter</span><span class="rs">·</span><span>Poet</span><span class="rs">·</span><span>Media Artist</span><span class="rs">·</span><span>Actor</span><span class="rs">·</span><span>Germany</span><span class="rs">·</span><span>Pakistan</span><span class="rs">·</span><span>Available for hire</span><span class="rs">·</span><span>IMDb</span><span class="rs">·</span><span>Since 2017</span><span class="rs">·</span>
+    <span>Filmmaker</span><span class="rs">·</span><span>Photographer</span><span class="rs">·</span><span>Screenwriter</span><span class="rs">·</span><span>Poet</span><span class="rs">·</span><span>Media Artist</span><span class="rs">·</span><span>Actor</span><span class="rs">·</span><span>Germany</span><span class="rs">·</span><span>Pakistan</span><span class="rs">·</span><span>Available for hire</span><span class="rs">·</span><span>IMDb</span><span class="rs">·</span><span>Since 2017</span><span class="rs">·</span>
   </div>
 </div>
 
-<!-- ══════════════════════════════
-     FOOTER
-══════════════════════════════ -->
+<!-- ════ HIRE ════ -->
+<section id="hire">
+  <div class="hire-ghost">Collaborate</div>
+  <p class="hire-eyebrow rv">Work with me</p>
+  <h2 class="hire-heading rv d1">Let's make something real.</h2>
+  <p class="hire-sub rv d2">Photographer, filmmaker, writer, creative director. Based between Germany and Pakistan. Open to commissions, collaborations, long-term projects, one-off shoots.</p>
+
+  <div class="rv d2" style="display:flex;flex-direction:column;align-items:center;gap:1rem;margin-bottom:3rem;">
+    <a href="mailto:abbas82abx@gmail.com" class="hire-btn" style="width:auto;min-width:320px;justify-content:center;">
+      <span style="opacity:.5;font-size:8px">✉</span>&nbsp; abbas82abx@gmail.com
+    </a>
+    <a href="tel:+4915755226405" class="hire-btn" style="width:auto;min-width:320px;justify-content:center;border-color:rgba(232,226,216,0.14);">
+      <span style="opacity:.5;font-size:8px">✆</span>&nbsp; +49 157 5522 6405
+    </a>
+    <a href="https://www.instagram.com/ghulamabbasphotography" target="_blank" rel="noopener" class="hire-btn" style="width:auto;min-width:320px;justify-content:center;border-color:rgba(232,226,216,0.14);">
+      <span style="opacity:.5;font-size:8px">◎</span>&nbsp; @ghulamabbasphotography
+    </a>
+  </div>
+
+  <div class="rv d3" style="display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem;">
+    <a href="https://www.imdb.com/name/nm18201027" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.8rem;background:rgba(245,197,24,0.08);border:1px solid rgba(245,197,24,0.3);padding:.8rem 2rem;text-decoration:none;transition:background .3s;" onmouseover="this.style.background='rgba(245,197,24,0.14)'" onmouseout="this.style.background='rgba(245,197,24,0.08)'">
+      <span style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:rgba(245,197,24,0.9);letter-spacing:.05em;">IMDb</span>
+      <span style="font-size:8px;font-weight:400;letter-spacing:.35em;color:rgba(245,197,24,0.55);text-transform:uppercase;">Ghulam Abbas Khan Soomro &nbsp;·&nbsp; nm18201027</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-left">
-    &copy; 2026 Ghulam Abbas Khan Soomro.<br>
-    All Rights Reserved.
+    <div>&copy; 2024 Ghulam Abbas Khan Soomro</div>
+    <div><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="impressum.html">Impressum</a></div>
+    <div style="margin-top:.3rem"><a href="mailto:abbas82abx@gmail.com">abbas82abx@gmail.com</a></div>
   </div>
   <div class="footer-mid">Abbasverse</div>
   <div class="footer-right">
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-    <a href="https://imdb.com" target="_blank">IMDb</a>
-    <a href="https://vimeo.com" target="_blank">Vimeo</a>
+    <a href="https://www.instagram.com/ghulamabbasphotography" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.imdb.com/name/nm18201027" target="_blank" rel="noopener">IMDb</a>
+    <a href="https://youtube.com/YOURCHANNEL" target="_blank" rel="noopener">YouTube</a>
   </div>
 </footer>
 
 <script>
-// CUSTOM INTERACTIVE CURSOR
+// Cursor
 const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function updateRing(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(updateRing);})();
-
-document.querySelectorAll('a,button,.fli,.ph-cell,.ex-panel').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{document.body.classList.add('hovering');});
-  el.addEventListener('mouseleave',()=>{document.body.classList.remove('hovering');});
+(function t(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(t);})();
+document.querySelectorAll('a,button,.fli,.ph-cell,.ex-panel,.ap').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hovering'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hovering'));
 });
 
-// HERO BACKGROUND INTERPOLATION
-const slides=document.querySelectorAll('.hslide'),dots=document.querySelectorAll('.hdot');
-let activeIndex=0;
-setInterval(()=>{
-  dots[activeIndex].classList.remove('on');
-  activeIndex=(activeIndex+1)%slides.length;
-  dots[activeIndex].classList.add('on');
-},6000);
+// Hero dots
+const hdots=document.querySelectorAll('.hdot');
+let hi=0;
+setInterval(()=>{hdots[hi].classList.remove('on');hi=(hi+1)%6;hdots[hi].classList.add('on');},6000);
+hdots.forEach(d=>d.addEventListener('click',()=>{hdots[hi].classList.remove('on');hi=+d.dataset.i;hdots[hi].classList.add('on');}));
 
-// PHOTO SIDEBAR CYCLE
+// Photography slideshow (slides 1–12)
 const phSlides=document.querySelectorAll('.ph-slide');
-let phIndex=0;
-setInterval(()=>{
-  phSlides[phIndex].classList.remove('on');
-  phIndex=(phIndex+1)%phSlides.length;
-  phSlides[phIndex].classList.add('on');
-},5000);
+let pi=0;
+setInterval(()=>{phSlides[pi].classList.remove('on');pi=(pi+1)%phSlides.length;phSlides[pi].classList.add('on');},3500);
 
-// YT DYNAMIC VIDEO SWITCHER
-function changeVideo(id){
-  const container = document.getElementById('videoPlayer');
-  container.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1" allowfullscreen></iframe>`;
+// Film player — click item to load video
+function playFilm(id){
+  document.getElementById('mainIframe').src='https://www.youtube.com/embed/'+id+'?autoplay=1';
+  document.getElementById('videoPlayer').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-// SCROLL INTERSECTIONS Observer
-const observer=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});
-},{threshold:.08});
-document.querySelectorAll('.rv').forEach(el=>observer.observe(el));
+// Nav
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('solid',scrollY>55));
 
-// SOLID HEADER EFFECT
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('solid',scrollY>50);});
+// Scroll reveal
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.07});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
