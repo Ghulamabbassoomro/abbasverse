@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghulam Abbas Khan Soomro — Filmography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#0d0505;color:#e8e2d8;
+  font-family:'Montserrat',sans-serif;font-weight:300;
+  overflow-x:hidden;cursor:none;
+}
+#cur,#cur-ring{position:fixed;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+#cur{width:8px;height:8px;background:#e8e2d8;mix-blend-mode:difference;}
+#cur-ring{width:36px;height:36px;border:1px solid rgba(232,226,216,0.3);transition:width .35s,height .35s,border-color .35s;}
+body.hovering #cur-ring{width:60px;height:60px;border-color:rgba(232,226,216,0.6);}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:800;
+  display:flex;justify-content:space-between;align-items:center;padding:1.8rem 3rem;
+  background:rgba(13,5,5,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,226,216,0.07);
+}
+.logo{font-family:'Playfair Display',serif;font-size:14px;color:#e8e2d8;text-decoration:none;letter-spacing:.3em;text-transform:uppercase;}
+
+header{padding:10rem 3rem 4rem;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,6rem);font-weight:400;line-height:1.1;}
+h1 em{font-style:italic;color:rgba(180,50,35,0.6);}
+
+.film-showcase{padding:0 3rem 10rem;max-width:1100px;}
+.film-item{margin-bottom:8rem;border-bottom:1px solid rgba(180,50,35,0.15);padding-bottom:5rem;}
+.film-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:400;margin-bottom:1rem;}
+.film-meta{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:rgba(232,226,216,0.4);margin-bottom:2rem;}
+.film-player{width:100%;aspect-ratio:16/9;background:rgba(255,255,255,0.01);border:1px solid rgba(180,50,35,0.2);margin-bottom:2rem;}
+.film-player iframe{width:100%;height:100%;border:none;}
+.film-text{font-size:.9rem;line-height:1.9;color:rgba(232,226,216,0.5);max-width:650px;}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<nav>
+  <a href="index.html" class="logo">Abbasverse</a>
+  <a href="index.html" style="font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;color:rgba(232,226,216,0.5);">Back to gateway</a>
+</nav>
+
+<header>
+  <h1>Moving<br><em>Images</em></h1>
+</header>
+
+<div class="film-showcase">
+  <div class="film-item">
+    <h2 class="film-title">The Girl In White</h2>
+    <div class="film-meta">Director · Writer · DP &nbsp;//&nbsp; 2026 Film Release</div>
+    <div class="film-player">
+      <iframe src="https://www.youtube.com/embed/W9m8bYkZf5g" allowfullscreen></iframe>
+    </div>
+    <p class="film-text">A suspenseful, highly aesthetic cinematic study diving deep into architectural spaces and tense character dynamics. Filmed with clinical framing and specialized anamorphic focal ranges to paint an evocative aesthetic portrait.</p>
+  </div>
+
+  <div class="film-item">
+    <h2 class="film-title">FaSTDa Racing Rollout</h2>
+    <div class="film-meta">Lead Editor & Technical Lead &nbsp;//&nbsp; 2026 Production Record</div>
+    <div class="film-player">
+      <iframe src="https://www.youtube.com/embed/917Jb_OlyP0" allowfullscreen></iframe>
+    </div>
+    <p class="film-text">High-speed documentary editing compiling dynamic machine movement, team coordination, and raw competitive racing action. Focused on clean audio transitions, structural visual logic, and continuous narrative flow.</p>
+  </div>
+</div>
+
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function updateRing(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(updateRing);})();
+
+document.querySelectorAll('a').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{document.body.classList.add('hovering');});
+  el.addEventListener('mouseleave',()=>{document.body.classList.remove('hovering');});
+});
+</script>
+</body>
+</html>
