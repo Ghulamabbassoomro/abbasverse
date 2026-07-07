@@ -1,155 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ghulam Abbas Khan Soomro — Photography</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-body{
-  background:#0e0c0a;color:#e8e2d8;
-  font-family:'Montserrat',sans-serif;font-weight:300;
-  overflow-x:hidden;cursor:none;
-}
-#cur,#cur-ring{position:fixed;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
-#cur{width:8px;height:8px;background:#e8e2d8;mix-blend-mode:difference;}
-#cur-ring{width:36px;height:36px;border:1px solid rgba(232,226,216,0.3);transition:width .35s,height .35s,border-color .35s;}
-body.hovering #cur-ring{width:60px;height:60px;border-color:rgba(232,226,216,0.6);}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghulam Abbas Khan Soomro — Photography Exhibition</title>
+  <meta name="description" content="Selected photography archives of Ghulam Abbas Khan Soomro. Curated fashion, editorial, commercial and documentary works across Germany & Pakistan.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
-/* NAVIGATION */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:800;
-  display:flex;justify-content:space-between;align-items:center;padding:1.8rem 3rem;
-  background:rgba(14,12,10,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,226,216,0.07);
-}
-.logo{font-family:'Playfair Display',serif;font-size:14px;color:#e8e2d8;text-decoration:none;letter-spacing:.3em;text-transform:uppercase;}
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            brand: {
+              charcoal: '#0e0c0a',
+              cream: '#e8e2d8',
+              accent: '#b43223',
+              darkGray: '#1c1917',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-/* HEADER */
-header{padding:10rem 3rem 4rem;max-width:1200px;}
-h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,6rem);font-weight:400;line-height:1.1;}
-h1 em{font-style:italic;color:rgba(232,226,216,0.45);}
-p.desc{max-width:480px;font-size:.85rem;line-height:1.9;color:rgba(232,226,216,0.5);margin-top:1.5rem;}
+  <style>
+    /* Custom premium scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0e0c0a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(232, 226, 216, 0.2);
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(232, 226, 216, 0.5);
+    }
 
-/* PHOTO FILTERING TABS */
-.filter-tabs{display:flex;gap:2rem;padding:0 3rem;margin-bottom:3rem;}
-.tab{font-size:9px;text-transform:uppercase;letter-spacing:.3em;color:rgba(232,226,216,0.3);cursor:pointer;transition:color .3s;}
-.tab.active,.tab:hover{color:#e8e2d8;}
+    /* Soft scroll reveal transition animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-/* MASONRY GALLERY */
-.gallery-grid{
-  display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
-  gap:20px;padding:0 3rem 8rem;
-}
-.photo-card{
-  position:relative;overflow:hidden;background:#141210;
-  border:1px solid rgba(232,226,216,0.05);cursor:pointer;
-}
-.photo-card img{width:100%;display:block;transition:transform .8s cubic-bezier(.23,1,.32,1);filter:grayscale(10%);}
-.photo-card:hover img{transform:scale(1.03);filter:grayscale(0%);}
-.photo-card .info{
-  position:absolute;bottom:0;left:0;right:0;padding:1.5rem;
-  background:linear-gradient(to top, #0e0c0a, transparent);
-  opacity:0;transition:opacity .4s;
-}
-.photo-card:hover .info{opacity:1;}
-.photo-card .info span{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:rgba(232,226,216,0.6);}
-
-/* MODAL VIEWER */
-#modal{
-  position:fixed;inset:0;background:rgba(14,12,10,0.95);z-index:1000;
-  display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .4s;
-}
-#modal img{max-width:90%;max-height:85vh;object-fit:contain;border:1px solid rgba(232,226,216,0.1);}
-#modal.active{display:flex;opacity:1;}
-#modal-close{position:absolute;top:2rem;right:3rem;font-size:10px;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;}
-</style>
+    /* Prevent cursor flash */
+    .custom-cursor {
+      mix-blend-mode: difference;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-brand-charcoal text-brand-cream overflow-x-hidden selection:bg-brand-cream selection:text-brand-charcoal antialiased">
 
-<div id="cur"></div>
-<div id="cur-ring"></div>
+<!-- Custom Desktop Pointer -->
+<div id="cursor-dot" class="custom-cursor fixed w-2 h-2 bg-brand-cream rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 hidden md:block"></div>
+<div id="cursor-ring" class="custom-cursor fixed w-10 h-10 border border-brand-cream/30 rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 transition-[width,height,border-color] duration-300 hidden md:block"></div>
 
-<nav>
-  <a href="index.html" class="logo">Abbasverse</a>
-  <div style="display:flex;gap:2rem;">
-    <a href="index.html" style="font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;color:rgba(232,226,216,0.5);">Back to gateway</a>
+<!-- Film Grain Overlay -->
+<div class="fixed inset-0 pointer-events-none z-40 opacity-[0.035] bg-[radial-gradient(rgba(232,226,216,0.15)_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+<!-- Premium Navigation Header -->
+<nav class="fixed top-0 left-0 w-full z-40 bg-brand-charcoal/80 backdrop-blur-md border-b border-brand-cream/5 transition-all duration-300" id="main-nav">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+    <a href="index.html" class="font-serif text-sm tracking-[0.35em] uppercase text-brand-cream/80 hover:text-brand-cream transition-colors duration-300">Abbasverse</a>
+    <div class="flex items-center gap-8">
+      <a href="index.html" class="font-sans text-[10px] tracking-[0.25em] uppercase text-brand-cream/60 hover:text-brand-cream transition-colors duration-300">Back to gateway</a>
+      <a href="index.html#hire" class="font-sans text-[10px] tracking-[0.25em] uppercase border border-brand-cream/20 px-4 py-2 hover:border-brand-cream/60 transition-colors duration-300">Get in touch</a>
+    </div>
   </div>
 </nav>
 
-<header>
-  <h1>Selected<br><em>Photography</em></h1>
-  <p class="desc">A gallery of deliberate frames tracking fashion editorial textures, abstract geometric divides, and industrial documentary records across Germany and Pakistan.</p>
+<!-- Main Header / Exhibition Intro -->
+<header class="pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
+  <div class="reveal">
+    <span class="font-sans text-[10px] tracking-[0.4em] uppercase text-brand-cream/40 block mb-3">Online Exhibition Portfolio</span>
+    <h1 class="font-serif text-5xl md:text-8xl font-normal leading-tight tracking-tight text-brand-cream/90">
+      Selected<br><span class="italic text-brand-cream/50">Photographs</span>
+    </h1>
+    <p class="font-sans font-light text-xs md:text-sm text-brand-cream/55 leading-relaxed max-w-lg mt-6">
+      A deliberate curated log organizing visual archives into thematic geometric lines. Formed of fashion, editorial compositions, industrial records, and unposed captures shot on location in Germany and Pakistan.
+    </p>
+  </div>
 </header>
 
-<div class="filter-tabs">
-  <span class="tab active" onclick="filterGallery('all')">All Frames</span>
-  <span class="tab" onclick="filterGallery('editorial')">Editorial</span>
-  <span class="tab" onclick="filterGallery('portrait')">Portraits</span>
-  <span class="tab" onclick="filterGallery('abstract')">Abstracts</span>
+<main class="max-w-7xl mx-auto px-6 md:px-12 pb-24 space-y-32">
+
+  <!-- SECTION 1: FASHION & EDITORIAL -->
+  <section class="space-y-12">
+    <div class="border-b border-brand-cream/10 pb-4 reveal">
+      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Theme 01</span>
+      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Fashion & Editorial</h2>
+    </div>
+
+    <!-- Group A: 3 Vertical Pictures -->
+    <div class="space-y-4 reveal">
+      <span class="font-sans text-[9px] tracking-[0.2em] uppercase text-brand-cream/30">Layout Phase A — Vertical Frames</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Vertical Image 1 -->
+        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[2/3]" onclick="openLightbox('assets/slide1.jpg', 'Editorial study — Phase I')">
+          <img src="assets/slide1.jpg" alt="Editorial Frame 1" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x900/1c1917/e8e2d8?text=Editorial+V1'">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 01 — Visual Texture</span>
+          </div>
+        </div>
+        <!-- Vertical Image 2 -->
+        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[2/3]" onclick="openLightbox('assets/slide2.jpg', 'Portrait concept — Darmstadt')">
+          <img src="assets/slide2.jpg" alt="Editorial Frame 2" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x900/1c1917/e8e2d8?text=Editorial+V2'">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 02 — High Contrast</span>
+          </div>
+        </div>
+        <!-- Vertical Image 3 -->
+        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[2/3]" onclick="openLightbox('assets/slide3.jpg', 'Geometric study — Structural form')">
+          <img src="assets/slide3.jpg" alt="Editorial Frame 3" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x900/1c1917/e8e2d8?text=Editorial+V3'">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 03 — Shadow Lines</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group B: Mix of 3 Vertical & Horizontal Pictures -->
+    <div class="space-y-4 reveal">
+      <span class="font-sans text-[9px] tracking-[0.2em] uppercase text-brand-cream/30">Layout Phase B — Dynamic Mix</span>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- Horizontal Image (Widescreen layout) -->
+        <div class="md:col-span-8 relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/10]" onclick="openLightbox('assets/slide4.jpg', 'Industrial symmetry narrative')">
+          <img src="assets/slide4.jpg" alt="Horizontal Mix Frame" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/1200x750/1c1917/e8e2d8?text=Horizontal+Mix'">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 04 — Asymmetric Space</span>
+          </div>
+        </div>
+        <!-- Vertical Image Side-A -->
+        <div class="md:col-span-4 relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[2/3]" onclick="openLightbox('assets/slide5.jpg', 'Studio composition with contrast lighting')">
+          <img src="assets/slide5.jpg" alt="Vertical Mix Frame 1" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x900/1c1917/e8e2d8?text=Vertical+Mix+1'">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 05 — Soft Focus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group C: 3 Horizontal Pictures -->
+    <div class="space-y-4 reveal">
+      <span class="font-sans text-[9px] tracking-[0.2em] uppercase text-brand-cream/30">Layout Phase C — Landscape Frames</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Horizontal Image 1 -->
+        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/10]" onclick="openLightbox('assets/slide6.jpg', 'Cinema mood study')">
+          <img src="assets/slide6.jpg" alt="Horizontal Frame 1" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/900x600/1c1917/e8e2d8?text=Horizontal+1'">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 06 — Cinematic Gaze</span>
+          </div>
+        </div>
+        <!-- Horizontal Image 2 -->
+        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/10]" onclick="openLightbox('assets/slide1.jpg', 'Atmosphere & dust reflection')">
+          <img src="assets/slide1.jpg" alt="Horizontal Frame 2" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/900x600/1c1917/e8e2d8?text=Horizontal+2'">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 07 — Linear Perspective</span>
+          </div>
+        </div>
+        <!-- Horizontal Image 3 -->
+        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/10]" onclick="openLightbox('assets/slide3.jpg', 'Widescreen depth study')">
+          <img src="assets/slide3.jpg" alt="Horizontal Frame 3" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/900x600/1c1917/e8e2d8?text=Horizontal+3'">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 08 — Structural Depth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: COMMERCIAL PROJECTS -->
+  <section class="space-y-12">
+    <div class="border-b border-brand-cream/10 pb-4 reveal">
+      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Theme 02</span>
+      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Commercial Projects</h2>
+    </div>
+
+    <!-- 9 Photo Grid (Balanced structure) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+      <!-- Item 1 -->
+      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/slide2.jpg', 'Brand Editorial - Commission 01')">
+        <img src="assets/slide2.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Commercial+1'">
+        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
+          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Berlin Campaign</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 09 // Outer Texture</span>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/slide4.jpg', 'Product Lookbook - Commission 02')">
+        <img src="assets/slide4.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Commercial+2'">
+        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
+          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Studio Product</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 10 // Object Symmetry</span>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/slide5.jpg', 'Brand Identity - Commission 03')">
+        <img src="assets/slide5.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Commercial+3'">
+        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
+          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Brand Capsule</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 11 // Contrast Silhouette</span>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/slide6.jpg', 'Symmetry & Frame Architecture')">
+        <img src="assets/slide6.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Commercial+4'">
+        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
+          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Darmstadt Architecture</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 12 // Geometric Form</span>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/slide1.jpg', 'Textured Surface Depth')">
+        <img src="assets/slide1.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Commercial+5'">
+        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
+          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Luxury Editorial</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 13 // Surface Contrast</span>
+        </div>
+      </div>
+      <!-- Item 6 -->
+      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/slide3.jpg', 'Material Reflection Structure')">
+        <img src="assets/slide3.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Commercial+6'">
+        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
+          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Visual Design</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 14 // Light Reflection</span>
+        </div>
+      </div>
+      <!-- Item 7 -->
+      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/slide4.jpg', 'Studio Shadow Experiment')">
+        <img src="assets/slide4.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Commercial+7'">
+        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
+          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Creative Experiment</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 15 // Minimalist Frame</span>
+        </div>
+      </div>
+      <!-- Item 8 -->
+      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/slide2.jpg', 'Creative Campaign Mockup')">
+        <img src="assets/slide2.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Commercial+8'">
+        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
+          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Creative Campaign</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 16 // Modern Lines</span>
+        </div>
+      </div>
+      <!-- Item 9 -->
+      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/slide5.jpg', 'Aesthetic Editorial Close-up')">
+        <img src="assets/slide5.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Commercial+9'">
+        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
+          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Brand Editorial</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 17 // Textural Form</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SOCIAL CAMPAIGNS FOR JOBS -->
+  <section class="space-y-12">
+    <div class="border-b border-brand-cream/10 pb-4 reveal">
+      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Theme 03</span>
+      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Social & Campaigns</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 reveal">
+      <!-- Social Post 1 -->
+      <div class="bg-brand-darkGray border border-brand-cream/5 overflow-hidden rounded-md flex flex-col">
+        <div class="aspect-square w-full relative overflow-hidden group cursor-pointer" onclick="openLightbox('assets/slide1.jpg', 'Social Layout 01')">
+          <img src="assets/slide1.jpg" class="w-full h-full object-cover filter grayscale-[20%] group-hover:scale-[1.03] group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="p-4 flex flex-col justify-between flex-grow space-y-3 bg-brand-charcoal/50">
+          <div class="space-y-1">
+            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/40">Digital Delivery</span>
+            <p class="font-sans text-xs font-medium text-brand-cream">Client Launch Campaign</p>
+          </div>
+          <span class="font-sans text-[8px] tracking-[0.1em] text-brand-cream/50">Delivered: 4K Editorial Deliverables</span>
+        </div>
+      </div>
+      <!-- Social Post 2 -->
+      <div class="bg-brand-darkGray border border-brand-cream/5 overflow-hidden rounded-md flex flex-col">
+        <div class="aspect-square w-full relative overflow-hidden group cursor-pointer" onclick="openLightbox('assets/slide4.jpg', 'Social Layout 02')">
+          <img src="assets/slide4.jpg" class="w-full h-full object-cover filter grayscale-[20%] group-hover:scale-[1.03] group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="p-4 flex flex-col justify-between flex-grow space-y-3 bg-brand-charcoal/50">
+          <div class="space-y-1">
+            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/40">Content Architecture</span>
+            <p class="font-sans text-xs font-medium text-brand-cream">Minimalist Brand Grids</p>
+          </div>
+          <span class="font-sans text-[8px] tracking-[0.1em] text-brand-cream/50">Format: Instagram Reels & Posts</span>
+        </div>
+      </div>
+      <!-- Social Post 3 -->
+      <div class="bg-brand-darkGray border border-brand-cream/5 overflow-hidden rounded-md flex flex-col">
+        <div class="aspect-square w-full relative overflow-hidden group cursor-pointer" onclick="openLightbox('assets/slide5.jpg', 'Social Layout 03')">
+          <img src="assets/slide5.jpg" class="w-full h-full object-cover filter grayscale-[20%] group-hover:scale-[1.03] group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="p-4 flex flex-col justify-between flex-grow space-y-3 bg-brand-charcoal/50">
+          <div class="space-y-1">
+            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/40">Creative Curation</span>
+            <p class="font-sans text-xs font-medium text-brand-cream">Aesthetic Identity Kit</p>
+          </div>
+          <span class="font-sans text-[8px] tracking-[0.1em] text-brand-cream/50">Scope: Photography + Direction</span>
+        </div>
+      </div>
+      <!-- Social Post 4 -->
+      <div class="bg-brand-darkGray border border-brand-cream/5 overflow-hidden rounded-md flex flex-col">
+        <div class="aspect-square w-full relative overflow-hidden group cursor-pointer" onclick="openLightbox('assets/slide3.jpg', 'Social Layout 04')">
+          <img src="assets/slide3.jpg" class="w-full h-full object-cover filter grayscale-[20%] group-hover:scale-[1.03] group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="p-4 flex flex-col justify-between flex-grow space-y-3 bg-brand-charcoal/50">
+          <div class="space-y-1">
+            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/40">Production Design</span>
+            <p class="font-sans text-xs font-medium text-brand-cream">Interactive Digital Ads</p>
+          </div>
+          <span class="font-sans text-[8px] tracking-[0.1em] text-brand-cream/50">Layout: Asymmetric Grid Delivery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: DOCUMENTING LIFE AS IT IS -->
+  <section class="space-y-12">
+    <div class="border-b border-brand-cream/10 pb-4 reveal">
+      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Theme 04</span>
+      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Documenting Life</h2>
+    </div>
+
+    <!-- Editorial raw layout for street/documentary -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal">
+      <div class="md:col-span-4 space-y-6 flex flex-col justify-center">
+        <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/40">Street & Life Records</span>
+        <h3 class="font-serif text-3xl font-normal leading-snug">Capturing unscripted, raw parameters.</h3>
+        <p class="font-sans font-light text-xs text-brand-cream/50 leading-relaxed">
+          The street does not pause. Documenting moments as they occur naturally in Germany and Pakistan—relying entirely on available light, real-world context, and natural expressions.
+        </p>
+      </div>
+      <div class="md:col-span-8 relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/9]" onclick="openLightbox('assets/slide6.jpg', 'Documentary capture — Germany / Pakistan')">
+        <img src="assets/slide6.jpg" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-1000" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex items-end">
+          <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 18 — Unscripted Human Frame</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: INSTAGRAM LIVE INTEGRATION -->
+  <section class="space-y-12">
+    <div class="border-b border-brand-cream/10 pb-4 reveal">
+      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Social Channel Sync</span>
+      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Instagram Bridge</h2>
+    </div>
+
+    <!-- Live simulated Grid connected to actual profile -->
+    <div class="bg-brand-darkGray/40 border border-brand-cream/5 p-6 md:p-12 rounded-lg space-y-8 reveal">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-brand-cream/10">
+        <!-- Profile Info -->
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 rounded-full border border-brand-cream/20 p-[2px] overflow-hidden">
+            <!-- fallback placeholder portrait -->
+            <img src="assets/portrait.jpg" alt="Ghulam Abbas Profile Portrait" class="w-full h-full object-cover rounded-full" onerror="this.src='https://placehold.co/150/1c1917/e8e2d8?text=GAK'">
+          </div>
+          <div>
+            <h3 class="font-sans font-medium text-sm text-brand-cream">@ghulamabbasphotography</h3>
+            <span class="font-sans text-[9px] tracking-[0.1em] text-brand-cream/50">Director of Narratives · Visual Artist</span>
+          </div>
+        </div>
+        <!-- Channel Link Button -->
+        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="font-sans text-[9px] tracking-[0.3em] uppercase bg-brand-cream text-brand-charcoal font-medium px-6 py-3 hover:bg-brand-cream/80 hover:text-brand-charcoal transition-all duration-300">
+          Follow daily journey
+        </a>
+      </div>
+
+      <!-- Feed Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- Live Post 1 -->
+        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="group relative overflow-hidden aspect-square border border-brand-cream/5 bg-brand-charcoal">
+          <img src="assets/slide1.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/80 text-center">View Post on Instagram →</span>
+          </div>
+        </a>
+        <!-- Live Post 2 -->
+        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="group relative overflow-hidden aspect-square border border-brand-cream/5 bg-brand-charcoal">
+          <img src="assets/slide2.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/80 text-center">View Post on Instagram →</span>
+          </div>
+        </a>
+        <!-- Live Post 3 -->
+        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="group relative overflow-hidden aspect-square border border-brand-cream/5 bg-brand-charcoal">
+          <img src="assets/slide3.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/80 text-center">View Post on Instagram →</span>
+          </div>
+        </a>
+        <!-- Live Post 4 -->
+        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="group relative overflow-hidden aspect-square border border-brand-cream/5 bg-brand-charcoal">
+          <img src="assets/slide4.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/80 text-center">View Post on Instagram →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FULLSCREEN LIGHTBOX MODAL -->
+<div id="lightbox" class="fixed inset-0 bg-brand-charcoal/95 z-50 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 ease-out" onclick="closeLightbox()">
+  <div class="absolute top-6 right-6 flex items-center gap-4">
+    <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/60 cursor-pointer hover:text-brand-cream transition-colors">Close // ESC</span>
+  </div>
+  
+  <div class="relative max-w-5xl max-h-[75vh] px-4" onclick="event.stopPropagation()">
+    <img id="lightbox-img" src="" alt="Wide View" class="max-w-full max-h-[70vh] object-contain border border-brand-cream/10 rounded-sm shadow-2xl">
+  </div>
+  
+  <div class="mt-6 text-center px-4" onclick="event.stopPropagation()">
+    <p id="lightbox-caption" class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream/80"></p>
+  </div>
 </div>
 
-<div class="gallery-grid">
-  <div class="photo-card" data-cat="editorial" onclick="openModal('assets/slide1.jpg')">
-    <img src="assets/slide1.jpg" alt="Exhibition Capture">
-    <div class="info"><span>Editorial Plate</span></div>
+<!-- Footer Panel -->
+<footer class="border-t border-brand-cream/10 bg-brand-charcoal py-8 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <span class="font-sans text-[9px] tracking-wider text-brand-cream/30">&copy; 2026 Ghulam Abbas Khan Soomro. All Rights Reserved.</span>
+    <span class="font-serif text-xs text-brand-cream/40 italic">Abbasverse</span>
+    <div class="flex items-center gap-6">
+      <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="font-sans text-[9px] tracking-wider text-brand-cream/40 hover:text-brand-cream transition-colors">Instagram</a>
+      <a href="index.html" class="font-sans text-[9px] tracking-wider text-brand-cream/40 hover:text-brand-cream transition-colors">Home Gateway</a>
+    </div>
   </div>
-  <div class="photo-card" data-cat="portrait" onclick="openModal('assets/slide2.jpg')">
-    <img src="assets/slide2.jpg" alt="Exhibition Capture">
-    <div class="info"><span>Portrait File</span></div>
-  </div>
-  <div class="photo-card" data-cat="abstract" onclick="openModal('assets/slide3.jpg')">
-    <img src="assets/slide3.jpg" alt="Exhibition Capture">
-    <div class="info"><span>Abstract Form</span></div>
-  </div>
-  <div class="photo-card" data-cat="editorial" onclick="openModal('assets/slide4.jpg')">
-    <img src="assets/slide4.jpg" alt="Exhibition Capture">
-    <div class="info"><span>Industrial Landscape</span></div>
-  </div>
-  <div class="photo-card" data-cat="portrait" onclick="openModal('assets/slide5.jpg')">
-    <img src="assets/slide5.jpg" alt="Exhibition Capture">
-    <div class="info"><span>Experimental Study</span></div>
-  </div>
-</div>
-
-<div id="modal" onclick="closeModal()">
-  <span id="modal-close">Close (Click outside)</span>
-  <img src="" id="modalImg" alt="Wide view">
-</div>
+</footer>
 
 <script>
-const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function updateRing(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(updateRing);})();
-
-document.querySelectorAll('a,.tab,.photo-card').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{document.body.classList.add('hovering');});
-  el.addEventListener('mouseleave',()=>{document.body.classList.remove('hovering');});
-});
-
-function filterGallery(cat){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  event.target.classList.add('active');
-  document.querySelectorAll('.photo-card').forEach(card=>{
-    if(cat==='all' || card.dataset.cat===cat){
-      card.style.display='block';
+  // Dynamic Scroll Header Reveal
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('main-nav');
+    if (window.scrollY > 40) {
+      nav.classList.add('bg-brand-charcoal/95', 'border-brand-cream/10');
+      nav.classList.remove('bg-brand-charcoal/80', 'border-brand-cream/5');
     } else {
-      card.style.display='none';
+      nav.classList.add('bg-brand-charcoal/80', 'border-brand-cream/5');
+      nav.classList.remove('bg-brand-charcoal/95', 'border-brand-cream/10');
     }
   });
-}
 
-function openModal(src){
-  const modal=document.getElementById('modal'),mImg=document.getElementById('modalImg');
-  mImg.src=src;
-  modal.classList.add('active');
-}
-function closeModal(){
-  document.getElementById('modal').classList.remove('active');
-}
+  // Customized Cursor Tracking
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Update simple dot position
+    dot.style.left = `${mouseX}px`;
+    dot.style.top = `${mouseY}px`;
+  });
+
+  // Frame Interpolation for smooth lag cursor loop
+  function cursorAnimate() {
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+    
+    ring.style.left = `${ringX}px`;
+    ring.style.top = `${ringY}px`;
+    
+    requestAnimationFrame(cursorAnimate);
+  }
+  cursorAnimate();
+
+  // Hover States Configuration
+  const interactives = document.querySelectorAll('a, button, [onclick]');
+  interactives.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+      ring.style.width = '60px';
+      ring.style.height = '60px';
+      ring.style.borderColor = 'rgba(232, 226, 216, 0.7)';
+    });
+    element.addEventListener('mouseleave', () => {
+      ring.style.width = '40px';
+      ring.style.height = '40px';
+      ring.style.borderColor = 'rgba(232, 226, 216, 0.3)';
+    });
+  });
+
+  // Scroll Reveal Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, {
+    threshold: 0.05
+  });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Lightbox Open & Close Functions
+  function openLightbox(src, captionText) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const caption = document.getElementById('lightbox-caption');
+    
+    img.src = src;
+    caption.innerText = captionText;
+    
+    lightbox.classList.remove('pointer-events-none', 'opacity-0');
+    lightbox.classList.add('opacity-100');
+    document.body.style.overflow = 'hidden'; // Freeze background scroll
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.add('opacity-0', 'pointer-events-none');
+    lightbox.classList.remove('opacity-100');
+    document.body.style.overflow = ''; // Unfreeze scroll
+  }
+
+  // Bind Escape Key to Close Lightbox
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  });
 </script>
 </body>
 </html>
