@@ -69,14 +69,20 @@ nav.solid{background:rgba(14,12,10,0.9);backdrop-filter:blur(14px);border-bottom
 ════════════════════════════ */
 #hero{position:relative;height:100vh;overflow:hidden;background:#0e0c0a;}
 .hero-slides{position:absolute;inset:0;z-index:0;}
-.hslide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:hfade 36s infinite;transform:scale(1.06);}
+.hslide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:hfade 72s infinite;transform:scale(1.06);}
 .hslide:nth-child(1){background-image:url('assets/slide1.jpg');animation-delay:0s;}
 .hslide:nth-child(2){background-image:url('assets/slide2.jpg');animation-delay:6s;}
 .hslide:nth-child(3){background-image:url('assets/slide3.jpg');animation-delay:12s;}
 .hslide:nth-child(4){background-image:url('assets/slide4.jpg');animation-delay:18s;}
 .hslide:nth-child(5){background-image:url('assets/slide5.jpg');animation-delay:24s;}
 .hslide:nth-child(6){background-image:url('assets/slide6.jpg');animation-delay:30s;}
-@keyframes hfade{0%{opacity:0;transform:scale(1.06);}5%{opacity:1;transform:scale(1.03);}15%{opacity:1;transform:scale(1);}21%{opacity:0;}100%{opacity:0;}}
+.hslide:nth-child(7){background-image:url('assets/slide7.jpg');animation-delay:36s;}
+.hslide:nth-child(8){background-image:url('assets/slide8.jpg');animation-delay:42s;}
+.hslide:nth-child(9){background-image:url('assets/slide9.jpg');animation-delay:48s;}
+.hslide:nth-child(10){background-image:url('assets/slide10.jpg');animation-delay:54s;}
+.hslide:nth-child(11){background-image:url('assets/slide11.jpg');animation-delay:60s;}
+.hslide:nth-child(12){background-image:url('assets/slide12.jpg');animation-delay:66s;}
+@keyframes hfade{0%{opacity:0;transform:scale(1.06);}4%{opacity:1;transform:scale(1.03);}10%{opacity:1;transform:scale(1);}14%{opacity:0;}100%{opacity:0;}}
 .hero-ov{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(14,12,10,0.88) 0%,rgba(14,12,10,0.35) 50%,rgba(14,12,10,0.2) 75%,rgba(14,12,10,0.55) 100%),linear-gradient(to bottom,rgba(14,12,10,0.45) 0%,transparent 20%,transparent 68%,rgba(14,12,10,0.95) 100%);}
 
 .hero-body{position:relative;z-index:2;height:100%;display:flex;align-items:center;padding:0 3.5rem;}
@@ -148,12 +154,12 @@ h1.hero-name em{display:block;font-style:italic;font-weight:400;color:rgba(232,2
 .who-subtitle{
   font-family:'Playfair Display',serif;font-style:italic;
   font-size:clamp(1.1rem,1.8vw,1.6rem);font-weight:400;
-  color:rgba(232,226,216,0.38);line-height:1.2;margin-bottom:1.8rem;
+  color:rgba(232,226,216,0.65);line-height:1.2;margin-bottom:1.8rem;
 }
 .who-body{
   font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:1.1rem;font-weight:300;line-height:1.85;
-  color:rgba(232,226,216,0.5);max-width:440px;
+  font-size:1.15rem;font-weight:300;line-height:1.85;
+  color:rgba(232,226,216,0.72);max-width:440px;
 }
 
 /* RIGHT col: portrait — contained, aligned */
@@ -303,9 +309,9 @@ h1.hero-name em{display:block;font-style:italic;font-weight:400;color:rgba(232,2
 #writer .section-big-word{color:#e8e2d8;opacity:.82;}
 #writer .section-big-word em{color:rgba(200,170,95,0.4);}
 .writer-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:4rem;align-items:start;}
-.poetry-label{font-size:7.5px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.5);text-transform:uppercase;margin-bottom:1rem;}
-.poetry-box{background:rgba(232,226,216,0.03);border:1px solid rgba(232,226,216,0.09);border-left:2px solid rgba(200,170,95,0.4);padding:2.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:300;line-height:2;color:rgba(232,226,216,0.62);min-height:280px;white-space:pre-line;}
-.writing-note{font-size:.82rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.38);margin-top:1.5rem;}
+.poetry-label{font-size:7.5px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.6);text-transform:uppercase;margin-bottom:1rem;}
+.poetry-box{background:rgba(232,226,216,0.03);border:1px solid rgba(232,226,216,0.09);border-left:2px solid rgba(200,170,95,0.4);padding:2.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.08rem;font-weight:300;line-height:1.95;color:rgba(232,226,216,0.78);min-height:280px;white-space:pre-line;}
+.writing-note{font-size:.88rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.6);margin-top:1.5rem;}
 
 /* ════════════════════════════
    ACTOR
@@ -355,6 +361,48 @@ footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-colum
 .rv{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.23,1,.32,1),transform .85s cubic-bezier(.23,1,.32,1);}
 .rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
 .rv.in{opacity:1;transform:translateY(0);}
+
+/* ════════════════════════════
+   MEDIA ARTIST / SOUNDSCAPES
+════════════════════════════ */
+#mediaartist{
+  background:linear-gradient(to bottom,#0e0c0a,#0c0e10 30%,#0d1014 60%,#0e0c0a);
+  padding:8rem 3.5rem;
+}
+#mediaartist .section-big-word{color:#e8e2d8;opacity:.78;font-size:clamp(3.5rem,9vw,10rem);}
+#mediaartist .section-big-word em{color:rgba(120,180,200,0.35);}
+.ma-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:4rem;align-items:start;}
+.ma-body{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.12rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.68);}
+.ma-body p+p{margin-top:1.2rem;}
+.ma-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem;}
+.ma-tag{font-size:7.5px;font-weight:400;letter-spacing:.35em;color:rgba(120,180,200,0.5);text-transform:uppercase;border:1px solid rgba(120,180,200,0.2);padding:.3rem .8rem;}
+.soundscape-box{background:rgba(120,180,200,0.03);border:1px solid rgba(120,180,200,0.1);border-left:2px solid rgba(120,180,200,0.3);padding:2.5rem;}
+.soundscape-label{font-size:7.5px;font-weight:400;letter-spacing:.45em;color:rgba(120,180,200,0.45);text-transform:uppercase;margin-bottom:1.2rem;}
+.soundscape-note{font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.38);}
+
+/* ════════════════════════════
+   CONTENT CREATION
+════════════════════════════ */
+#content-creation{
+  background:linear-gradient(to bottom,#0e0c0a,#131108 30%,#131108 70%,#0e0c0a);
+  padding:8rem 3.5rem;
+}
+#content-creation .section-big-word{color:#e8e2d8;opacity:.78;font-size:clamp(3rem,7.5vw,9rem);}
+#content-creation .section-big-word em{color:rgba(210,175,80,0.35);}
+.cc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:4rem;}
+.cc-card{
+  background:rgba(232,226,216,0.02);
+  border:1px solid rgba(232,226,216,0.06);
+  padding:2.5rem 2rem;
+  transition:background .4s,border-color .4s;
+  cursor:default;
+}
+.cc-card:hover{background:rgba(232,226,216,0.05);border-color:rgba(210,175,80,0.2);}
+.cc-num{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:300;letter-spacing:.3em;color:rgba(210,175,80,0.4);margin-bottom:1.2rem;}
+.cc-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:rgba(232,226,216,0.85);margin-bottom:.5rem;line-height:1;}
+.cc-role{font-size:7.5px;font-weight:400;letter-spacing:.35em;color:rgba(232,226,216,0.3);text-transform:uppercase;margin-bottom:1rem;}
+.cc-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.98rem;font-weight:300;line-height:1.7;color:rgba(232,226,216,0.5);}
+.cc-intro{max-width:580px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.12rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.68);margin-top:2rem;}
 </style>
 </head>
 <body>
@@ -388,6 +436,12 @@ footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-colum
     <div class="hslide"></div>
     <div class="hslide"></div>
     <div class="hslide"></div>
+    <div class="hslide"></div>
+    <div class="hslide"></div>
+    <div class="hslide"></div>
+    <div class="hslide"></div>
+    <div class="hslide"></div>
+    <div class="hslide"></div>
   </div>
   <div class="hero-ov"></div>
   <div class="hero-body">
@@ -414,6 +468,12 @@ footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-colum
     <div class="hdot" data-i="3"></div>
     <div class="hdot" data-i="4"></div>
     <div class="hdot" data-i="5"></div>
+    <div class="hdot" data-i="6"></div>
+    <div class="hdot" data-i="7"></div>
+    <div class="hdot" data-i="8"></div>
+    <div class="hdot" data-i="9"></div>
+    <div class="hdot" data-i="10"></div>
+    <div class="hdot" data-i="11"></div>
   </div>
   <div class="hero-scroll"><div class="hero-scroll-bar"></div><span>Scroll</span></div>
 </section>
@@ -423,7 +483,7 @@ footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-colum
   <div class="who-grid">
     <div class="who-text-col rv">
       <h2 class="who-title">Who Is<br>ABBAS?</h2>
-      <p class="who-subtitle">I tell stories through every medium I can find.</p>
+      <p class="who-subtitle">Through every medium I can find.</p>
       <p class="who-body">I'm a filmmaker, photographer, writer, and media artist working between Germany and Pakistan. Since 2017 I've built a body of work across short films, documentary, editorial photography, screenplays, and poetry. I shoot. I direct. I write. I can do all three for your project.</p>
       <a href="#hire" class="cta-link"><span class="cl"></span>Work with me</a>
     </div>
@@ -443,21 +503,13 @@ footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-colum
     <div class="section-right-note">I photograph what the eye almost misses — fashion, editorial, abstract, documentary, landscape. Shot across Germany and Pakistan. Available for commissions.</div>
   </div>
 
-  <!-- Left: slideshow slides 1–12 | Right: slides 2, 4, 6 (three cells) -->
+  <!-- Left: slideshow slides 13–16 | Right: slides 2, 4, 6 (three cells) -->
   <div class="photo-exhibition rv d1">
     <div class="ph-slide-col">
-      <div class="ph-slide on" style="background-image:url('assets/slide1.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide2.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide3.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide4.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide5.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide6.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide7.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide8.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide9.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide10.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide11.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide12.jpg')"></div>
+      <div class="ph-slide on" style="background-image:url('assets/slide13.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide14.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide15.jpg')"></div>
+      <div class="ph-slide"    style="background-image:url('assets/slide16.jpg')"></div>
     </div>
     <div class="ph-right-col">
       <div class="ph-cell"><img src="assets/slide2.jpg" alt="Photography by Ghulam Abbas — Germany" loading="lazy"></div>
@@ -633,6 +685,65 @@ footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-colum
   </div>
 </section>
 
+<!-- ════ MEDIA ARTIST & SOUNDSCAPES ════ -->
+<section id="mediaartist">
+  <div class="rv">
+    <div class="section-big-word">Media Artist<em>?</em></div>
+  </div>
+  <div class="ma-grid">
+    <div class="rv d1">
+      <p class="ma-body">
+        <p>Beyond the frame and the script, I work at the intersection of art, technology, and experience. As a media artist I create work that doesn't fit a single category — installations, sound-image compositions, experimental video, and sonic environments.</p>
+        <p>Soundscapes are a particular obsession. The ambient texture of a space — a city at 3am, rain on glass in Darmstadt, a market in Karachi — is as much a document as any photograph. I record, layer, and compose these into immersive audio environments that accompany visual work or stand alone.</p>
+      </p>
+      <div class="ma-tags">
+        <span class="ma-tag">Sound Design</span>
+        <span class="ma-tag">Experimental Video</span>
+        <span class="ma-tag">Installation</span>
+        <span class="ma-tag">Soundscapes</span>
+        <span class="ma-tag">Ambient Audio</span>
+        <span class="ma-tag">Multimedia</span>
+      </div>
+    </div>
+    <div class="rv d2">
+      <div class="soundscape-box">
+        <p class="soundscape-label">Soundscapes · Audio Work</p>
+        <p class="soundscape-note">Sound environments created from field recordings, ambient layers, and composed texture — Germany, Pakistan, in-between. Available as accompaniment to visual projects or standalone commissions.</p>
+        <p class="soundscape-note" style="margin-top:1rem;color:rgba(232,226,216,0.28);">Embed or link your soundscape audio here — SoundCloud, Bandcamp, or direct audio file.</p>
+        <!-- Paste your SoundCloud or audio embed here -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTENT CREATION ════ -->
+<section id="content-creation">
+  <div class="rv">
+    <div class="section-big-word">Content<br><em>Creator?</em></div>
+    <p class="cc-intro">I've created content for organisations and brands — from event coverage and social media strategy to full production. Here's some of who I've worked with.</p>
+  </div>
+  <div class="cc-grid rv d1">
+    <div class="cc-card">
+      <p class="cc-num">01</p>
+      <p class="cc-name">FASTDA</p>
+      <p class="cc-role">Director · Videographer · Editor</p>
+      <p class="cc-desc">Formula Student Germany racing team. Produced the official 2024 car rollout video, event coverage, and social media content for the season.</p>
+    </div>
+    <div class="cc-card">
+      <p class="cc-num">02</p>
+      <p class="cc-name">MediaArtCulture</p>
+      <p class="cc-role">Media Coverage · Photography · Film</p>
+      <p class="cc-desc">Cultural events, art exhibitions, and media productions. Photography and video documentation across Germany and Pakistan.</p>
+    </div>
+    <div class="cc-card">
+      <p class="cc-num">03</p>
+      <p class="cc-name">IMC HDA</p>
+      <p class="cc-role">Content Creation · Social Media</p>
+      <p class="cc-desc">International Media Club at Hochschule Darmstadt. Social media content, event photography, and visual storytelling for the student community.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ════ WRITER ════ -->
 <section id="writer">
   <div class="rv">
@@ -640,23 +751,22 @@ footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-colum
   </div>
   <div class="writer-grid">
     <div class="rv d1">
-      <p class="poetry-label">Poetry · Verse</p>
-      <!-- PASTE YOUR POEM HERE — it will display exactly as typed -->
-      <div class="poetry-box">I carry two countries in one passport.
-Two languages in one silence.
-Three cameras and a notebook
-that has never learned to sleep.
-
-The frame does not lie.
-It only chooses what to leave out.
-
-— paste your poem here —</div>
+      <p class="poetry-label">— Abbas Writes —</p>
+      <div class="poetry-box">Whenever I try to capture something, I can't help but capture loneliness, detachment, looking from the outside, or isolation. Maybe it's just reflecting my phase in life, but who to blame? The people with whom you invested so much of your energy just to be with them, or just life? Where everyone is hanging around the other with an agenda, that this would lead me to this, which is also fine and the way this world works. But what happened to genuine connections? Or are those ones just made in school? Or maybe I am looking at it wrong, or doing something wrong? Whenever I try to capture something, somehow I end up capturing distance.</div>
     </div>
     <div class="rv d2">
-      <p style="font-size:8px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.42);text-transform:uppercase;margin-bottom:1.2rem;">Screenwriting · Essays</p>
-      <p class="writing-note">Screenplays, poetry, essays — writing is where every project begins. Festival-selected short film scripts. Available for hire: scripts, content, books. I write for the same reason I shoot — because some things can only be said once, and they need to be said right.</p>
-      <a href="writing.html" class="cta-link" style="color:rgba(200,170,95,0.45)"><span class="cl" style="background:rgba(200,170,95,0.25)"></span>Read the work</a>
+      <p class="poetry-label">Bench — Abbas Writes —</p>
+      <div class="poetry-box">The idea of having a bench outside, in a park, or in a balcony or roof is such a soothing one because it has a different comfort. You can't sit on it for long enough but the momentarily comfort does trump a lot of comfortable chairs. You automatically start talking about life on it, big issues, small issues, the idea of having tea sounds so intriguing or just taking it in the outdoor air in its truest form especially in winters.
+
+But perhaps I am not talking about bench at all. People are like that too. You find these amazing people like a breath of fresh air for a short time in your life perhaps whom you share everything with, the connections perhaps doesn't hold for long as "Life happens" but still the conversations the butterflies in stomach of having a new friend with similar interests in shows, movies, books and so on becomes so intriguing that you just can't help it but enjoy it or sometimes mess up too.
+
+Here is to my bench people making an impact in life but with whom perhaps the connection is not the same and to all the new ones making the life exciting.</div>
     </div>
+  </div>
+  <div style="margin-top:3rem;padding:0 0" class="rv d2">
+    <p style="font-size:8px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.42);text-transform:uppercase;margin-bottom:1.2rem;">Screenwriting · Essays · Available for hire</p>
+    <p class="writing-note" style="max-width:580px;">Festival-selected short film scripts. Available for hire — scripts, content, books. I write for the same reason I shoot: because some things can only be said once, and they need to be said right.</p>
+    <a href="writing.html" class="cta-link" style="color:rgba(200,170,95,0.5)"><span class="cl" style="background:rgba(200,170,95,0.3)"></span>Read more</a>
   </div>
 </section>
 
@@ -745,7 +855,7 @@ document.querySelectorAll('a,button,.fli,.ph-cell,.ex-panel,.ap').forEach(el=>{
 // Hero dots
 const hdots=document.querySelectorAll('.hdot');
 let hi=0;
-setInterval(()=>{hdots[hi].classList.remove('on');hi=(hi+1)%6;hdots[hi].classList.add('on');},6000);
+setInterval(()=>{hdots[hi].classList.remove('on');hi=(hi+1)%12;hdots[hi].classList.add('on');},6000);
 hdots.forEach(d=>d.addEventListener('click',()=>{hdots[hi].classList.remove('on');hi=+d.dataset.i;hdots[hi].classList.add('on');}));
 
 // Photography slideshow (slides 1–12)
