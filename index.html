@@ -251,18 +251,20 @@ hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,
 .ma-photos{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
 .ma-photo{overflow:hidden;aspect-ratio:3/4;}
 .ma-photo.wide{grid-column:span 2;aspect-ratio:16/9;}
-.ma-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.ma-photo-h{overflow:hidden;aspect-ratio:16/9;grid-column:span 2;} /* horizontal landscape photos */
+.ma-photo img,.ma-photo-h img{width:100%;height:100%;object-fit:cover;display:block;}
 .ma-photo-ph{width:100%;height:100%;min-height:140px;background:rgba(120,180,200,0.04);display:flex;align-items:center;justify-content:center;font-size:7px;letter-spacing:.3em;color:rgba(120,180,200,0.2);text-transform:uppercase;text-align:center;padding:.5rem;}
 .festival-pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(120,180,200,0.07);border:1px solid rgba(120,180,200,0.2);padding:.4rem 1rem;margin:.4rem .4rem 0 0;font-size:7.5px;font-weight:400;letter-spacing:.28em;color:rgba(120,180,200,0.65);text-transform:uppercase;}
 .festival-pill.gold{background:rgba(245,197,24,0.07);border-color:rgba(245,197,24,0.2);color:rgba(245,197,24,0.65);}
 .ma-artists{font-size:7.5px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.3);text-transform:uppercase;margin-top:1.2rem;line-height:2;}
 .ma-artists strong{color:rgba(232,226,216,0.55);font-weight:400;}
-.jenna-screenshot{margin-top:1.5rem;border:1px solid rgba(245,197,24,0.18);overflow:hidden;}
+/* Jena screenshot — vertical/portrait display, centred, max ~320px wide */
+.jenna-screenshot{margin-top:1.5rem;border:1px solid rgba(245,197,24,0.18);overflow:hidden;max-width:320px;}
 .jenna-screenshot img{width:100%;display:block;}
 .jenna-screenshot-ph{padding:2rem;font-size:7.5px;letter-spacing:.3em;color:rgba(245,197,24,0.3);text-transform:uppercase;text-align:center;background:rgba(245,197,24,0.03);}
 .soundscape-box{background:rgba(120,180,200,0.03);border:1px solid rgba(120,180,200,0.1);border-left:2px solid rgba(120,180,200,0.3);padding:2rem;margin-top:2rem;}
 .soundscape-label{font-size:7px;font-weight:400;letter-spacing:.4em;color:rgba(120,180,200,0.5);text-transform:uppercase;margin-bottom:.8rem;}
-.soundscape-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.62);}
+.soundscape-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.68);}
 
 /* ── WRITER ── */
 #writer{background:linear-gradient(to bottom,#0e0c0a,#2b2419 14%,#2b2419 86%,#0e0c0a);padding:5rem 2.5rem;}
@@ -526,25 +528,16 @@ footer{background:#0a0907;padding:2.2rem 2.5rem;display:grid;grid-template-colum
     <!-- FASTDA -->
     <div class="brand-card">
       <div class="brand-pano">
-        <img src="assets/fastda-panoramic.jpg" alt="FASTDA Racing — panoramic" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.brand-pano-ph').style.display='flex'">
+        <img src="assets/fastda-panoramic.jpg" alt="FASTDA Racing — panoramic event photography" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.brand-pano-ph').style.display='flex'">
         <div class="brand-pano-ph" style="display:none">Add: assets/fastda-panoramic.jpg</div>
       </div>
       <div class="brand-body">
         <p class="brand-num">01</p>
         <p class="brand-name">FASTDA Racing</p>
         <p class="brand-role">Director · Videographer · Photographer · Editor · Strategist</p>
-        <p class="brand-desc">Formula Student Germany racing team at Hochschule Darmstadt. I photographed events, created a series of short videos and reels boosting their engagement across multiple platforms — and didn't just create content but came up with the strategy, content plan, and full execution.</p>
-        <div class="brand-reels">
-          <!-- Add reels: assets/fastda-reel1.mp4, fastda-reel2.mp4 — or use YouTube embeds below -->
-          <div class="brand-reel">
-            <div class="brand-reel-ph">Add reel video<br>assets/fastda-reel1.mp4</div>
-          </div>
-          <div class="brand-reel">
-            <div class="brand-reel-ph">Add reel video<br>assets/fastda-reel2.mp4</div>
-          </div>
-        </div>
-        <div class="brand-insta">
-          <img src="assets/fastda-insta.jpg" alt="FASTDA Instagram handle" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <p class="brand-desc">Formula Student Germany racing team at Hochschule Darmstadt. I photographed events, created a series of short videos and reels — boosting their engagement across multiple platforms. Didn't just create content: I developed the full strategy, content plan, and executed from concept to delivery.</p>
+        <div class="brand-insta" style="margin-top:1.4rem;">
+          <img src="assets/fastda-insta.jpg" alt="FASTDA Racing Instagram" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
           <div class="brand-insta-ph" style="display:none">Add screenshot: assets/fastda-insta.jpg</div>
         </div>
       </div>
@@ -553,26 +546,15 @@ footer{background:#0a0907;padding:2.2rem 2.5rem;display:grid;grid-template-colum
     <!-- MediaArtCulture -->
     <div class="brand-card">
       <div class="brand-pano">
-        <img src="assets/mac-panoramic.jpg" alt="MediaArtCulture — panoramic" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.brand-pano-ph').style.display='flex'">
+        <img src="assets/mac-panoramic.jpg" alt="MediaArtCulture — panoramic event photography" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.brand-pano-ph').style.display='flex'">
         <div class="brand-pano-ph" style="display:none">Add: assets/mac-panoramic.jpg</div>
       </div>
       <div class="brand-body">
         <p class="brand-num">02</p>
         <p class="brand-name">MediaArtCulture</p>
         <p class="brand-role">Photographer · Videographer · Content Strategist</p>
-        <p class="brand-desc">Cultural events, art exhibitions, and media productions across Germany and Pakistan. I photographed events, created a series of short videos and reels for their page — boosting engagement across multiple platforms — and came up with a content strategy, plan, and full execution.</p>
-        <div class="brand-reels">
-          <!-- Add your two MediaArtCulture reels here -->
-          <div class="brand-reel">
-            <video src="assets/mac-reel1.mp4" muted loop playsinline preload="none" onerror="this.parentElement.querySelector('.brand-reel-ph').style.display='flex';this.style.display='none'"></video>
-            <div class="brand-reel-ph" style="display:none">Add reel:<br>assets/mac-reel1.mp4</div>
-          </div>
-          <div class="brand-reel">
-            <video src="assets/mac-reel2.mp4" muted loop playsinline preload="none" onerror="this.parentElement.querySelector('.brand-reel-ph').style.display='flex';this.style.display='none'"></video>
-            <div class="brand-reel-ph" style="display:none">Add reel:<br>assets/mac-reel2.mp4</div>
-          </div>
-        </div>
-        <div class="brand-insta">
+        <p class="brand-desc">Cultural events, art exhibitions, and media productions across Germany. I photographed events, created a series of short videos and reels for their platforms — boosting engagement across multiple channels. Came up with the content strategy, content plan, and handled full execution.</p>
+        <div class="brand-insta" style="margin-top:1.4rem;">
           <img src="assets/mac-insta.jpg" alt="MediaArtCulture Instagram" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
           <div class="brand-insta-ph" style="display:none">Add screenshot: assets/mac-insta.jpg</div>
         </div>
@@ -674,15 +656,15 @@ footer{background:#0a0907;padding:2.2rem 2.5rem;display:grid;grid-template-colum
         <div class="soundscape-box" style="margin-top:1.5rem;border-color:rgba(120,180,200,0.18);border-left-color:rgba(120,180,200,0.4);">
           <p class="soundscape-label">Also — The +496071 Landline</p>
           <p class="soundscape-note">A media art installation exploring human connection through a vintage landline telephone set in a familiar living room. Visitors pick up and answer a question, creating a moment of self-reflection through memory, cultural background, and shared experience. Exhibited as part of a sensory environment inspired by Kükelhaus's theory of embodied perception.</p>
-          <!-- Add 7 Landline photos below — assets/landline1.jpg through landline7.jpg -->
+          <!-- landline1-3: portrait/square, landline4-7: horizontal -->
           <div class="ma-photos" style="margin-top:1.2rem;">
             <div class="ma-photo"><img src="assets/landline1.jpg" alt="The Landline installation" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline1.jpg</div></div>
             <div class="ma-photo"><img src="assets/landline2.jpg" alt="Landline detail" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline2.jpg</div></div>
-            <div class="ma-photo"><img src="assets/landline3.jpg" alt="Landline visitors" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline3.jpg</div></div>
-            <div class="ma-photo"><img src="assets/landline4.jpg" alt="Landline space" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline4.jpg</div></div>
-            <div class="ma-photo"><img src="assets/landline5.jpg" alt="Landline phone" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline5.jpg</div></div>
-            <div class="ma-photo"><img src="assets/landline6.jpg" alt="Landline exhibition" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline6.jpg</div></div>
-            <div class="ma-photo wide"><img src="assets/landline7.jpg" alt="Landline overview" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline7.jpg</div></div>
+            <div class="ma-photo wide"><img src="assets/landline3.jpg" alt="Landline visitors" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline3.jpg</div></div>
+            <div class="ma-photo-h wide"><img src="assets/landline4.jpg" alt="Landline space" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline4.jpg</div></div>
+            <div class="ma-photo-h wide"><img src="assets/landline5.jpg" alt="Landline phone" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline5.jpg</div></div>
+            <div class="ma-photo-h wide"><img src="assets/landline6.jpg" alt="Landline exhibition" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline6.jpg</div></div>
+            <div class="ma-photo-h wide"><img src="assets/landline7.jpg" alt="Landline overview" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline7.jpg</div></div>
           </div>
         </div>
       </div>
@@ -843,12 +825,6 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
 // ── SCROLL REVEAL ──
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.07});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
-
-// ── AUTOPLAY videos on hover ──
-document.querySelectorAll('.brand-reel video').forEach(v=>{
-  v.closest('.brand-reel').addEventListener('mouseenter',()=>v.play().catch(()=>{}));
-  v.closest('.brand-reel').addEventListener('mouseleave',()=>v.pause());
-});
 </script>
 </body>
 </html>
