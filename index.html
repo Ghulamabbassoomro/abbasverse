@@ -2,407 +2,321 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ═══ SEO ═══ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Ghulam Abbas Khan Soomro — Filmmaker · Photographer · Writer | Germany & Pakistan</title>
 <meta name="description" content="Ghulam Abbas Khan Soomro — Filmmaker, Photographer, Screenwriter, Media Artist and Actor based in Germany and Pakistan. Available for photography commissions, film projects, and creative direction. Active since 2017.">
-<meta name="keywords" content="photographer germany, photographer pakistan, filmmaker germany, screenwriter germany, cinematographer germany, media artist germany, photographer frankfurt, filmmaker pakistan, actor germany, visual storyteller, ghulam abbas khan soomro, abbasverse, editorial photographer germany, documentary filmmaker, short film director germany">
+<meta name="keywords" content="photographer germany, photographer pakistan, filmmaker germany, screenwriter germany, cinematographer germany, media artist germany, photographer frankfurt, filmmaker pakistan, actor germany, visual storyteller, ghulam abbas khan soomro, abbasverse, editorial photographer germany, documentary filmmaker, short film director germany, darmstadt photographer, social media content creator germany">
 <meta name="author" content="Ghulam Abbas Khan Soomro">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://abbasverse.com/">
-
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://abbasverse.com/">
 <meta property="og:title" content="Ghulam Abbas Khan Soomro — Filmmaker · Photographer · Writer">
 <meta property="og:description" content="Filmmaker, Photographer, Screenwriter and Media Artist based in Germany and Pakistan. Active since 2017.">
 <meta property="og:image" content="https://abbasverse.com/assets/slide1.jpg">
 <meta name="twitter:card" content="summary_large_image">
-
-<!-- Schema.org structured data -->
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"Ghulam Abbas Khan Soomro",
-  "url":"https://abbasverse.com",
-  "jobTitle":["Filmmaker","Photographer","Screenwriter","Media Artist","Actor"],
-  "description":"Filmmaker, Photographer, Screenwriter and Media Artist based in Germany and Pakistan.",
-  "address":[{"@type":"PostalAddress","addressCountry":"DE"},{"@type":"PostalAddress","addressCountry":"PK"}],
-  "sameAs":["https://www.instagram.com/ghulamabbasphotography","https://www.imdb.com/name/nm18201027"]
-}
+{"@context":"https://schema.org","@type":"Person","name":"Ghulam Abbas Khan Soomro","url":"https://abbasverse.com","jobTitle":["Filmmaker","Photographer","Screenwriter","Media Artist","Actor"],"description":"Filmmaker, Photographer, Screenwriter and Media Artist based in Germany and Pakistan.","sameAs":["https://www.instagram.com/ghulamabbasphotography","https://www.imdb.com/name/nm18201027"]}
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@200;300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-
 <style>
+/* ── RESET ── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:#0e0c0a;color:#e8e2d8;font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;}
+body{background:#0e0c0a;color:#e8e2d8;font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;}
+img{max-width:100%;display:block;}
 
-/* CURSOR */
-#cur{position:fixed;width:8px;height:8px;background:#e8e2d8;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
-#cur-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(232,226,216,0.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .35s,height .35s,border-color .35s;}
-body.hovering #cur-ring{width:56px;height:56px;border-color:rgba(232,226,216,0.6);}
+/* ── CURSOR (desktop only) ── */
+@media(hover:hover){
+  body{cursor:none;}
+  #cur{position:fixed;width:8px;height:8px;background:#e8e2d8;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
+  #cur-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(232,226,216,0.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;}
+  body.hov #cur-ring{width:54px;height:54px;border-color:rgba(232,226,216,0.6);}
+}
 
-/* GRAIN */
-.grain{position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px;}
+/* ── GRAIN ── */
+.grain{position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px;}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;justify-content:space-between;align-items:center;padding:1.6rem 3rem;transition:background .5s,backdrop-filter .5s;}
-nav.solid{background:rgba(14,12,10,0.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,226,216,0.07);}
-.nav-wordmarks{display:flex;flex-direction:column;gap:.2rem;}
-.nav-wordmarks span{font-size:7px;font-weight:600;letter-spacing:.45em;color:rgba(232,226,216,0.25);text-transform:uppercase;line-height:1.3;}
-.nav-wordmarks span.hi{color:rgba(232,226,216,0.65);}
-.nav-center{font-family:'Playfair Display',serif;font-size:13px;font-weight:400;letter-spacing:.5em;color:rgba(232,226,216,0.5);text-transform:uppercase;text-decoration:none;}
-.nav-right{display:flex;align-items:center;gap:2.2rem;}
-.nav-right a{font-size:9px;font-weight:400;letter-spacing:.28em;color:rgba(232,226,216,0.4);text-decoration:none;text-transform:uppercase;transition:color .3s;}
-.nav-right a:hover{color:rgba(232,226,216,0.9);}
-.nav-hire{border:1px solid rgba(232,226,216,0.2);padding:.45rem 1.1rem;transition:border-color .3s,color .3s !important;}
-.nav-hire:hover{border-color:rgba(232,226,216,0.55) !important;color:rgba(232,226,216,0.9) !important;}
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 2rem;transition:background .5s;}
+nav.solid{background:rgba(14,12,10,0.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,226,216,0.07);}
+.nav-wm{display:flex;flex-direction:column;gap:.15rem;}
+.nav-wm span{font-size:6.5px;font-weight:600;letter-spacing:.4em;color:rgba(232,226,216,0.22);text-transform:uppercase;line-height:1.3;}
+.nav-wm span.hi{color:rgba(232,226,216,0.6);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:12px;font-weight:400;letter-spacing:.45em;color:rgba(232,226,216,0.5);text-transform:uppercase;text-decoration:none;}
+.nav-r{display:flex;align-items:center;gap:1.8rem;}
+.nav-r a{font-size:8px;font-weight:400;letter-spacing:.25em;color:rgba(232,226,216,0.38);text-decoration:none;text-transform:uppercase;transition:color .3s;}
+.nav-r a:hover{color:rgba(232,226,216,0.9);}
+.nav-hire{border:1px solid rgba(232,226,216,0.18);padding:.4rem 1rem;}
+.nav-hire:hover{border-color:rgba(232,226,216,0.5) !important;color:rgba(232,226,216,0.9) !important;}
+/* Mobile nav */
+@media(max-width:700px){
+  .nav-wm,.nav-r .nav-links-wrap{display:none;}
+  nav{padding:1.2rem 1.4rem;}
+  .nav-logo{font-size:11px;}
+  .nav-hire{display:block;}
+}
 
-/* ════════════════════════════
-   HERO
-════════════════════════════ */
-#hero{position:relative;height:100vh;overflow:hidden;background:#0e0c0a;}
+/* ── HERO ── */
+#hero{position:relative;height:100svh;min-height:500px;overflow:hidden;background:#0e0c0a;}
 .hero-slides{position:absolute;inset:0;z-index:0;}
-.hslide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:hfade 72s infinite;transform:scale(1.06);}
-.hslide:nth-child(1){background-image:url('assets/slide1.jpg');animation-delay:0s;}
-.hslide:nth-child(2){background-image:url('assets/slide2.jpg');animation-delay:6s;}
-.hslide:nth-child(3){background-image:url('assets/slide3.jpg');animation-delay:12s;}
-.hslide:nth-child(4){background-image:url('assets/slide4.jpg');animation-delay:18s;}
-.hslide:nth-child(5){background-image:url('assets/slide5.jpg');animation-delay:24s;}
-.hslide:nth-child(6){background-image:url('assets/slide6.jpg');animation-delay:30s;}
-.hslide:nth-child(7){background-image:url('assets/slide7.jpg');animation-delay:36s;}
-.hslide:nth-child(8){background-image:url('assets/slide8.jpg');animation-delay:42s;}
-.hslide:nth-child(9){background-image:url('assets/slide9.jpg');animation-delay:48s;}
-.hslide:nth-child(10){background-image:url('assets/slide10.jpg');animation-delay:54s;}
-.hslide:nth-child(11){background-image:url('assets/slide11.jpg');animation-delay:60s;}
-.hslide:nth-child(12){background-image:url('assets/slide12.jpg');animation-delay:66s;}
-@keyframes hfade{0%{opacity:0;transform:scale(1.06);}4%{opacity:1;transform:scale(1.03);}10%{opacity:1;transform:scale(1);}14%{opacity:0;}100%{opacity:0;}}
-.hero-ov{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(14,12,10,0.88) 0%,rgba(14,12,10,0.35) 50%,rgba(14,12,10,0.2) 75%,rgba(14,12,10,0.55) 100%),linear-gradient(to bottom,rgba(14,12,10,0.45) 0%,transparent 20%,transparent 68%,rgba(14,12,10,0.95) 100%);}
-
-.hero-body{position:relative;z-index:2;height:100%;display:flex;align-items:center;padding:0 3.5rem;}
-.hero-left{max-width:600px;}
-
-/* Germany · Pakistan · Since 2017 — bigger, highlighted */
-.hero-geo{display:flex;align-items:center;gap:.7rem;margin-bottom:1.6rem;flex-wrap:wrap;}
-.hero-geo .geo-word{
-  font-family:'Playfair Display',serif;font-style:italic;
-  font-size:clamp(1rem,1.6vw,1.4rem);font-weight:400;
-  color:#e8e2d8;letter-spacing:.04em;
-}
-.hero-geo .geo-sep{color:rgba(232,226,216,0.2);font-size:.9rem;}
-.hero-geo .geo-yr{
-  font-family:'Montserrat',sans-serif;font-size:10px;font-weight:400;
-  letter-spacing:.45em;color:rgba(232,226,216,0.5);text-transform:uppercase;
-  border:1px solid rgba(232,226,216,0.2);padding:.25rem .75rem;
-}
-
-h1.hero-name{font-family:'Playfair Display',serif;font-size:clamp(3.8rem,7.5vw,8.5rem);font-weight:700;line-height:.88;letter-spacing:-.01em;color:#e8e2d8;}
-h1.hero-name em{display:block;font-style:italic;font-weight:400;color:rgba(232,226,216,0.42);font-size:.58em;letter-spacing:.05em;margin-top:.12em;}
-
-/* Abbasverse word — bigger, present */
-.hero-abbasverse{
-  font-family:'Playfair Display',serif;font-size:clamp(.75rem,1.2vw,1.1rem);
-  font-weight:400;letter-spacing:.55em;text-transform:uppercase;
-  color:rgba(232,226,216,0.28);margin-top:1.2rem;margin-bottom:.6rem;
-}
-
-/* disciplines — bigger */
-.hero-disciplines{display:flex;flex-direction:column;gap:.4rem;margin-top:.3rem;}
-.hero-disciplines .disc-row{
-  font-family:'Montserrat',sans-serif;font-size:clamp(9px,1.1vw,13px);
-  font-weight:300;letter-spacing:.4em;color:rgba(232,226,216,0.55);text-transform:uppercase;
-}
-.hero-disciplines .bio-line{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(1rem,1.3vw,1.2rem);font-weight:300;
-  color:rgba(232,226,216,0.32);letter-spacing:.03em;margin-top:.5rem;
-}
-
-.hero-counter{position:absolute;right:3rem;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:7px;}
+.hslide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;will-change:opacity,transform;}
+.hslide.on{animation:hfade-in 1.4s ease forwards;}
+.hslide.off{animation:hfade-out 1.4s ease forwards;}
+@keyframes hfade-in{from{opacity:0;transform:scale(1.05);}to{opacity:1;transform:scale(1.02);}}
+@keyframes hfade-out{from{opacity:1;}to{opacity:0;}}
+.hslide:nth-child(1){background-image:url('assets/slide1.jpg');}
+.hslide:nth-child(2){background-image:url('assets/slide2.jpg');}
+.hslide:nth-child(3){background-image:url('assets/slide3.jpg');}
+.hslide:nth-child(4){background-image:url('assets/slide4.jpg');}
+.hslide:nth-child(5){background-image:url('assets/slide5.jpg');}
+.hslide:nth-child(6){background-image:url('assets/slide6.jpg');}
+.hslide:nth-child(7){background-image:url('assets/slide7.jpg');}
+.hslide:nth-child(8){background-image:url('assets/slide8.jpg');}
+.hslide:nth-child(9){background-image:url('assets/slide9.jpg');}
+.hslide:nth-child(10){background-image:url('assets/slide10.jpg');}
+.hslide:nth-child(11){background-image:url('assets/slide11.jpg');}
+.hslide:nth-child(12){background-image:url('assets/slide12.jpg');}
+.hero-ov{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(14,12,10,0.85) 0%,rgba(14,12,10,0.3) 55%,rgba(14,12,10,0.55) 100%),linear-gradient(to bottom,rgba(14,12,10,0.4) 0%,transparent 20%,transparent 65%,rgba(14,12,10,0.95) 100%);}
+.hero-body{position:relative;z-index:2;height:100%;display:flex;align-items:center;padding:0 2.5rem;}
+.hero-left{max-width:560px;}
+.hero-geo{display:flex;align-items:center;gap:.6rem;margin-bottom:1.4rem;flex-wrap:wrap;}
+.geo-word{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(.95rem,1.6vw,1.35rem);font-weight:400;color:#e8e2d8;letter-spacing:.03em;}
+.geo-sep{color:rgba(232,226,216,0.2);font-size:.85rem;}
+.geo-yr{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:400;letter-spacing:.4em;color:rgba(232,226,216,0.45);text-transform:uppercase;border:1px solid rgba(232,226,216,0.18);padding:.22rem .7rem;}
+h1.hero-name{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,7vw,8rem);font-weight:700;line-height:.88;letter-spacing:-.01em;color:#e8e2d8;}
+h1.hero-name em{display:block;font-style:italic;font-weight:400;color:rgba(232,226,216,0.42);font-size:.58em;letter-spacing:.04em;margin-top:.1em;}
+.hero-abbasverse{font-family:'Playfair Display',serif;font-size:clamp(.7rem,1.1vw,1rem);font-weight:400;letter-spacing:.5em;text-transform:uppercase;color:rgba(232,226,216,0.22);margin-top:1.1rem;margin-bottom:.5rem;}
+.hero-disc{display:flex;flex-direction:column;gap:.35rem;margin-top:.3rem;}
+.disc-row{font-family:'Montserrat',sans-serif;font-size:clamp(8px,1vw,11px);font-weight:300;letter-spacing:.38em;color:rgba(232,226,216,0.6);text-transform:uppercase;}
+.bio-line{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.95rem,1.3vw,1.15rem);font-weight:300;color:rgba(232,226,216,0.42);letter-spacing:.03em;margin-top:.4rem;}
+.hero-dots{position:absolute;right:2rem;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;}
 .hdot{width:2px;height:2px;border-radius:50%;background:rgba(232,226,216,0.2);cursor:pointer;transition:background .5s,transform .5s,border-radius .4s;}
-.hdot.on{background:#e8e2d8;transform:scaleY(3.5);border-radius:1px;}
-.hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.4rem;font-size:7px;letter-spacing:.5em;color:rgba(232,226,216,0.25);text-transform:uppercase;}
-.hero-scroll-bar{width:.5px;height:44px;background:linear-gradient(to bottom,rgba(232,226,216,0),rgba(232,226,216,0.4));animation:sb 2.5s ease-in-out infinite;}
-@keyframes sb{0%,100%{height:44px;opacity:.4}50%{height:62px;opacity:1}}
-
-/* ════════════════════════════
-   WHO AM I — fixed portrait size
-════════════════════════════ */
-#who{background:linear-gradient(to bottom,#0e0c0a,rgba(14,12,10,0.95));padding:7rem 3.5rem;}
-.who-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:4rem;align-items:center;}
-
-/* LEFT col: text is primary, bold, instant */
-.who-text-col{}
-.who-label{
-  font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;
-  letter-spacing:.55em;color:rgba(232,226,216,0.55);text-transform:uppercase;
-  display:flex;align-items:center;gap:.8rem;margin-bottom:1.4rem;
-}
-.who-label::before{content:'';width:20px;height:1px;background:rgba(232,226,216,0.4);}
-.who-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(6rem,13vw,14rem);
-  font-weight:900;line-height:.82;letter-spacing:-.03em;color:#e8e2d8;
-  margin-bottom:1.2rem;
-}
-.who-subtitle{
-  font-family:'Playfair Display',serif;font-style:italic;
-  font-size:clamp(1.1rem,1.8vw,1.6rem);font-weight:400;
-  color:rgba(232,226,216,0.65);line-height:1.2;margin-bottom:1.8rem;
-}
-.who-body{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:1.15rem;font-weight:300;line-height:1.85;
-  color:rgba(232,226,216,0.72);max-width:440px;
+.hdot.on{background:#e8e2d8;transform:scaleY(3.2);border-radius:1px;}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.4rem;font-size:6.5px;letter-spacing:.5em;color:rgba(232,226,216,0.22);text-transform:uppercase;}
+.hero-scroll-bar{width:.5px;height:38px;background:linear-gradient(to bottom,rgba(232,226,216,0),rgba(232,226,216,0.4));animation:sb 2.5s ease-in-out infinite;}
+@keyframes sb{0%,100%{height:38px;opacity:.4}50%{height:54px;opacity:1}}
+@media(max-width:700px){
+  .hero-body{padding:0 1.4rem;}
+  .hero-left{max-width:100%;}
+  .hero-dots{right:.8rem;}
 }
 
-/* RIGHT col: portrait — contained, aligned */
-.who-portrait-wrap{
-  width:100%;
-  max-height:520px; /* prevents going taller than the text */
-  overflow:hidden;position:relative;
-}
-.who-portrait-wrap img{
-  width:100%;height:100%;object-fit:cover;object-position:top;display:block;
-  filter:grayscale(10%);transition:filter .6s,transform 8s ease;
-}
-.who-portrait-wrap:hover img{filter:grayscale(0%);transform:scale(1.02);}
-.who-portrait-wrap::after{content:'';position:absolute;inset:0;border:1px solid rgba(232,226,216,0.08);pointer-events:none;}
-
-.cta-link{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.8rem;font-size:9px;font-weight:400;letter-spacing:.35em;color:rgba(232,226,216,0.4);text-decoration:none;text-transform:uppercase;transition:color .3s,gap .3s;}
-.cta-link .cl{width:22px;height:1px;background:rgba(232,226,216,0.3);transition:width .4s cubic-bezier(.23,1,.32,1);}
+/* ── SHARED SECTION STYLES ── */
+.sec{padding:5rem 2.5rem;}
+@media(max-width:700px){.sec{padding:4rem 1.4rem;}}
+.sec-big{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,9vw,11rem);font-weight:900;line-height:.85;letter-spacing:-.02em;color:#e8e2d8;opacity:.88;}
+.sec-big em{font-style:italic;font-weight:400;color:rgba(232,226,216,0.3);}
+.sec-label{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:.5em;color:rgba(232,226,216,0.35);text-transform:uppercase;display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem;}
+.sec-label::before{content:'';width:18px;height:1px;background:rgba(232,226,216,0.3);}
+.body-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.75);}
+.body-text p+p{margin-top:1rem;}
+.cta-link{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.8rem;font-size:9px;font-weight:400;letter-spacing:.32em;color:rgba(232,226,216,0.45);text-decoration:none;text-transform:uppercase;transition:color .3s,gap .3s;}
+.cta-link .cl{width:20px;height:1px;background:rgba(232,226,216,0.3);transition:width .4s cubic-bezier(.23,1,.32,1);}
 .cta-link:hover{color:rgba(232,226,216,0.85);}
-.cta-link:hover .cl{width:40px;}
+.cta-link:hover .cl{width:38px;}
+hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,rgba(232,226,216,0.08) 20%,rgba(232,226,216,0.08) 80%,transparent);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+@media(max-width:700px){.two-col{grid-template-columns:1fr;gap:2.5rem;}}
 
-/* ════════════════════════════
-   PHOTOGRAPHER — light bg
-════════════════════════════ */
-#photography{background:linear-gradient(to bottom,#0e0c0a 0%,#ece7df 7%,#ece7df 93%,#0e0c0a 100%);padding:6rem 0;}
+/* ── WHO AM I ── */
+#who{background:linear-gradient(to bottom,#0e0c0a,rgba(14,12,10,0.96));padding:5rem 2.5rem;}
+.who-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:4rem;align-items:center;}
+@media(max-width:700px){.who-grid{grid-template-columns:1fr;gap:2.5rem;}}
+.who-title{font-family:'Playfair Display',serif;font-size:clamp(4.5rem,12vw,13rem);font-weight:900;line-height:.82;letter-spacing:-.03em;color:#e8e2d8;margin-bottom:1rem;}
+.who-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;color:rgba(232,226,216,0.6);line-height:1.3;margin-bottom:1.6rem;}
+.who-portrait{width:100%;aspect-ratio:3/4;overflow:hidden;position:relative;}
+.who-portrait img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:grayscale(10%);transition:filter .6s;}
+.who-portrait:hover img{filter:grayscale(0%);}
+.who-portrait::after{content:'';position:absolute;inset:0;border:1px solid rgba(232,226,216,0.08);pointer-events:none;}
+@media(max-width:700px){.who-portrait{aspect-ratio:4/3;}}
 
-.photo-header{
-  padding:0 3.5rem 3rem;
-  display:grid;grid-template-columns:1fr auto;
-  gap:3rem;align-items:end;
-}
-.section-big-word{font-family:'Playfair Display',serif;font-size:clamp(4.5rem,11vw,12rem);font-weight:900;line-height:.85;letter-spacing:-.02em;color:#1a1714;opacity:.88;}
-.section-big-word em{font-style:italic;font-weight:400;color:rgba(26,23,20,0.3);}
-.section-right-note{max-width:280px;text-align:right;font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:300;line-height:1.85;color:rgba(26,23,20,0.5);}
-
-/* photo grid: slideshow left (slides 1–12), three statics right (slides 2,4,6) */
-.photo-exhibition{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:3px;
-  height:620px;
-}
-.ph-slide-col{
-  position:relative;
-  overflow:hidden;
-  height:620px; /* must be explicit for absolute children to fill */
-}
-.ph-slide{
-  position:absolute;
-  top:0;left:0;right:0;bottom:0;
-  background-size:cover;
-  background-position:center;
-  opacity:0;
-  transition:opacity 1.2s ease;
-}
+/* ── PHOTOGRAPHY ── */
+#photography{background:linear-gradient(to bottom,#0e0c0a 0%,#ece7df 6%,#ece7df 94%,#0e0c0a 100%);padding:5rem 0;}
+.photo-header{padding:0 2.5rem 2.5rem;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+.sec-big-dark{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,10vw,12rem);font-weight:900;line-height:.85;letter-spacing:-.02em;color:#1a1714;opacity:.88;}
+.sec-big-dark em{font-style:italic;font-weight:400;color:rgba(26,23,20,0.3);}
+.photo-note{max-width:260px;text-align:right;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;font-weight:300;line-height:1.8;color:rgba(26,23,20,0.6);}
+/* Exhibition grid */
+.photo-exhibition{display:grid;grid-template-columns:1fr 1fr;gap:3px;height:560px;}
+@media(max-width:700px){.photo-exhibition{grid-template-columns:1fr;height:auto;}}
+.ph-slide-col{position:relative;overflow:hidden;height:560px;}
+@media(max-width:700px){.ph-slide-col{height:280px;}}
+.ph-slide{position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease;}
 .ph-slide.on{opacity:1;}
-.ph-right-col{
-  display:grid;
-  grid-template-rows:1fr 1fr 1fr;
-  gap:3px;
-  height:620px;
-}
-.ph-cell{
-  overflow:hidden;
-  cursor:pointer;
-  min-height:0; /* prevents grid blowout */
-}
-.ph-cell img{
-  width:100%;height:100%;
-  object-fit:cover;display:block;
-  transition:transform .9s cubic-bezier(.23,1,.32,1),filter .5s;
-  filter:saturate(.9);
-}
+.ph-right-col{display:grid;grid-template-rows:1fr 1fr 1fr;gap:3px;height:560px;}
+@media(max-width:700px){.ph-right-col{grid-template-columns:1fr 1fr 1fr;grid-template-rows:none;height:140px;}}
+.ph-cell{overflow:hidden;min-height:0;}
+.ph-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.23,1,.32,1),filter .5s;filter:saturate(.9);}
 .ph-cell:hover img{transform:scale(1.05);filter:saturate(1.1);}
-.ph-cta{padding:2rem 3.5rem 0;text-align:right;}
+.ph-cta{padding:2rem 2.5rem 0;text-align:right;}
 .ph-cta a{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:400;letter-spacing:.4em;color:rgba(26,23,20,0.45);text-decoration:none;text-transform:uppercase;border-bottom:1px solid rgba(26,23,20,0.2);padding-bottom:.2rem;transition:color .3s;}
 .ph-cta a:hover{color:rgba(26,23,20,0.85);}
 
-/* ════════════════════════════
-   EXHIBITION STRIP
-════════════════════════════ */
-#exhibition{background:#0e0c0a;display:flex;height:65vh;overflow:hidden;gap:2px;}
+/* ── EXHIBITION STRIP ── */
+#exhibition{background:#0e0c0a;display:flex;height:60vh;min-height:280px;overflow:hidden;gap:2px;}
+@media(max-width:700px){#exhibition{height:40vw;}}
 .ex-panel{flex:1;overflow:hidden;cursor:pointer;position:relative;transition:flex .8s cubic-bezier(.23,1,.32,1);}
 .ex-panel:hover{flex:2.2;}
 .ex-panel img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.23,1,.32,1),filter .6s;filter:grayscale(20%) brightness(.82);}
 .ex-panel:hover img{transform:scale(1.04);filter:grayscale(0%) brightness(1);}
-.ex-label{position:absolute;bottom:1.4rem;left:1.2rem;font-size:7.5px;font-weight:300;letter-spacing:.45em;color:rgba(232,226,216,0);text-transform:uppercase;transition:color .5s;}
+.ex-label{position:absolute;bottom:1.2rem;left:1rem;font-size:7px;font-weight:300;letter-spacing:.4em;color:rgba(232,226,216,0);text-transform:uppercase;transition:color .5s;}
 .ex-panel:hover .ex-label{color:rgba(232,226,216,0.5);}
 
-/* ════════════════════════════
-   FILMMAKER — dark red
-════════════════════════════ */
-#filmmaker{background:linear-gradient(to bottom,#0e0c0a,#1c0b09 25%,#180807 70%,#0e0c0a);padding:8rem 3.5rem;}
-#filmmaker .section-big-word{color:#e8e2d8;}
-#filmmaker .section-big-word em{color:rgba(180,50,35,0.55);}
-
-/* Girl in White — festival highlight */
-.giw-section{
-  display:grid;grid-template-columns:1fr 1fr;gap:4rem;
-  margin-top:4rem;padding:3rem;
-  border:1px solid rgba(180,50,35,0.18);
-  background:rgba(180,50,35,0.04);
-  position:relative;
-}
-.giw-section::before{content:'FESTIVAL SELECTION';position:absolute;top:-1px;left:2.5rem;font-size:7px;font-weight:600;letter-spacing:.5em;color:rgba(180,50,35,0.6);background:#1c0b09;padding:0 .8rem;text-transform:uppercase;}
-.giw-poster{aspect-ratio:2/3;overflow:hidden;background:rgba(232,226,216,0.04);display:flex;align-items:center;justify-content:center;}
+/* ── FILMMAKER ── */
+#filmmaker{background:linear-gradient(to bottom,#0e0c0a,#1c0b09 25%,#180807 70%,#0e0c0a);padding:5rem 2.5rem;}
+.giw-section{display:grid;grid-template-columns:1fr 1.5fr;gap:3rem;margin-top:3rem;padding:2.5rem;border:1px solid rgba(180,50,35,0.18);background:rgba(180,50,35,0.04);position:relative;}
+@media(max-width:700px){.giw-section{grid-template-columns:1fr;gap:1.5rem;padding:1.5rem;}}
+.giw-section::before{content:'FESTIVAL SELECTION';position:absolute;top:-1px;left:2rem;font-size:6.5px;font-weight:600;letter-spacing:.5em;color:rgba(180,50,35,0.65);background:#1c0b09;padding:0 .7rem;text-transform:uppercase;}
+.giw-poster{aspect-ratio:2/3;overflow:hidden;background:rgba(232,226,216,0.04);display:flex;align-items:center;justify-content:center;min-height:200px;}
 .giw-poster img{width:100%;height:100%;object-fit:cover;display:block;}
-.giw-poster-ph{font-size:8px;letter-spacing:.3em;color:rgba(232,226,216,0.2);text-transform:uppercase;text-align:center;}
-.giw-info{display:flex;flex-direction:column;justify-content:center;}
-.giw-tag{font-size:8px;font-weight:600;letter-spacing:.5em;color:rgba(180,50,35,0.7);text-transform:uppercase;margin-bottom:1rem;}
-.giw-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;color:#e8e2d8;line-height:1;margin-bottom:.5rem;}
-.giw-title em{font-style:italic;font-weight:400;color:rgba(232,226,216,0.45);display:block;font-size:.6em;letter-spacing:.05em;margin-top:.3rem;}
-.giw-detail{font-size:.82rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.4);margin-top:1.2rem;}
-.giw-detail span{display:block;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:rgba(180,50,35,0.5);margin-bottom:.3rem;}
-
-/* Film list + player */
-.film-split{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;margin-top:4rem;align-items:start;}
-.film-section-label{font-size:8px;font-weight:400;letter-spacing:.45em;color:rgba(232,226,216,0.22);text-transform:uppercase;margin-bottom:1.5rem;}
-.film-list-items{list-style:none;}
-.fli{display:grid;grid-template-columns:2.4rem 1fr;gap:.8rem;align-items:start;padding:1rem 0;border-bottom:1px solid rgba(180,50,35,0.1);cursor:pointer;transition:padding-left .3s cubic-bezier(.23,1,.32,1);}
+.giw-poster-ph{font-size:7.5px;letter-spacing:.3em;color:rgba(232,226,216,0.18);text-transform:uppercase;text-align:center;padding:1rem;}
+.giw-tag{font-size:7.5px;font-weight:600;letter-spacing:.45em;color:rgba(180,50,35,0.7);text-transform:uppercase;margin-bottom:.9rem;}
+.giw-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:700;color:#e8e2d8;line-height:1;margin-bottom:.4rem;}
+.giw-title em{font-style:italic;font-weight:400;color:rgba(232,226,216,0.4);display:block;font-size:.62em;letter-spacing:.04em;margin-top:.25rem;}
+.giw-detail{font-size:.82rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.5);margin-top:1rem;}
+.giw-detail span{display:block;font-size:7px;letter-spacing:.35em;text-transform:uppercase;color:rgba(180,50,35,0.55);margin-bottom:.25rem;}
+.fest-badge{display:inline-flex;align-items:center;gap:.5rem;font-style:normal;font-size:.8rem;color:rgba(232,226,216,0.6);margin-top:.3rem;}
+.fest-badge::before{content:'✦';color:rgba(180,50,35,0.7);font-size:.7rem;}
+.film-split{display:grid;grid-template-columns:1.1fr 1fr;gap:3.5rem;margin-top:3.5rem;align-items:start;}
+@media(max-width:700px){.film-split{grid-template-columns:1fr;gap:2rem;}}
+.film-sec-label{font-size:7.5px;font-weight:400;letter-spacing:.42em;color:rgba(232,226,216,0.22);text-transform:uppercase;margin-bottom:1.3rem;}
+.film-list{list-style:none;}
+.fli{display:grid;grid-template-columns:2.2rem 1fr;gap:.7rem;align-items:start;padding:.9rem 0;border-bottom:1px solid rgba(180,50,35,0.1);cursor:pointer;transition:padding-left .3s cubic-bezier(.23,1,.32,1);}
 .fli:first-child{border-top:1px solid rgba(180,50,35,0.1);}
 .fli:hover{padding-left:.6rem;}
 .fli:hover .fli-t{color:#c0392b;}
-.fli-n{font-size:8px;font-weight:300;letter-spacing:.2em;color:rgba(180,50,35,0.38);padding-top:.15rem;}
-.fli-t{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:400;color:rgba(232,226,216,0.8);transition:color .3s;display:block;margin-bottom:.2rem;}
-.fli-meta{font-size:7.5px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.28);text-transform:uppercase;display:flex;gap:.8rem;flex-wrap:wrap;}
-.fli-cat{font-size:7px;font-weight:600;letter-spacing:.3em;color:rgba(180,50,35,0.45);text-transform:uppercase;margin-bottom:.15rem;}
-
-.film-embed-note{font-size:8px;font-weight:300;letter-spacing:.3em;color:rgba(232,226,216,0.22);text-transform:uppercase;margin-bottom:1rem;}
-.yt-embed{width:100%;aspect-ratio:16/9;background:rgba(255,255,255,0.02);border:1px solid rgba(180,50,35,0.18);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:8px;color:rgba(232,226,216,0.18);letter-spacing:.3em;text-transform:uppercase;}
+.fli-n{font-size:7.5px;font-weight:300;letter-spacing:.18em;color:rgba(180,50,35,0.4);padding-top:.1rem;}
+.fli-cat{font-size:7px;font-weight:600;letter-spacing:.3em;color:rgba(180,50,35,0.48);text-transform:uppercase;display:block;margin-bottom:.15rem;}
+.fli-t{font-family:'Playfair Display',serif;font-size:.92rem;font-weight:400;color:rgba(232,226,216,0.82);transition:color .3s;display:block;margin-bottom:.18rem;}
+.fli-meta{font-size:7px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.28);text-transform:uppercase;display:flex;gap:.7rem;flex-wrap:wrap;}
+.fli-thumb{width:72px;height:40px;object-fit:cover;flex-shrink:0;border:1px solid rgba(180,50,35,0.2);}
+.fli-inner{display:flex;align-items:center;gap:.9rem;width:100%;}
+.yt-note{font-size:7.5px;font-weight:300;letter-spacing:.3em;color:rgba(232,226,216,0.2);text-transform:uppercase;margin-bottom:.9rem;}
+.yt-embed{width:100%;aspect-ratio:16/9;background:rgba(255,255,255,0.02);border:1px solid rgba(180,50,35,0.18);position:relative;overflow:hidden;}
 .yt-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+.imdb-badge{display:inline-flex;align-items:center;gap:.8rem;background:rgba(245,197,24,0.07);border:1px solid rgba(245,197,24,0.28);padding:.7rem 1.5rem;text-decoration:none;transition:background .3s;margin-top:1.5rem;}
+.imdb-badge:hover{background:rgba(245,197,24,0.13);}
+.imdb-badge .imdb-logo{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:rgba(245,197,24,0.9);letter-spacing:.04em;}
+.imdb-badge .imdb-text{font-size:7.5px;font-weight:400;letter-spacing:.3em;color:rgba(245,197,24,0.5);text-transform:uppercase;}
 
-/* ════════════════════════════
-   CINEMATOGRAPHER / EDITOR
-════════════════════════════ */
-#cine{background:linear-gradient(to bottom,#0e0c0a,#0c0f13 40%,#0c0f13 60%,#0e0c0a);padding:8rem 3.5rem;}
-#cine .section-big-word{color:#e8e2d8;opacity:.8;font-size:clamp(3rem,8vw,9rem);}
-#cine .section-big-word em{color:rgba(90,130,175,0.4);}
-.cine-desc{font-size:.82rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.32);max-width:520px;margin-top:1.2rem;}
-.cine-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:3rem;}
+/* ── SOCIAL MEDIA CONTENT CREATOR ── */
+#social{background:linear-gradient(to bottom,#0e0c0a,#0f1108 30%,#0f1108 70%,#0e0c0a);padding:5rem 2.5rem;}
+.social-intro{max-width:600px;margin-top:1.5rem;}
+.brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:3rem;}
+@media(max-width:700px){.brand-grid{grid-template-columns:1fr;}}
+.brand-card{background:rgba(232,226,216,0.02);border:1px solid rgba(232,226,216,0.06);overflow:hidden;}
+.brand-pano{width:100%;aspect-ratio:3/1;overflow:hidden;position:relative;background:rgba(232,226,216,0.04);}
+.brand-pano img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease;}
+.brand-card:hover .brand-pano img{transform:scale(1.04);}
+.brand-pano-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:7.5px;letter-spacing:.3em;color:rgba(232,226,216,0.18);text-transform:uppercase;}
+.brand-body{padding:2rem 2rem 1.8rem;}
+.brand-num{font-size:8px;font-weight:300;letter-spacing:.3em;color:rgba(210,175,80,0.45);margin-bottom:.9rem;}
+.brand-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:rgba(232,226,216,0.88);margin-bottom:.3rem;line-height:1;}
+.brand-role{font-size:7px;font-weight:400;letter-spacing:.35em;color:rgba(210,175,80,0.45);text-transform:uppercase;margin-bottom:1rem;}
+.brand-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.62);}
+.brand-reels{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:1.2rem;}
+.brand-reel{aspect-ratio:9/16;overflow:hidden;background:rgba(232,226,216,0.03);border:1px solid rgba(232,226,216,0.06);}
+.brand-reel video{width:100%;height:100%;object-fit:cover;display:block;}
+.brand-reel-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:7px;letter-spacing:.3em;color:rgba(232,226,216,0.15);text-transform:uppercase;text-align:center;padding:.5rem;}
+.brand-insta{margin-top:1.2rem;background:rgba(232,226,216,0.02);border:1px solid rgba(232,226,216,0.07);overflow:hidden;}
+.brand-insta img{width:100%;display:block;}
+.brand-insta-ph{padding:1.5rem;font-size:7px;letter-spacing:.3em;color:rgba(232,226,216,0.15);text-transform:uppercase;text-align:center;}
+
+/* ── CINEMATOGRAPHER ── */
+#cine{background:linear-gradient(to bottom,#0e0c0a,#0c0f13 40%,#0c0f13 60%,#0e0c0a);padding:5rem 2.5rem;}
+.cine-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.68);max-width:520px;margin-top:1.2rem;}
+.cine-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:2.5rem;}
+@media(max-width:700px){.cine-grid{grid-template-columns:1fr;}}
 .cine-cell{aspect-ratio:16/9;overflow:hidden;border:1px solid rgba(90,130,175,0.08);}
 .cine-cell iframe{width:100%;height:100%;border:none;display:block;}
+.cine-wide{grid-column:span 2;}
+@media(max-width:700px){.cine-wide{grid-column:span 1;}}
 
-/* ════════════════════════════
-   WRITER
-════════════════════════════ */
-#writer{background:linear-gradient(to bottom,#0e0c0a,#2b2419 14%,#2b2419 86%,#0e0c0a);padding:8rem 3.5rem;}
-#writer .section-big-word{color:#e8e2d8;opacity:.82;}
-#writer .section-big-word em{color:rgba(200,170,95,0.4);}
-.writer-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:4rem;align-items:start;}
-.poetry-label{font-size:7.5px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.6);text-transform:uppercase;margin-bottom:1rem;}
-.poetry-box{background:rgba(232,226,216,0.03);border:1px solid rgba(232,226,216,0.09);border-left:2px solid rgba(200,170,95,0.4);padding:2.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.08rem;font-weight:300;line-height:1.95;color:rgba(232,226,216,0.78);min-height:280px;white-space:pre-line;}
-.writing-note{font-size:.88rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.6);margin-top:1.5rem;}
+/* ── MEDIA ARTIST ── */
+#mediaartist{background:linear-gradient(to bottom,#0e0c0a,#080d10 30%,#080d10 70%,#0e0c0a);padding:5rem 2.5rem;}
 
-/* ════════════════════════════
-   ACTOR
-════════════════════════════ */
-#actor{background:linear-gradient(to bottom,#0e0c0a,#111010);padding:8rem 3.5rem;}
-#actor .section-big-word{color:#e8e2d8;opacity:.72;font-size:clamp(4rem,10vw,11rem);}
-#actor .section-big-word em{color:rgba(232,226,216,0.18);}
-.actor-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:4rem;align-items:start;}
+/* Project card */
+.ma-project{margin-top:3.5rem;padding:2.5rem;border:1px solid rgba(120,180,200,0.14);background:rgba(120,180,200,0.03);position:relative;}
+.ma-project-tag{position:absolute;top:-1px;left:2rem;font-size:6.5px;font-weight:600;letter-spacing:.45em;color:rgba(120,180,200,0.55);background:#080d10;padding:0 .7rem;text-transform:uppercase;}
+.ma-project-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:700;color:rgba(232,226,216,0.88);margin-bottom:.5rem;line-height:1.05;}
+.ma-project-title em{font-style:italic;font-weight:400;color:rgba(120,180,200,0.5);}
+.ma-project-meta{font-size:7.5px;font-weight:300;letter-spacing:.3em;color:rgba(120,180,200,0.45);text-transform:uppercase;margin-bottom:1.4rem;display:flex;flex-wrap:wrap;gap:.8rem;}
+.ma-project-body{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.7);}
+.ma-project-body p+p{margin-top:.9rem;}
+.ma-grid-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;margin-top:2rem;align-items:start;}
+@media(max-width:700px){.ma-grid-inner{grid-template-columns:1fr;gap:1.5rem;}}
+.ma-photos{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+.ma-photo{overflow:hidden;aspect-ratio:3/4;}
+.ma-photo.wide{grid-column:span 2;aspect-ratio:16/9;}
+.ma-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.ma-photo-ph{width:100%;height:100%;min-height:140px;background:rgba(120,180,200,0.04);display:flex;align-items:center;justify-content:center;font-size:7px;letter-spacing:.3em;color:rgba(120,180,200,0.2);text-transform:uppercase;text-align:center;padding:.5rem;}
+.festival-pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(120,180,200,0.07);border:1px solid rgba(120,180,200,0.2);padding:.4rem 1rem;margin:.4rem .4rem 0 0;font-size:7.5px;font-weight:400;letter-spacing:.28em;color:rgba(120,180,200,0.65);text-transform:uppercase;}
+.festival-pill.gold{background:rgba(245,197,24,0.07);border-color:rgba(245,197,24,0.2);color:rgba(245,197,24,0.65);}
+.ma-artists{font-size:7.5px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.3);text-transform:uppercase;margin-top:1.2rem;line-height:2;}
+.ma-artists strong{color:rgba(232,226,216,0.55);font-weight:400;}
+.jenna-screenshot{margin-top:1.5rem;border:1px solid rgba(245,197,24,0.18);overflow:hidden;}
+.jenna-screenshot img{width:100%;display:block;}
+.jenna-screenshot-ph{padding:2rem;font-size:7.5px;letter-spacing:.3em;color:rgba(245,197,24,0.3);text-transform:uppercase;text-align:center;background:rgba(245,197,24,0.03);}
+.soundscape-box{background:rgba(120,180,200,0.03);border:1px solid rgba(120,180,200,0.1);border-left:2px solid rgba(120,180,200,0.3);padding:2rem;margin-top:2rem;}
+.soundscape-label{font-size:7px;font-weight:400;letter-spacing:.4em;color:rgba(120,180,200,0.5);text-transform:uppercase;margin-bottom:.8rem;}
+.soundscape-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.62);}
+
+/* ── WRITER ── */
+#writer{background:linear-gradient(to bottom,#0e0c0a,#2b2419 14%,#2b2419 86%,#0e0c0a);padding:5rem 2.5rem;}
+.poetry-label{font-size:7.5px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.6);text-transform:uppercase;margin-bottom:.9rem;}
+.poetry-box{background:rgba(232,226,216,0.03);border:1px solid rgba(232,226,216,0.09);border-left:2px solid rgba(200,170,95,0.4);padding:2rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;font-weight:300;line-height:1.95;color:rgba(232,226,216,0.8);white-space:pre-line;}
+
+/* ── ACTOR ── */
+#actor{background:linear-gradient(to bottom,#0e0c0a,#111010);padding:5rem 2.5rem;}
 .actor-projects{list-style:none;}
-.ap{padding:.9rem 0;border-bottom:1px solid rgba(232,226,216,0.05);display:grid;grid-template-columns:1.4rem 1fr;gap:.8rem;}
+.ap{padding:.85rem 0;border-bottom:1px solid rgba(232,226,216,0.05);display:grid;grid-template-columns:1.3rem 1fr;gap:.7rem;}
 .ap-dot{width:3px;height:3px;border-radius:50%;background:rgba(232,226,216,0.18);margin-top:.5rem;}
-.ap-title{font-family:'Playfair Display',serif;font-size:.9rem;color:rgba(232,226,216,0.65);display:block;margin-bottom:.18rem;}
-.ap-meta{font-size:7.5px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.28);text-transform:uppercase;}
+.ap-title{font-family:'Playfair Display',serif;font-size:.88rem;color:rgba(232,226,216,0.68);display:block;margin-bottom:.15rem;}
+.ap-meta{font-size:7px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.28);text-transform:uppercase;}
 
-/* ════════════════════════════
-   HIRE
-════════════════════════════ */
-#hire{position:relative;overflow:hidden;background:linear-gradient(to bottom,#0e0c0a,#130e0d);padding:10rem 3.5rem 8rem;text-align:center;border-top:1px solid rgba(232,226,216,0.05);}
-.hire-ghost{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Playfair Display',serif;font-weight:900;font-style:italic;font-size:clamp(7rem,20vw,26rem);color:rgba(232,226,216,0.025);white-space:nowrap;pointer-events:none;line-height:1;}
-.hire-eyebrow{font-size:8px;font-weight:400;letter-spacing:.5em;color:rgba(232,226,216,0.28);text-transform:uppercase;margin-bottom:2rem;display:flex;align-items:center;justify-content:center;gap:1rem;}
-.hire-eyebrow::before,.hire-eyebrow::after{content:'';width:24px;height:1px;background:rgba(232,226,216,0.18);}
-.hire-heading{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(2.8rem,6vw,6.5rem);font-weight:400;line-height:1;color:#e8e2d8;margin-bottom:1.5rem;}
-.hire-sub{font-size:.85rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.38);max-width:460px;margin:0 auto 3.5rem;}
-.hire-btn{display:inline-flex;align-items:center;gap:1rem;font-size:9px;font-weight:400;letter-spacing:.4em;color:#e8e2d8;text-decoration:none;text-transform:uppercase;border:1px solid rgba(232,226,216,0.22);padding:1.1rem 3rem;position:relative;overflow:hidden;transition:border-color .4s;}
-.hire-btn::before{content:'';position:absolute;inset:0;background:rgba(232,226,216,0.07);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.23,1,.32,1);}
-.hire-btn:hover::before{transform:scaleX(1);}
-.hire-btn:hover{border-color:rgba(232,226,216,0.5);}
+/* ── HIRE ── */
+#hire{position:relative;overflow:hidden;background:linear-gradient(to bottom,#0e0c0a,#130e0d);padding:8rem 2.5rem 6rem;text-align:center;border-top:1px solid rgba(232,226,216,0.05);}
+.hire-ghost{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Playfair Display',serif;font-weight:900;font-style:italic;font-size:clamp(6rem,18vw,24rem);color:rgba(232,226,216,0.025);white-space:nowrap;pointer-events:none;line-height:1;}
+.hire-ey{font-size:8px;font-weight:400;letter-spacing:.45em;color:rgba(232,226,216,0.28);text-transform:uppercase;margin-bottom:1.8rem;display:flex;align-items:center;justify-content:center;gap:1rem;}
+.hire-ey::before,.hire-ey::after{content:'';width:22px;height:1px;background:rgba(232,226,216,0.18);}
+.hire-h{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(2.5rem,5.5vw,6rem);font-weight:400;line-height:1;color:#e8e2d8;margin-bottom:1.4rem;}
+.hire-sub{font-size:.85rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.5);max-width:440px;margin:0 auto 3rem;}
+.contact-stack{display:flex;flex-direction:column;align-items:center;gap:.9rem;margin-bottom:2.5rem;}
+.contact-btn{display:inline-flex;align-items:center;gap:.9rem;min-width:280px;justify-content:center;font-size:8.5px;font-weight:400;letter-spacing:.35em;color:#e8e2d8;text-decoration:none;text-transform:uppercase;border:1px solid rgba(232,226,216,0.18);padding:1rem 2.5rem;position:relative;overflow:hidden;transition:border-color .4s;}
+.contact-btn::before{content:'';position:absolute;inset:0;background:rgba(232,226,216,0.06);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.23,1,.32,1);}
+.contact-btn:hover::before{transform:scaleX(1);}
+.contact-btn:hover{border-color:rgba(232,226,216,0.4);}
+.imdb-hire{display:inline-flex;align-items:center;gap:.8rem;background:rgba(245,197,24,0.07);border:1px solid rgba(245,197,24,0.28);padding:.8rem 2rem;text-decoration:none;transition:background .3s;margin-top:1rem;}
+.imdb-hire:hover{background:rgba(245,197,24,0.13);}
+.imdb-hire .ilogo{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:rgba(245,197,24,0.9);}
+.imdb-hire .itext{font-size:7.5px;font-weight:400;letter-spacing:.3em;color:rgba(245,197,24,0.5);text-transform:uppercase;}
 
-/* MARQUEE */
-.mq-wrap{overflow:hidden;white-space:nowrap;border-top:1px solid rgba(232,226,216,0.05);border-bottom:1px solid rgba(232,226,216,0.05);padding:.85rem 0;background:rgba(14,12,10,0.8);}
+/* ── MARQUEE ── */
+.mq-wrap{overflow:hidden;white-space:nowrap;border-top:1px solid rgba(232,226,216,0.05);border-bottom:1px solid rgba(232,226,216,0.05);padding:.8rem 0;background:rgba(14,12,10,0.8);}
 .mq-track{display:inline-block;animation:mqroll 32s linear infinite;}
-.mq-track span{font-size:8px;font-weight:300;letter-spacing:.45em;color:rgba(232,226,216,0.22);text-transform:uppercase;padding:0 2rem;}
-.mq-track .rs{color:rgba(180,50,35,0.55);padding:0 .4rem;letter-spacing:0;}
+.mq-track span{font-size:7.5px;font-weight:300;letter-spacing:.4em;color:rgba(232,226,216,0.22);text-transform:uppercase;padding:0 1.8rem;}
+.mq-track .rs{color:rgba(180,50,35,0.55);padding:0 .3rem;letter-spacing:0;}
 @keyframes mqroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* FOOTER */
-footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-top:1px solid rgba(232,226,216,0.05);}
-.footer-left{font-size:.7rem;font-weight:300;color:rgba(232,226,216,0.2);letter-spacing:.04em;line-height:1.8;}
-.footer-left a{color:rgba(232,226,216,0.2);text-decoration:none;transition:color .3s;}
-.footer-left a:hover{color:rgba(232,226,216,0.5);}
-.footer-mid{font-family:'Playfair Display',serif;font-size:11px;letter-spacing:.5em;color:rgba(232,226,216,0.18);text-transform:uppercase;}
-.footer-right{display:flex;justify-content:flex-end;gap:1.8rem;}
-.footer-right a{font-size:.7rem;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.2);text-decoration:none;text-transform:uppercase;transition:color .3s;}
-.footer-right a:hover{color:rgba(232,226,216,0.55);}
+/* ── FOOTER ── */
+footer{background:#0a0907;padding:2.2rem 2.5rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-top:1px solid rgba(232,226,216,0.05);}
+@media(max-width:700px){footer{grid-template-columns:1fr;gap:1rem;text-align:center;}}
+.fc{font-size:.68rem;font-weight:300;color:rgba(232,226,216,0.2);letter-spacing:.04em;line-height:1.8;}
+.fc a{color:rgba(232,226,216,0.2);text-decoration:none;transition:color .3s;}
+.fc a:hover{color:rgba(232,226,216,0.5);}
+.fm{font-family:'Playfair Display',serif;font-size:10px;letter-spacing:.45em;color:rgba(232,226,216,0.18);text-transform:uppercase;text-align:center;}
+.fs{display:flex;justify-content:flex-end;gap:1.6rem;}
+@media(max-width:700px){.fs{justify-content:center;}}
+.fs a{font-size:.68rem;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.2);text-decoration:none;text-transform:uppercase;transition:color .3s;}
+.fs a:hover{color:rgba(232,226,216,0.55);}
 
-/* SCROLL REVEAL */
-.rv{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.23,1,.32,1),transform .85s cubic-bezier(.23,1,.32,1);}
-.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
+/* ── SCROLL REVEAL ── */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.23,1,.32,1),transform .8s cubic-bezier(.23,1,.32,1);}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
 .rv.in{opacity:1;transform:translateY(0);}
-
-/* ════════════════════════════
-   MEDIA ARTIST / SOUNDSCAPES
-════════════════════════════ */
-#mediaartist{
-  background:linear-gradient(to bottom,#0e0c0a,#0c0e10 30%,#0d1014 60%,#0e0c0a);
-  padding:8rem 3.5rem;
-}
-#mediaartist .section-big-word{color:#e8e2d8;opacity:.78;font-size:clamp(3.5rem,9vw,10rem);}
-#mediaartist .section-big-word em{color:rgba(120,180,200,0.35);}
-.ma-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:4rem;align-items:start;}
-.ma-body{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.12rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.68);}
-.ma-body p+p{margin-top:1.2rem;}
-.ma-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem;}
-.ma-tag{font-size:7.5px;font-weight:400;letter-spacing:.35em;color:rgba(120,180,200,0.5);text-transform:uppercase;border:1px solid rgba(120,180,200,0.2);padding:.3rem .8rem;}
-.soundscape-box{background:rgba(120,180,200,0.03);border:1px solid rgba(120,180,200,0.1);border-left:2px solid rgba(120,180,200,0.3);padding:2.5rem;}
-.soundscape-label{font-size:7.5px;font-weight:400;letter-spacing:.45em;color:rgba(120,180,200,0.45);text-transform:uppercase;margin-bottom:1.2rem;}
-.soundscape-note{font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.38);}
-
-/* ════════════════════════════
-   CONTENT CREATION
-════════════════════════════ */
-#content-creation{
-  background:linear-gradient(to bottom,#0e0c0a,#131108 30%,#131108 70%,#0e0c0a);
-  padding:8rem 3.5rem;
-}
-#content-creation .section-big-word{color:#e8e2d8;opacity:.78;font-size:clamp(3rem,7.5vw,9rem);}
-#content-creation .section-big-word em{color:rgba(210,175,80,0.35);}
-.cc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:4rem;}
-.cc-card{
-  background:rgba(232,226,216,0.02);
-  border:1px solid rgba(232,226,216,0.06);
-  padding:2.5rem 2rem;
-  transition:background .4s,border-color .4s;
-  cursor:default;
-}
-.cc-card:hover{background:rgba(232,226,216,0.05);border-color:rgba(210,175,80,0.2);}
-.cc-num{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:300;letter-spacing:.3em;color:rgba(210,175,80,0.4);margin-bottom:1.2rem;}
-.cc-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:rgba(232,226,216,0.85);margin-bottom:.5rem;line-height:1;}
-.cc-role{font-size:7.5px;font-weight:400;letter-spacing:.35em;color:rgba(232,226,216,0.3);text-transform:uppercase;margin-bottom:1rem;}
-.cc-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.98rem;font-weight:300;line-height:1.7;color:rgba(232,226,216,0.5);}
-.cc-intro{max-width:580px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.12rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.68);margin-top:2rem;}
 </style>
 </head>
 <body>
@@ -413,24 +327,26 @@ footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-colum
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="nav-wordmarks">
+  <div class="nav-wm">
     <span class="hi">Filmmaker</span>
     <span>Photographer</span>
     <span>Writer</span>
   </div>
-  <a href="#" class="nav-center">Abbasverse</a>
-  <div class="nav-right">
-    <a href="#photography">Photography</a>
-    <a href="#filmmaker">Film</a>
-    <a href="#writer">Writing</a>
+  <a href="#" class="nav-logo">Abbasverse</a>
+  <div class="nav-r">
+    <div class="nav-links-wrap" style="display:flex;align-items:center;gap:1.8rem;">
+      <a href="#photography">Photography</a>
+      <a href="#filmmaker">Film</a>
+      <a href="#writer">Writing</a>
+    </div>
     <a href="#hire" class="nav-hire">Hire me</a>
   </div>
 </nav>
 
-<!-- ════ HERO ════ -->
+<!-- HERO -->
 <section id="hero">
-  <div class="hero-slides">
-    <div class="hslide"></div>
+  <div class="hero-slides" id="heroSlides">
+    <div class="hslide on"></div>
     <div class="hslide"></div>
     <div class="hslide"></div>
     <div class="hslide"></div>
@@ -447,309 +363,339 @@ footer{background:#0a0907;padding:2.5rem 3.5rem;display:grid;grid-template-colum
   <div class="hero-body">
     <div class="hero-left">
       <div class="hero-geo">
-        <span class="geo-word">Germany</span>
-        <span class="geo-sep">·</span>
-        <span class="geo-word">Pakistan</span>
-        <span class="geo-sep">·</span>
+        <span class="geo-word">Germany</span><span class="geo-sep">·</span>
+        <span class="geo-word">Pakistan</span><span class="geo-sep">·</span>
         <span class="geo-yr">Since 2017</span>
       </div>
       <h1 class="hero-name">Ghulam Abbas<br><em>Khan Soomro</em></h1>
       <p class="hero-abbasverse">Abbasverse</p>
-      <div class="hero-disciplines">
+      <div class="hero-disc">
         <span class="disc-row">Filmmaker &nbsp;·&nbsp; Photographer &nbsp;·&nbsp; Writer &nbsp;·&nbsp; Media Artist</span>
         <span class="bio-line">Part-time actor. Part-time poet. Full-time storyteller.</span>
       </div>
     </div>
   </div>
-  <div class="hero-counter" id="hdots">
-    <div class="hdot on" data-i="0"></div>
-    <div class="hdot" data-i="1"></div>
-    <div class="hdot" data-i="2"></div>
-    <div class="hdot" data-i="3"></div>
-    <div class="hdot" data-i="4"></div>
-    <div class="hdot" data-i="5"></div>
-    <div class="hdot" data-i="6"></div>
-    <div class="hdot" data-i="7"></div>
-    <div class="hdot" data-i="8"></div>
-    <div class="hdot" data-i="9"></div>
-    <div class="hdot" data-i="10"></div>
-    <div class="hdot" data-i="11"></div>
-  </div>
+  <div class="hero-dots" id="hdots"></div>
   <div class="hero-scroll"><div class="hero-scroll-bar"></div><span>Scroll</span></div>
 </section>
 
-<!-- ════ WHO AM I ════ -->
+<hr class="rule">
+
+<!-- WHO AM I -->
 <section id="who">
   <div class="who-grid">
-    <div class="who-text-col rv">
+    <div class="rv">
       <h2 class="who-title">Who Is<br>ABBAS?</h2>
-      <p class="who-subtitle">Through every medium I can find.</p>
-      <p class="who-body">I'm a filmmaker, photographer, writer, and media artist working between Germany and Pakistan. Since 2017 I've built a body of work across short films, documentary, editorial photography, screenplays, and poetry. I shoot. I direct. I write. I can do all three for your project.</p>
+      <p class="who-sub">Through every medium I can find.</p>
+      <p class="body-text">I'm a filmmaker, photographer, writer, and media artist working between Germany and Pakistan. Since 2017 I've built a body of work across short films, documentary, editorial photography, screenplays, poetry, and media art. I shoot. I direct. I write. I can do all three for your project.</p>
       <a href="#hire" class="cta-link"><span class="cl"></span>Work with me</a>
     </div>
     <div class="rv d1">
-      <!-- Add your portrait: assets/portrait.jpg -->
-      <div class="who-portrait-wrap">
-        <img src="assets/portrait.jpg" alt="Ghulam Abbas Khan Soomro — Filmmaker and Photographer based in Germany and Pakistan" loading="lazy" onerror="this.parentElement.style.minHeight='400px';this.parentElement.style.background='rgba(232,226,216,0.04)';this.style.display='none'">
+      <div class="who-portrait">
+        <img src="assets/portrait.jpg" alt="Ghulam Abbas Khan Soomro — Filmmaker and Photographer" loading="lazy" onerror="this.parentElement.style.minHeight='320px';this.parentElement.style.background='rgba(232,226,216,0.04)';this.style.display='none'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ PHOTOGRAPHER ════ -->
+<hr class="rule">
+
+<!-- PHOTOGRAPHY -->
 <section id="photography">
   <div class="photo-header rv">
-    <div class="section-big-word">Photographer<em>?</em></div>
-    <div class="section-right-note">I photograph what the eye almost misses — fashion, editorial, abstract, documentary, landscape. Shot across Germany and Pakistan. Available for commissions.</div>
+    <div class="sec-big-dark">Photographer<em>?</em></div>
+    <div class="photo-note">I photograph what the eye almost misses — fashion, editorial, abstract, documentary, landscape. Shot across Germany and Pakistan. Available for commissions.</div>
   </div>
-
-  <!-- Left: slideshow slides 13–16 | Right: slides 2, 4, 6 (three cells) -->
   <div class="photo-exhibition rv d1">
-    <div class="ph-slide-col">
-      <div class="ph-slide on" style="background-image:url('assets/slide13.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide14.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide15.jpg')"></div>
-      <div class="ph-slide"    style="background-image:url('assets/slide16.jpg')"></div>
+    <div class="ph-slide-col" id="phSlideCol">
+      <div class="ph-slide on" style="background-image:url('assets/slideshow1.jpg')"></div>
+      <div class="ph-slide" style="background-image:url('assets/slideshow2.jpg')"></div>
+      <div class="ph-slide" style="background-image:url('assets/slideshow3.jpg')"></div>
+      <div class="ph-slide" style="background-image:url('assets/slideshow4.jpg')"></div>
+      <div class="ph-slide" style="background-image:url('assets/slideshow5.jpg')"></div>
+      <div class="ph-slide" style="background-image:url('assets/slideshow6.jpg')"></div>
     </div>
     <div class="ph-right-col">
-      <div class="ph-cell"><img src="assets/slide2.jpg" alt="Photography by Ghulam Abbas — Germany" loading="lazy"></div>
-      <div class="ph-cell"><img src="assets/slide4.jpg" alt="Photography by Ghulam Abbas — Pakistan" loading="lazy"></div>
-      <div class="ph-cell"><img src="assets/slide6.jpg" alt="Editorial photography Germany" loading="lazy"></div>
+      <div class="ph-cell"><img src="assets/slide2.jpg" alt="Photography Germany" loading="lazy"></div>
+      <div class="ph-cell"><img src="assets/slide4.jpg" alt="Photography Pakistan" loading="lazy"></div>
+      <div class="ph-cell"><img src="assets/slide6.jpg" alt="Editorial photography" loading="lazy"></div>
     </div>
   </div>
-
   <div class="ph-cta rv d2"><a href="photography.html">View the full archive →</a></div>
 </section>
 
-<!-- ════ EXHIBITION STRIP ════ -->
+<!-- EXHIBITION STRIP -->
 <section id="exhibition">
-  <div class="ex-panel"><img src="assets/slide1.jpg" alt="Editorial photography" loading="lazy"><span class="ex-label">Editorial</span></div>
-  <div class="ex-panel"><img src="assets/slide3.jpg" alt="Portrait photography" loading="lazy"><span class="ex-label">Portrait</span></div>
-  <div class="ex-panel"><img src="assets/slide5.jpg" alt="Abstract photography" loading="lazy"><span class="ex-label">Abstract</span></div>
-  <div class="ex-panel"><img src="assets/slide2.jpg" alt="Documentary photography Germany" loading="lazy"><span class="ex-label">Documentary</span></div>
+  <div class="ex-panel"><img src="assets/slide1.jpg" alt="Editorial" loading="lazy"><span class="ex-label">Editorial</span></div>
+  <div class="ex-panel"><img src="assets/slide3.jpg" alt="Portrait" loading="lazy"><span class="ex-label">Portrait</span></div>
+  <div class="ex-panel"><img src="assets/slide5.jpg" alt="Abstract" loading="lazy"><span class="ex-label">Abstract</span></div>
+  <div class="ex-panel"><img src="assets/slide7.jpg" alt="Documentary" loading="lazy"><span class="ex-label">Documentary</span></div>
 </section>
 
-<!-- ════ FILMMAKER ════ -->
-<section id="filmmaker">
-  <div class="rv">
-    <div class="section-big-word">Filmmaker<em>?</em></div>
-  </div>
+<hr class="rule">
 
-  <!-- THE GIRL IN WHITE — festival highlight -->
+<!-- FILMMAKER -->
+<section id="filmmaker">
+  <div class="rv"><div class="sec-big">Filmmaker<em>?</em></div></div>
+
+  <!-- Girl in White -->
   <div class="giw-section rv d1">
     <div class="giw-poster">
-      <!-- Add poster: assets/giw-poster.jpg -->
-      <img src="assets/giw-poster.jpg" alt="The Girl in White — Short Film by Ghulam Abbas Khan Soomro" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.giw-poster-ph').style.display='flex'">
-      <div class="giw-poster-ph" style="display:none;flex-direction:column;align-items:center;gap:.8rem;padding:2rem">
-        <span style="font-size:2rem;opacity:.2">◻</span>
-        <span>Add poster:<br>assets/giw-poster.jpg</span>
-      </div>
+      <img src="assets/giw-poster.jpg" alt="The Girl in White poster" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="giw-poster-ph" style="display:none">Add poster: assets/giw-poster.jpg</div>
     </div>
-    <div class="giw-info">
-      <p class="giw-tag">Short Film · On the Festival Circuit</p>
+    <div>
+      <p class="giw-tag">Short Film · Festival Circuit</p>
       <h3 class="giw-title">The Girl in White<em>Das Mädchen in Weiß</em></h3>
+      <div class="giw-detail"><span>My Role</span>Director · Cinematographer · Editor · Co-Writer</div>
+      <div class="giw-detail"><span>Language & Genre</span>English / German · Drama</div>
       <div class="giw-detail">
-        <span>My Role</span>
-        Director &nbsp;·&nbsp; Cinematographer &nbsp;·&nbsp; Editor &nbsp;·&nbsp; Co-Writer
-      </div>
-      <div class="giw-detail" style="margin-top:1.2rem">
-        <span>Language &amp; Genre</span>
-        English / German &nbsp;·&nbsp; Drama
-      </div>
-      <div class="giw-detail" style="margin-top:1.2rem">
         <span>Festival Selections</span>
-        <span style="display:inline-flex;align-items:center;gap:.5rem;margin-top:.4rem;font-style:normal;font-size:.82rem;color:rgba(232,226,216,0.55);">
-          ✦ Dieburger Filmabend — Selected to screen (1 of 6 films)
-        </span><br>
-        <span style="display:inline-flex;align-items:center;gap:.5rem;margin-top:.3rem;font-style:normal;font-size:.82rem;color:rgba(232,226,216,0.55);">
-          ✦ Lift-Off Global Network Film Festival — Official Selection
-        </span>
+        <div class="fest-badge">Dieburger Filmabend — Selected to screen (1 of 6 films)</div><br>
+        <div class="fest-badge">Lift-Off Global Network Film Festival — Official Selection</div>
       </div>
-      <div class="giw-detail" style="margin-top:1.2rem">
-        <span>Availability</span>
-        Currently on the festival circuit. Not available online.
-      </div>
+      <div class="giw-detail"><span>Availability</span>Currently on the festival circuit. Not available online.</div>
     </div>
   </div>
 
-  <!-- Selected Projects list + interactive player -->
+  <!-- Film list + player -->
   <div class="film-split">
     <div class="rv d1">
-      <p class="film-section-label">Selected projects</p>
-      <ul class="film-list-items" id="filmList">
-
+      <p class="film-sec-label">Selected projects</p>
+      <ul class="film-list" id="filmList">
         <li class="fli" onclick="playFilm('wWwEkPcEDZE')">
           <span class="fli-n">001</span>
-          <div style="display:flex;align-items:center;gap:1rem;width:100%">
-            <img src="https://img.youtube.com/vi/wWwEkPcEDZE/mqdefault.jpg" alt="FASTDA Rollout Video thumbnail" style="width:80px;height:45px;object-fit:cover;flex-shrink:0;border:1px solid rgba(180,50,35,0.2);" loading="lazy">
-            <div>
-              <span class="fli-cat">Director</span>
-              <span class="fli-t">FASTDA Racing 26 — Rollout Video</span>
-              <div class="fli-meta"><span>2024</span><span>Documentary</span></div>
-            </div>
+          <div class="fli-inner">
+            <img class="fli-thumb" src="https://img.youtube.com/vi/wWwEkPcEDZE/mqdefault.jpg" alt="" loading="lazy">
+            <div><span class="fli-cat">Director</span><span class="fli-t">FASTDA Racing 26 — Rollout Video</span><div class="fli-meta"><span>2024</span><span>Documentary</span></div></div>
           </div>
         </li>
-
         <li class="fli" onclick="playFilm('_oL8oBuGNEw')">
           <span class="fli-n">002</span>
-          <div>
-            <span class="fli-cat">Director · BTS</span>
-            <span class="fli-t">Documentary BTS — "Tumharey Husn Kay Naam"</span>
-            <div class="fli-meta"><span>2023</span><span>Documentary</span></div>
-          </div>
+          <div><span class="fli-cat">Director · BTS</span><span class="fli-t">Documentary BTS — "Tumharey Husn Kay Naam"</span><div class="fli-meta"><span>2023</span><span>Documentary</span></div></div>
         </li>
-
         <li class="fli" onclick="playFilm('9kepTbUXK88')">
           <span class="fli-n">003</span>
-          <div>
-            <span class="fli-cat">Writer · Director · Editor</span>
-            <span class="fli-t">Red Sock — Short Film</span>
-            <div class="fli-meta"><span>Short Film</span></div>
-          </div>
+          <div><span class="fli-cat">Writer · Director · Editor</span><span class="fli-t">Red Sock — Short Film</span><div class="fli-meta"><span>Short Film</span></div></div>
         </li>
-
         <li class="fli" onclick="playFilm('ETllZwfA-Cs')">
           <span class="fli-n">004</span>
-          <div>
-            <span class="fli-cat">Writer · Director · Editor</span>
-            <span class="fli-t">Qaid — A Quarantine Short Film</span>
-            <div class="fli-meta"><span>Short Film</span></div>
-          </div>
+          <div><span class="fli-cat">Writer · Director · Editor</span><span class="fli-t">Qaid — A Quarantine Short Film</span><div class="fli-meta"><span>Short Film</span></div></div>
         </li>
-
         <li class="fli" onclick="playFilm('kG-YCHPtKNg')">
           <span class="fli-n">005</span>
-          <div>
-            <span class="fli-cat">Production Head</span>
-            <span class="fli-t">Tumharey Husn Kay Naam</span>
-            <div class="fli-meta"><span>Music Video</span></div>
-          </div>
+          <div><span class="fli-cat">Production Head</span><span class="fli-t">Tumharey Husn Kay Naam</span><div class="fli-meta"><span>Music Video</span></div></div>
         </li>
-
         <li class="fli" onclick="playFilm('8frYgvc6Jp0')">
           <span class="fli-n">006</span>
-          <div>
-            <span class="fli-cat">Assistant Director</span>
-            <span class="fli-t">Naina Ki Sharafat — Web Series</span>
-            <div class="fli-meta"><span>Web Series</span></div>
-          </div>
+          <div><span class="fli-cat">Assistant Director</span><span class="fli-t">Naina Ki Sharafat — Web Series</span><div class="fli-meta"><span>Web Series</span></div></div>
         </li>
-
         <li class="fli" onclick="playFilm('fxCVTFPgzyk')">
           <span class="fli-n">007</span>
-          <div>
-            <span class="fli-cat">Assistant Director</span>
-            <span class="fli-t">Hangor — Film</span>
-            <div class="fli-meta"><span>Feature Film</span></div>
-          </div>
+          <div><span class="fli-cat">Assistant Director</span><span class="fli-t">Hangor — Film</span><div class="fli-meta"><span>Feature Film</span></div></div>
         </li>
-
         <li class="fli" style="cursor:default">
           <span class="fli-n">008</span>
-          <div>
-            <span class="fli-cat">Assistant Director</span>
-            <span class="fli-t">Fraud — Serial</span>
-            <div class="fli-meta"><span>TV Serial</span></div>
-          </div>
+          <div><span class="fli-cat">Assistant Director</span><span class="fli-t">Fraud — Serial</span><div class="fli-meta"><span>TV Serial</span></div></div>
         </li>
-
       </ul>
-      <a href="https://www.imdb.com/name/nm18201027" target="_blank" rel="noopener" class="cta-link imdb-link" style="color:rgba(245,197,24,0.7);margin-top:1.5rem;border:1px solid rgba(245,197,24,0.2);padding:.6rem 1rem;display:inline-flex;align-items:center;gap:.8rem;"><span style="font-size:11px;font-weight:700;letter-spacing:.1em;color:rgba(245,197,24,0.85);">IMDb</span><span style="font-size:8px;letter-spacing:.3em;color:rgba(245,197,24,0.55);text-transform:uppercase;">nm18201027 — View full profile</span></a>
+      <a href="https://www.imdb.com/name/nm18201027" target="_blank" rel="noopener" class="imdb-badge">
+        <span class="imdb-logo">IMDb</span>
+        <span class="imdb-text">nm18201027 — View full profile</span>
+      </a>
     </div>
-
     <div class="rv d2">
-      <p class="film-embed-note">Click any project to watch</p>
+      <p class="yt-note">Click any project to watch</p>
       <div class="yt-embed" id="videoPlayer">
-        <iframe id="mainIframe" src="https://www.youtube.com/embed/wWwEkPcEDZE" allowfullscreen title="FASTDA Racing 26 Rollout Video — Ghulam Abbas Khan Soomro"></iframe>
+        <iframe id="mainIframe" src="https://www.youtube.com/embed/wWwEkPcEDZE" allowfullscreen title="Film by Ghulam Abbas Khan Soomro" loading="lazy"></iframe>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ CINEMATOGRAPHER / EDITOR ════ -->
+<hr class="rule">
+
+<!-- SOCIAL MEDIA CONTENT CREATOR -->
+<section id="social">
+  <div class="rv">
+    <div class="sec-big" style="font-size:clamp(2.8rem,7vw,9rem);">Social Media<br><em>Content Creator?</em></div>
+    <p class="social-intro body-text" style="margin-top:1.5rem">I don't just create content — I build strategy, develop content plans, and execute across platforms. From event photography and short-form video to reels and engagement campaigns, I've worked with organisations in Germany to grow their digital presence.</p>
+  </div>
+  <div class="brand-grid rv d1">
+
+    <!-- FASTDA -->
+    <div class="brand-card">
+      <div class="brand-pano">
+        <img src="assets/fastda-panoramic.jpg" alt="FASTDA Racing — panoramic" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.brand-pano-ph').style.display='flex'">
+        <div class="brand-pano-ph" style="display:none">Add: assets/fastda-panoramic.jpg</div>
+      </div>
+      <div class="brand-body">
+        <p class="brand-num">01</p>
+        <p class="brand-name">FASTDA Racing</p>
+        <p class="brand-role">Director · Videographer · Photographer · Editor · Strategist</p>
+        <p class="brand-desc">Formula Student Germany racing team at Hochschule Darmstadt. I photographed events, created a series of short videos and reels boosting their engagement across multiple platforms — and didn't just create content but came up with the strategy, content plan, and full execution.</p>
+        <div class="brand-reels">
+          <!-- Add reels: assets/fastda-reel1.mp4, fastda-reel2.mp4 — or use YouTube embeds below -->
+          <div class="brand-reel">
+            <div class="brand-reel-ph">Add reel video<br>assets/fastda-reel1.mp4</div>
+          </div>
+          <div class="brand-reel">
+            <div class="brand-reel-ph">Add reel video<br>assets/fastda-reel2.mp4</div>
+          </div>
+        </div>
+        <div class="brand-insta">
+          <img src="assets/fastda-insta.jpg" alt="FASTDA Instagram handle" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="brand-insta-ph" style="display:none">Add screenshot: assets/fastda-insta.jpg</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MediaArtCulture -->
+    <div class="brand-card">
+      <div class="brand-pano">
+        <img src="assets/mac-panoramic.jpg" alt="MediaArtCulture — panoramic" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.brand-pano-ph').style.display='flex'">
+        <div class="brand-pano-ph" style="display:none">Add: assets/mac-panoramic.jpg</div>
+      </div>
+      <div class="brand-body">
+        <p class="brand-num">02</p>
+        <p class="brand-name">MediaArtCulture</p>
+        <p class="brand-role">Photographer · Videographer · Content Strategist</p>
+        <p class="brand-desc">Cultural events, art exhibitions, and media productions across Germany and Pakistan. I photographed events, created a series of short videos and reels for their page — boosting engagement across multiple platforms — and came up with a content strategy, plan, and full execution.</p>
+        <div class="brand-reels">
+          <!-- Add your two MediaArtCulture reels here -->
+          <div class="brand-reel">
+            <video src="assets/mac-reel1.mp4" muted loop playsinline preload="none" onerror="this.parentElement.querySelector('.brand-reel-ph').style.display='flex';this.style.display='none'"></video>
+            <div class="brand-reel-ph" style="display:none">Add reel:<br>assets/mac-reel1.mp4</div>
+          </div>
+          <div class="brand-reel">
+            <video src="assets/mac-reel2.mp4" muted loop playsinline preload="none" onerror="this.parentElement.querySelector('.brand-reel-ph').style.display='flex';this.style.display='none'"></video>
+            <div class="brand-reel-ph" style="display:none">Add reel:<br>assets/mac-reel2.mp4</div>
+          </div>
+        </div>
+        <div class="brand-insta">
+          <img src="assets/mac-insta.jpg" alt="MediaArtCulture Instagram" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="brand-insta-ph" style="display:none">Add screenshot: assets/mac-insta.jpg</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- CINEMATOGRAPHER / EDITOR -->
 <section id="cine">
   <div class="rv">
-    <div class="section-big-word">Cinematographer<br><em>&amp; Editor?</em></div>
-    <p class="cine-desc">Travel films, aesthetic video essays, visual logs — work that shows what I see and how I move through the world with a camera.</p>
+    <div class="sec-big" style="font-size:clamp(2.8rem,7vw,9rem);color:#e8e2d8;opacity:.8;">Cinematographer<br><em style="color:rgba(90,130,175,0.4)">&amp; Editor?</em></div>
+    <p class="cine-desc">Travel films, aesthetic video essays, visual logs — the work that shows what I see and how I move through the world with a camera.</p>
   </div>
   <div class="cine-grid rv d1">
-    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/lZyTSFhRu18" allowfullscreen title="Cinematography reel — Ghulam Abbas Khan Soomro" loading="lazy"></iframe></div>
-    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/XxE0W0HoXGo" allowfullscreen title="Travel film Germany" loading="lazy"></iframe></div>
-    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/Z59q-iAj2yU" allowfullscreen title="Cinematic travel log" loading="lazy"></iframe></div>
-    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/yoC-CkckblY" allowfullscreen title="Christmas in Darmstadt" loading="lazy"></iframe></div>
-    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/BlU-lymjzzM" allowfullscreen title="Cinematography edit" loading="lazy"></iframe></div>
-    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/PzuvSq_ANzk" allowfullscreen title="Video essay" loading="lazy"></iframe></div>
-    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/QFHCFqL9U1E" allowfullscreen title="Aesthetic reel" loading="lazy"></iframe></div>
-    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/BW6G0BniL3s" allowfullscreen title="Short film edit" loading="lazy"></iframe></div>
-    <div class="cine-cell" style="grid-column:span 2"><iframe src="https://www.youtube.com/embed/ZuJ8M4TDLNU" allowfullscreen title="Cinematic reel" loading="lazy"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/lZyTSFhRu18" allowfullscreen loading="lazy" title="Cinematography reel"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/XxE0W0HoXGo" allowfullscreen loading="lazy" title="Travel film Germany"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/Z59q-iAj2yU" allowfullscreen loading="lazy" title="Cinematic travel log"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/yoC-CkckblY" allowfullscreen loading="lazy" title="Christmas in Darmstadt"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/BlU-lymjzzM" allowfullscreen loading="lazy" title="Cinematography edit"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/PzuvSq_ANzk" allowfullscreen loading="lazy" title="Video essay"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/QFHCFqL9U1E" allowfullscreen loading="lazy" title="Aesthetic reel"></iframe></div>
+    <div class="cine-cell"><iframe src="https://www.youtube.com/embed/BW6G0BniL3s" allowfullscreen loading="lazy" title="Short film edit"></iframe></div>
+    <div class="cine-cell cine-wide"><iframe src="https://www.youtube.com/embed/ZuJ8M4TDLNU" allowfullscreen loading="lazy" title="Cinematic reel"></iframe></div>
   </div>
 </section>
 
-<!-- ════ MEDIA ARTIST & SOUNDSCAPES ════ -->
+<hr class="rule">
+
+<!-- MEDIA ARTIST -->
 <section id="mediaartist">
   <div class="rv">
-    <div class="section-big-word">Media Artist<em>?</em></div>
+    <div class="sec-big" style="font-size:clamp(3rem,8vw,10rem);color:#e8e2d8;opacity:.8;">Media Artist<em style="color:rgba(120,180,200,0.35)">?</em></div>
   </div>
-  <div class="ma-grid">
-    <div class="rv d1">
-      <p class="ma-body">
-        <p>Beyond the frame and the script, I work at the intersection of art, technology, and experience. As a media artist I create work that doesn't fit a single category — installations, sound-image compositions, experimental video, and sonic environments.</p>
-        <p>Soundscapes are a particular obsession. The ambient texture of a space — a city at 3am, rain on glass in Darmstadt, a market in Karachi — is as much a document as any photograph. I record, layer, and compose these into immersive audio environments that accompany visual work or stand alone.</p>
-      </p>
-      <div class="ma-tags">
-        <span class="ma-tag">Sound Design</span>
-        <span class="ma-tag">Experimental Video</span>
-        <span class="ma-tag">Installation</span>
-        <span class="ma-tag">Soundscapes</span>
-        <span class="ma-tag">Ambient Audio</span>
-        <span class="ma-tag">Multimedia</span>
+
+  <!-- PROJECT 1: Things I Want to Do One Day -->
+  <div class="ma-project rv d1">
+    <span class="ma-project-tag">Live Performance · HDA</span>
+    <div class="ma-grid-inner">
+      <div>
+        <h3 class="ma-project-title">Things I Want to Do<em>One Day</em></h3>
+        <div class="ma-project-meta">
+          <span>Performer · Concept</span>
+          <span>30 June 2025</span>
+          <span>IMC Room, HDA Darmstadt</span>
+        </div>
+        <p class="ma-project-body">A durational performance exploring time, dreams deferred, and the quiet weight of our own postponements. I performed wearing a black shalwar kameez and ajrak — my Sindhi cultural identity made visible. Post-it notes attached to my body carried dreams I have told myself to pursue "one day." A two-sided mirror: one face for me, one for the audience. Visitors were invited to write their own deferred dreams and place them on my body.</p>
+        <p class="ma-project-body" style="margin-top:.9rem;color:rgba(232,226,216,0.55);font-size:.95rem;">The shalwar kameez represents where I come from. The ajrak carries centuries of Sindhi tradition, identity, and resistance. The performance was an act of shared vulnerability — inviting strangers into the weight of possibility.</p>
+      </div>
+      <div>
+        <!-- Add 3 performance photos: assets/perf1.jpg, perf2.jpg, perf3.jpg -->
+        <div class="ma-photos">
+          <div class="ma-photo"><img src="assets/perf1.jpg" alt="Performance — Things I Want to Do One Day" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">perf1.jpg</div></div>
+          <div class="ma-photo"><img src="assets/perf2.jpg" alt="Performance detail" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">perf2.jpg</div></div>
+          <div class="ma-photo wide"><img src="assets/perf3.jpg" alt="Performance audience" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">perf3.jpg</div></div>
+        </div>
       </div>
     </div>
-    <div class="rv d2">
-      <div class="soundscape-box">
-        <p class="soundscape-label">Soundscapes · Audio Work</p>
-        <p class="soundscape-note">Sound environments created from field recordings, ambient layers, and composed texture — Germany, Pakistan, in-between. Available as accompaniment to visual projects or standalone commissions.</p>
-        <p class="soundscape-note" style="margin-top:1rem;color:rgba(232,226,216,0.28);">Embed or link your soundscape audio here — SoundCloud, Bandcamp, or direct audio file.</p>
-        <!-- Paste your SoundCloud or audio embed here -->
+  </div>
+
+  <!-- PROJECT 2: Echoes of a Thought That Died -->
+  <div class="ma-project rv d1" style="margin-top:2px;border-color:rgba(245,197,24,0.2);background:rgba(245,197,24,0.025);">
+    <span class="ma-project-tag" style="color:rgba(245,197,24,0.6);background:#080d10;">3D Audio · Fulldome · Jena Festival</span>
+    <div class="ma-grid-inner">
+      <div>
+        <h3 class="ma-project-title" style="color:#e8e2d8;">Echoes of a Thought<em style="color:rgba(245,197,24,0.45)">That Died</em></h3>
+        <div class="ma-project-meta" style="color:rgba(245,197,24,0.45)">
+          <span>Title & Exposé — Ghulam Abbas</span>
+          <span>3D Audio Composition</span>
+          <span>Fulldome Interactive</span>
+        </div>
+        <p class="ma-project-body">An immersive 3D audio piece pulling the listener into the mental disintegration of an unnamed subject — someone losing not their life, but their inner continuity. Inspired by Poe's <em>The Fall of the House of Usher</em>, the work unfolds across five emotional zones: Dissociation, Panic, Longing, Fragmentation, and Collapse.</p>
+        <p class="ma-project-body" style="margin-top:.9rem;">I wrote the title and the full exposé for this work, and contributed to the 3D audio composition. The piece was part of the IMC MediaArtCulture Summer Exhibition at Dieburg Museum as a Fulldome Touch Design interactive piece — and has since been nominated and selected for the Jena Full Dome Festival.</p>
+        <div style="margin-top:1.2rem;">
+          <span class="festival-pill gold">IMC Summer Exhibition — Dieburg Museum</span>
+          <span class="festival-pill gold">20th Jena Full Dome Festival — Official Selection</span>
+          <span class="festival-pill gold">Zeiss-Planetarium Jena · 16 July 2025</span>
+        </div>
+        <div class="ma-artists">
+          Dramaturg / Composer: <strong>Ahmed Slimene</strong><br>
+          Scriptwriter: <strong>Ghulam Abbas Khan Soomro</strong><br>
+          Field Recording: <strong>Nhi Cao</strong><br>
+          3D Audio Artist: <strong>Kashif Shabbir</strong><br>
+          Artists: <strong>Laura Pachon Beltran, Berfin Damla Fiskeci, Alban Tufa</strong><br>
+          Performer: <strong>Berfin Damla Fiskeci</strong><br>
+          Mentors: <strong>Robin Wiemann, Prof. Sabine Breitsameter</strong>
+        </div>
+      </div>
+      <div>
+        <!-- Add Jena screenshot: assets/jena-screenshot.jpg -->
+        <div class="jenna-screenshot">
+          <img src="assets/jena-screenshot.jpg" alt="Jena Full Dome Festival nomination" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="jenna-screenshot-ph">Add: assets/jena-screenshot.jpg<br><br>Jena Full Dome Festival nomination screenshot</div>
+        </div>
+        <!-- Add Landline photos: assets/landline1.jpg through landline7.jpg -->
+        <div class="soundscape-box" style="margin-top:1.5rem;border-color:rgba(120,180,200,0.18);border-left-color:rgba(120,180,200,0.4);">
+          <p class="soundscape-label">Also — The +496071 Landline</p>
+          <p class="soundscape-note">A media art installation exploring human connection through a vintage landline telephone set in a familiar living room. Visitors pick up and answer a question, creating a moment of self-reflection through memory, cultural background, and shared experience. Exhibited as part of a sensory environment inspired by Kükelhaus's theory of embodied perception.</p>
+          <!-- Add 7 Landline photos below — assets/landline1.jpg through landline7.jpg -->
+          <div class="ma-photos" style="margin-top:1.2rem;">
+            <div class="ma-photo"><img src="assets/landline1.jpg" alt="The Landline installation" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline1.jpg</div></div>
+            <div class="ma-photo"><img src="assets/landline2.jpg" alt="Landline detail" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline2.jpg</div></div>
+            <div class="ma-photo"><img src="assets/landline3.jpg" alt="Landline visitors" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline3.jpg</div></div>
+            <div class="ma-photo"><img src="assets/landline4.jpg" alt="Landline space" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline4.jpg</div></div>
+            <div class="ma-photo"><img src="assets/landline5.jpg" alt="Landline phone" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline5.jpg</div></div>
+            <div class="ma-photo"><img src="assets/landline6.jpg" alt="Landline exhibition" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline6.jpg</div></div>
+            <div class="ma-photo wide"><img src="assets/landline7.jpg" alt="Landline overview" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ma-photo-ph').style.display='flex'"><div class="ma-photo-ph" style="display:none">landline7.jpg</div></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ CONTENT CREATION ════ -->
-<section id="content-creation">
-  <div class="rv">
-    <div class="section-big-word">Content<br><em>Creator?</em></div>
-    <p class="cc-intro">I've created content for organisations and brands — from event coverage and social media strategy to full production. Here's some of who I've worked with.</p>
-  </div>
-  <div class="cc-grid rv d1">
-    <div class="cc-card">
-      <p class="cc-num">01</p>
-      <p class="cc-name">FASTDA</p>
-      <p class="cc-role">Director · Videographer · Editor</p>
-      <p class="cc-desc">Formula Student Germany racing team. Produced the official 2024 car rollout video, event coverage, and social media content for the season.</p>
-    </div>
-    <div class="cc-card">
-      <p class="cc-num">02</p>
-      <p class="cc-name">MediaArtCulture</p>
-      <p class="cc-role">Media Coverage · Photography · Film</p>
-      <p class="cc-desc">Cultural events, art exhibitions, and media productions. Photography and video documentation across Germany and Pakistan.</p>
-    </div>
-    <div class="cc-card">
-      <p class="cc-num">03</p>
-      <p class="cc-name">IMC HDA</p>
-      <p class="cc-role">Content Creation · Social Media</p>
-      <p class="cc-desc">International Media Club at Hochschule Darmstadt. Social media content, event photography, and visual storytelling for the student community.</p>
-    </div>
-  </div>
-</section>
+<hr class="rule">
 
-<!-- ════ WRITER ════ -->
+<!-- WRITER -->
 <section id="writer">
-  <div class="rv">
-    <div class="section-big-word">Writer<em>?</em></div>
-  </div>
-  <div class="writer-grid">
+  <div class="rv"><div class="sec-big" style="color:#e8e2d8;opacity:.82;">Writer<em style="color:rgba(200,170,95,0.4)">?</em></div></div>
+  <div class="two-col" style="margin-top:3rem;">
     <div class="rv d1">
       <p class="poetry-label">— Abbas Writes —</p>
       <div class="poetry-box">Whenever I try to capture something, I can't help but capture loneliness, detachment, looking from the outside, or isolation. Maybe it's just reflecting my phase in life, but who to blame? The people with whom you invested so much of your energy just to be with them, or just life? Where everyone is hanging around the other with an agenda, that this would lead me to this, which is also fine and the way this world works. But what happened to genuine connections? Or are those ones just made in school? Or maybe I am looking at it wrong, or doing something wrong? Whenever I try to capture something, somehow I end up capturing distance.</div>
@@ -763,22 +709,21 @@ But perhaps I am not talking about bench at all. People are like that too. You f
 Here is to my bench people making an impact in life but with whom perhaps the connection is not the same and to all the new ones making the life exciting.</div>
     </div>
   </div>
-  <div style="margin-top:3rem;padding:0 0" class="rv d2">
-    <p style="font-size:8px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.42);text-transform:uppercase;margin-bottom:1.2rem;">Screenwriting · Essays · Available for hire</p>
-    <p class="writing-note" style="max-width:580px;">Festival-selected short film scripts. Available for hire — scripts, content, books. I write for the same reason I shoot: because some things can only be said once, and they need to be said right.</p>
+  <div class="rv d2" style="margin-top:2.5rem;">
+    <p style="font-size:7.5px;font-weight:400;letter-spacing:.42em;color:rgba(200,170,95,0.42);text-transform:uppercase;margin-bottom:.9rem;">Screenwriting · Essays · Available for hire</p>
+    <p class="body-text" style="max-width:560px;color:rgba(232,226,216,0.62);">Festival-selected short film scripts. Available for hire — scripts, content, books. I write for the same reason I shoot: because some things can only be said once.</p>
     <a href="writing.html" class="cta-link" style="color:rgba(200,170,95,0.5)"><span class="cl" style="background:rgba(200,170,95,0.3)"></span>Read more</a>
   </div>
 </section>
 
-<!-- ════ ACTOR ════ -->
+<hr class="rule">
+
+<!-- ACTOR -->
 <section id="actor">
-  <div class="rv">
-    <div class="section-big-word">Actor<em>?</em></div>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(232,226,216,0.28);margin-top:.7rem;max-width:460px;line-height:1.7;">Occasionally. But always with intention.</p>
-  </div>
-  <div class="actor-grid">
+  <div class="rv"><div class="sec-big" style="font-size:clamp(4rem,10vw,11rem);color:#e8e2d8;opacity:.72;">Actor<em style="color:rgba(232,226,216,0.18)">?</em></div></div>
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(232,226,216,0.42);margin-top:.7rem;max-width:440px;line-height:1.7;">Occasionally. But always with intention.</p>
+  <div class="two-col" style="margin-top:3rem;">
     <div class="rv d1">
-      <!-- REPLACE with your actual acting credits -->
       <ul class="actor-projects">
         <li class="ap"><div class="ap-dot"></div><div><span class="ap-title">Add your acting project here</span><span class="ap-meta">Role · Year · Director</span></div></li>
         <li class="ap"><div class="ap-dot"></div><div><span class="ap-title">Add your acting project here</span><span class="ap-meta">Role · Year · Director</span></div></li>
@@ -786,7 +731,9 @@ Here is to my bench people making an impact in life but with whom perhaps the co
       </ul>
     </div>
     <div class="rv d2">
-      <div class="yt-embed" style="border-color:rgba(232,226,216,0.06)"><span>Add acting reel or screenshot here</span></div>
+      <div class="yt-embed" style="border-color:rgba(232,226,216,0.06);">
+        <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:7.5px;letter-spacing:.3em;color:rgba(232,226,216,0.18);text-transform:uppercase;">Add acting reel</div>
+      </div>
     </div>
   </div>
 </section>
@@ -795,86 +742,113 @@ Here is to my bench people making an impact in life but with whom perhaps the co
 <div class="mq-wrap">
   <div class="mq-track">
     <span>Filmmaker</span><span class="rs">·</span><span>Photographer</span><span class="rs">·</span><span>Screenwriter</span><span class="rs">·</span><span>Poet</span><span class="rs">·</span><span>Media Artist</span><span class="rs">·</span><span>Actor</span><span class="rs">·</span><span>Germany</span><span class="rs">·</span><span>Pakistan</span><span class="rs">·</span><span>Available for hire</span><span class="rs">·</span><span>IMDb</span><span class="rs">·</span><span>Since 2017</span><span class="rs">·</span>
-    <span>Filmmaker</span><span class="rs">·</span><span>Photographer</span><span class="rs">·</span><span>Screenwriter</span><span class="rs">·</span><span>Poet</span><span class="rs">·</span><span>Media Artist</span><span class="rs">·</span><span>Actor</span><span class="rs">·</span><span>Germany</span><span class="rs">·</span><span>Pakistan</span><span class="rs">·</span><span>Available for hire</span><span class="rs">·</span><span>IMDb</span><span class="rs">·</span><span>Since 2017</span><span class="rs">·</span>
+    <span>Filmmaker</span><span class="rs">·</span><span>Photographer</span><span class="rs">·</span><span>Screenwriter</span><span class="rs">·</span><span>Poet</span><span class="rs">·</span><span class="rs">·</span><span>Media Artist</span><span class="rs">·</span><span>Actor</span><span class="rs">·</span><span>Germany</span><span class="rs">·</span><span>Pakistan</span><span class="rs">·</span><span>Available for hire</span><span class="rs">·</span><span>IMDb</span><span class="rs">·</span><span>Since 2017</span><span class="rs">·</span>
   </div>
 </div>
 
-<!-- ════ HIRE ════ -->
+<!-- HIRE -->
 <section id="hire">
   <div class="hire-ghost">Collaborate</div>
-  <p class="hire-eyebrow rv">Work with me</p>
-  <h2 class="hire-heading rv d1">Let's make something real.</h2>
-  <p class="hire-sub rv d2">Photographer, filmmaker, writer, creative director. Based between Germany and Pakistan. Open to commissions, collaborations, long-term projects, one-off shoots.</p>
-
-  <div class="rv d2" style="display:flex;flex-direction:column;align-items:center;gap:1rem;margin-bottom:3rem;">
-    <a href="mailto:abbas82abx@gmail.com" class="hire-btn" style="width:auto;min-width:320px;justify-content:center;">
-      <span style="opacity:.5;font-size:8px">✉</span>&nbsp; abbas82abx@gmail.com
-    </a>
-    <a href="tel:+4915755226405" class="hire-btn" style="width:auto;min-width:320px;justify-content:center;border-color:rgba(232,226,216,0.14);">
-      <span style="opacity:.5;font-size:8px">✆</span>&nbsp; +49 157 5522 6405
-    </a>
-    <a href="https://www.instagram.com/ghulamabbasphotography" target="_blank" rel="noopener" class="hire-btn" style="width:auto;min-width:320px;justify-content:center;border-color:rgba(232,226,216,0.14);">
-      <span style="opacity:.5;font-size:8px">◎</span>&nbsp; @ghulamabbasphotography
-    </a>
+  <p class="hire-ey rv">Work with me</p>
+  <h2 class="hire-h rv d1">Let's make something real.</h2>
+  <p class="hire-sub rv d2">Photographer, filmmaker, writer, creative director. Based between Germany and Pakistan. Open to commissions, collaborations, long-term projects. Reach out.</p>
+  <div class="contact-stack rv d2">
+    <a href="mailto:abbas82abx@gmail.com" class="contact-btn">✉ &nbsp; abbas82abx@gmail.com</a>
+    <a href="tel:+4915755226405" class="contact-btn">✆ &nbsp; +49 157 5522 6405</a>
+    <a href="https://www.instagram.com/ghulamabbasphotography" target="_blank" rel="noopener" class="contact-btn">◎ &nbsp; @ghulamabbasphotography</a>
   </div>
-
-  <div class="rv d3" style="display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem;">
-    <a href="https://www.imdb.com/name/nm18201027" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.8rem;background:rgba(245,197,24,0.08);border:1px solid rgba(245,197,24,0.3);padding:.8rem 2rem;text-decoration:none;transition:background .3s;" onmouseover="this.style.background='rgba(245,197,24,0.14)'" onmouseout="this.style.background='rgba(245,197,24,0.08)'">
-      <span style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:rgba(245,197,24,0.9);letter-spacing:.05em;">IMDb</span>
-      <span style="font-size:8px;font-weight:400;letter-spacing:.35em;color:rgba(245,197,24,0.55);text-transform:uppercase;">Ghulam Abbas Khan Soomro &nbsp;·&nbsp; nm18201027</span>
+  <div class="rv d3">
+    <a href="https://www.imdb.com/name/nm18201027" target="_blank" rel="noopener" class="imdb-hire">
+      <span class="ilogo">IMDb</span>
+      <span class="itext">Ghulam Abbas Khan Soomro &nbsp;·&nbsp; nm18201027 &nbsp;·&nbsp; View full profile</span>
     </a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">
-    <div>&copy; 2024 Ghulam Abbas Khan Soomro</div>
+  <div class="fc">
+    <div>&copy; 2025 Ghulam Abbas Khan Soomro</div>
     <div><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="impressum.html">Impressum</a></div>
-    <div style="margin-top:.3rem"><a href="mailto:abbas82abx@gmail.com">abbas82abx@gmail.com</a></div>
+    <div><a href="mailto:abbas82abx@gmail.com">abbas82abx@gmail.com</a></div>
   </div>
-  <div class="footer-mid">Abbasverse</div>
-  <div class="footer-right">
+  <div class="fm">Abbasverse</div>
+  <div class="fs">
     <a href="https://www.instagram.com/ghulamabbasphotography" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.imdb.com/name/nm18201027" target="_blank" rel="noopener">IMDb</a>
-    <a href="https://youtube.com/YOURCHANNEL" target="_blank" rel="noopener">YouTube</a>
+    <a href="#hire">Contact</a>
   </div>
 </footer>
 
 <script>
-// Cursor
+// ── CURSOR ──
 const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function t(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(t);})();
-document.querySelectorAll('a,button,.fli,.ph-cell,.ex-panel,.ap').forEach(el=>{
-  el.addEventListener('mouseenter',()=>document.body.classList.add('hovering'));
-  el.addEventListener('mouseleave',()=>document.body.classList.remove('hovering'));
-});
-
-// Hero dots
-const hdots=document.querySelectorAll('.hdot');
-let hi=0;
-setInterval(()=>{hdots[hi].classList.remove('on');hi=(hi+1)%12;hdots[hi].classList.add('on');},6000);
-hdots.forEach(d=>d.addEventListener('click',()=>{hdots[hi].classList.remove('on');hi=+d.dataset.i;hdots[hi].classList.add('on');}));
-
-// Photography slideshow (slides 1–12)
-const phSlides=document.querySelectorAll('.ph-slide');
-let pi=0;
-setInterval(()=>{phSlides[pi].classList.remove('on');pi=(pi+1)%phSlides.length;phSlides[pi].classList.add('on');},3500);
-
-// Film player — click item to load video
-function playFilm(id){
-  document.getElementById('mainIframe').src='https://www.youtube.com/embed/'+id+'?autoplay=1';
-  document.getElementById('videoPlayer').scrollIntoView({behavior:'smooth',block:'nearest'});
+if(cur&&ring){
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+  (function t(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(t);})();
+  document.querySelectorAll('a,button,.fli,.ph-cell,.ex-panel,.ap,.brand-card').forEach(el=>{
+    el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+    el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
+  });
 }
 
-// Nav
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('solid',scrollY>55));
+// ── HERO SLIDESHOW — JS-driven, smooth crossfade ──
+const HERO_TOTAL = 12;
+const heroSlides = document.querySelectorAll('.hslide');
+const hdotsWrap = document.getElementById('hdots');
 
-// Scroll reveal
+// Build dots
+for(let i=0;i<HERO_TOTAL;i++){
+  const d=document.createElement('div');
+  d.className='hdot'+(i===0?' on':'');
+  d.dataset.i=i;
+  d.addEventListener('click',()=>goHero(i));
+  hdotsWrap.appendChild(d);
+}
+const allDots=()=>hdotsWrap.querySelectorAll('.hdot');
+
+let hCur=0,hTimer=null;
+function goHero(next){
+  if(next===hCur)return;
+  heroSlides[hCur].classList.remove('on');
+  heroSlides[hCur].classList.add('off');
+  setTimeout(()=>heroSlides[hCur].classList.remove('off'),1400);
+  allDots()[hCur].classList.remove('on');
+  hCur=next;
+  heroSlides[hCur].classList.add('on');
+  allDots()[hCur].classList.add('on');
+  clearInterval(hTimer);
+  hTimer=setInterval(()=>goHero((hCur+1)%HERO_TOTAL),6000);
+}
+hTimer=setInterval(()=>goHero((hCur+1)%HERO_TOTAL),6000);
+
+// ── PHOTOGRAPHY SLIDESHOW ──
+const phSlides=document.querySelectorAll('#phSlideCol .ph-slide');
+let pi=0;
+setInterval(()=>{
+  phSlides[pi].classList.remove('on');
+  pi=(pi+1)%phSlides.length;
+  phSlides[pi].classList.add('on');
+},4000);
+
+// ── FILM PLAYER ──
+function playFilm(id){
+  document.getElementById('mainIframe').src='https://www.youtube.com/embed/'+id+'?autoplay=1';
+}
+
+// ── NAV ──
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('solid',scrollY>55),{passive:true});
+
+// ── SCROLL REVEAL ──
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.07});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+// ── AUTOPLAY videos on hover ──
+document.querySelectorAll('.brand-reel video').forEach(v=>{
+  v.closest('.brand-reel').addEventListener('mouseenter',()=>v.play().catch(()=>{}));
+  v.closest('.brand-reel').addEventListener('mouseleave',()=>v.pause());
+});
 </script>
 </body>
 </html>
