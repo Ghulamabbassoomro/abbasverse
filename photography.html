@@ -3,548 +3,498 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghulam Abbas Khan Soomro — Photography Exhibition</title>
-  <meta name="description" content="Selected photography archives of Ghulam Abbas Khan Soomro. Curated fashion, editorial, commercial and documentary works across Germany & Pakistan.">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts -->
+  <title>Photography — Ghulam Abbas Khan Soomro | Abbasverse</title>
+  <meta name="description" content="Selected photography archives of Ghulam Abbas Khan Soomro. Fashion, editorial, documentary and fine art photography across Germany and Pakistan.">
+  <meta name="keywords" content="photographer germany, editorial photography, fashion photography germany, documentary photographer, ghulam abbas khan soomro, abbasverse photography">
+  <link rel="canonical" href="https://abbasverse.com/photography.html">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Montserrat', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
-          },
-          colors: {
-            brand: {
-              charcoal: '#0e0c0a',
-              cream: '#e8e2d8',
-              accent: '#b43223',
-              darkGray: '#1c1917',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@200;300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 
   <style>
-    /* Custom premium scrollbar */
-    ::-webkit-scrollbar {
-      width: 4px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0e0c0a;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: rgba(232, 226, 216, 0.2);
-      border-radius: 2px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: rgba(232, 226, 216, 0.5);
-    }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:#0e0c0a;color:#e8e2d8;font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;}
 
-    /* Soft scroll reveal transition animation */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  /* SCROLLBAR */
+  ::-webkit-scrollbar{width:3px;}
+  ::-webkit-scrollbar-track{background:#0e0c0a;}
+  ::-webkit-scrollbar-thumb{background:rgba(232,226,216,0.18);border-radius:2px;}
 
-    /* Prevent cursor flash */
-    .custom-cursor {
-      mix-blend-mode: difference;
-    }
+  /* CURSOR */
+  @media(hover:hover){
+    #cur{position:fixed;width:7px;height:7px;background:#e8e2d8;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
+    #cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(232,226,216,0.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;}
+    body.hov #cur-ring{width:52px;height:52px;border-color:rgba(232,226,216,0.6);}
+  }
+
+  /* GRAIN */
+  .grain{position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.032;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px;}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 2.5rem;background:rgba(14,12,10,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,226,216,0.06);}
+  .nav-logo{font-family:'Playfair Display',serif;font-size:12px;font-weight:400;letter-spacing:.45em;color:rgba(232,226,216,0.5);text-transform:uppercase;text-decoration:none;transition:color .3s;}
+  .nav-logo:hover{color:rgba(232,226,216,0.85);}
+  .nav-r{display:flex;align-items:center;gap:2rem;}
+  .nav-r a{font-size:8.5px;font-weight:400;letter-spacing:.25em;color:rgba(232,226,216,0.38);text-decoration:none;text-transform:uppercase;transition:color .3s;}
+  .nav-r a:hover{color:rgba(232,226,216,0.85);}
+  .nav-hire{border:1px solid rgba(232,226,216,0.18);padding:.4rem 1rem;transition:border-color .3s,color .3s !important;}
+  .nav-hire:hover{border-color:rgba(232,226,216,0.5) !important;color:rgba(232,226,216,0.85) !important;}
+  @media(max-width:700px){
+    nav{padding:1.1rem 1.4rem;}
+    .nav-r span.hide-mob{display:none;}
+  }
+
+  /* PAGE HEADER */
+  .page-header{padding:9rem 2.5rem 5rem;}
+  @media(max-width:700px){.page-header{padding:7rem 1.4rem 3.5rem;}}
+  .page-eyebrow{font-size:8px;font-weight:400;letter-spacing:.55em;color:rgba(232,226,216,0.3);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.8rem;}
+  .page-eyebrow::before{content:'';width:18px;height:1px;background:rgba(232,226,216,0.25);}
+  .page-title{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,8vw,9rem);font-weight:900;line-height:.85;letter-spacing:-.02em;color:#e8e2d8;}
+  .page-title em{font-style:italic;font-weight:400;color:rgba(232,226,216,0.4);}
+  .page-intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.6);max-width:560px;margin-top:2rem;}
+
+  /* MAIN */
+  main{padding:0 2.5rem 8rem;max-width:1400px;margin:0 auto;}
+  @media(max-width:700px){main{padding:0 1.4rem 5rem;}}
+
+  /* SECTION */
+  .ph-section{margin-bottom:7rem;}
+  .ph-section-header{display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:1.2rem;border-bottom:1px solid rgba(232,226,216,0.08);margin-bottom:3rem;flex-wrap:wrap;gap:1rem;}
+  .theme-label{font-size:8px;font-weight:400;letter-spacing:.45em;color:rgba(232,226,216,0.28);text-transform:uppercase;}
+  .theme-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;font-style:italic;color:#e8e2d8;margin-top:.3rem;}
+  .theme-count{font-size:8px;letter-spacing:.3em;color:rgba(232,226,216,0.22);text-transform:uppercase;align-self:flex-end;}
+
+  /* PHOTO CARD */
+  .ph-card{position:relative;overflow:hidden;cursor:pointer;background:#1c1917;border:1px solid rgba(232,226,216,0.05);}
+  .ph-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.23,1,.32,1),filter .6s;filter:grayscale(12%) saturate(.92);}
+  .ph-card:hover img{transform:scale(1.04);filter:grayscale(0%) saturate(1.05);}
+  .ph-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,12,10,.85) 0%,transparent 55%);opacity:0;transition:opacity .5s;display:flex;align-items:flex-end;padding:1.2rem;}
+  .ph-card:hover .ph-card-overlay{opacity:1;}
+  .ph-card-label{font-size:7.5px;font-weight:300;letter-spacing:.35em;color:rgba(232,226,216,0.8);text-transform:uppercase;}
+
+  /* GRIDS */
+  .grid-3v{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;}
+  @media(max-width:700px){.grid-3v{grid-template-columns:1fr;gap:4px;}}
+  .grid-mix{display:grid;grid-template-columns:8fr 4fr;gap:4px;align-items:start;}
+  @media(max-width:700px){.grid-mix{grid-template-columns:1fr;}}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+  @media(max-width:700px){.grid-2{grid-template-columns:1fr;}}
+  .grid-stack{display:flex;flex-direction:column;gap:4px;}
+
+  /* Aspect ratios */
+  .ar-2-3{aspect-ratio:2/3;}
+  .ar-16-9{aspect-ratio:16/9;}
+  .ar-sq{aspect-ratio:1/1;}
+  .ar-3-4{aspect-ratio:3/4;}
+
+  /* ══════════════════════════════════════
+     WERKSCHAU EXHIBITION SECTION
+     Light parchment background to feel
+     like a gallery space
+  ══════════════════════════════════════ */
+  #werkschau{
+    margin-bottom:8rem;
+    background:linear-gradient(to bottom,#0e0c0a 0%,#ede8e0 4%,#ede8e0 96%,#0e0c0a 100%);
+    padding:5rem 0;
+  }
+  .werkschau-inner{max-width:1400px;margin:0 auto;padding:0 2.5rem;}
+  @media(max-width:700px){.werkschau-inner{padding:0 1.4rem;}}
+
+  .werkschau-header{margin-bottom:4rem;}
+  .ws-eyebrow{font-size:8px;font-weight:600;letter-spacing:.55em;color:rgba(26,23,20,0.4);text-transform:uppercase;margin-bottom:.8rem;}
+  .ws-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,8rem);font-weight:900;line-height:.85;letter-spacing:-.02em;color:#1a1714;}
+  .ws-title em{font-style:italic;font-weight:400;color:rgba(26,23,20,0.35);}
+  .ws-meta{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.4rem;align-items:center;}
+  .ws-meta-item{font-size:8px;font-weight:400;letter-spacing:.4em;color:rgba(26,23,20,0.45);text-transform:uppercase;display:flex;align-items:center;gap:.5rem;}
+  .ws-meta-item::before{content:'·';color:rgba(26,23,20,0.25);}
+  .ws-meta-item:first-child::before{display:none;}
+
+  /* Artist statement + project text */
+  .ws-text-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;margin-bottom:4rem;align-items:start;}
+  @media(max-width:700px){.ws-text-grid{grid-template-columns:1fr;gap:2.5rem;}}
+  .ws-artist-label{font-size:7.5px;font-weight:600;letter-spacing:.45em;color:rgba(26,23,20,0.35);text-transform:uppercase;margin-bottom:.8rem;}
+  .ws-artist-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;font-weight:300;line-height:1.9;color:rgba(26,23,20,0.65);}
+  .ws-project-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:300;line-height:1.95;color:rgba(26,23,20,0.7);border-left:2px solid rgba(26,23,20,0.18);padding-left:2rem;}
+
+  /* Exhibition gallery — 7 vertical photos in a deliberate exhibition layout */
+  /* Row 1: 3 photos */
+  .ws-gallery-row1{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px;}
+  @media(max-width:700px){.ws-gallery-row1{grid-template-columns:1fr;gap:4px;}}
+  /* Row 2: 2 photos wider */
+  .ws-gallery-row2{display:grid;grid-template-columns:1.2fr .8fr;gap:4px;margin-bottom:4px;}
+  @media(max-width:700px){.ws-gallery-row2{grid-template-columns:1fr;gap:4px;}}
+  /* Row 3: 2 photos */
+  .ws-gallery-row3{display:grid;grid-template-columns:.8fr 1.2fr;gap:4px;}
+  @media(max-width:700px){.ws-gallery-row3{grid-template-columns:1fr;gap:4px;}}
+
+  /* Exhibition photo card — light bg context */
+  .ws-card{position:relative;overflow:hidden;cursor:pointer;background:#d8d2ca;}
+  .ws-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.4s cubic-bezier(.23,1,.32,1),filter .7s;filter:saturate(.88);}
+  .ws-card:hover img{transform:scale(1.03);filter:saturate(1);}
+  .ws-card-info{position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1.4rem;background:linear-gradient(to top,rgba(14,12,10,.8),transparent);opacity:0;transition:opacity .5s;display:flex;justify-content:space-between;align-items:flex-end;}
+  .ws-card:hover .ws-card-info{opacity:1;}
+  .ws-city{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:#e8e2d8;font-weight:400;}
+  .ws-plate{font-size:7px;letter-spacing:.35em;color:rgba(232,226,216,0.5);text-transform:uppercase;}
+
+  /* Sound note */
+  .ws-sound-note{margin-top:2.5rem;padding:1.5rem 2rem;background:rgba(26,23,20,0.05);border:1px solid rgba(26,23,20,0.12);border-left:2px solid rgba(26,23,20,0.2);}
+  .ws-sound-label{font-size:7.5px;font-weight:600;letter-spacing:.45em;color:rgba(26,23,20,0.35);text-transform:uppercase;margin-bottom:.5rem;}
+  .ws-sound-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.98rem;font-weight:300;line-height:1.8;color:rgba(26,23,20,0.55);}
+
+  /* INSTAGRAM BRIDGE */
+  #insta-bridge{margin-bottom:6rem;}
+  .insta-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(232,226,216,0.08);margin-bottom:2rem;}
+  .insta-profile{display:flex;align-items:center;gap:1rem;}
+  .insta-avatar{width:48px;height:48px;border-radius:50%;border:1px solid rgba(232,226,216,0.2);overflow:hidden;}
+  .insta-avatar img{width:100%;height:100%;object-fit:cover;}
+  .insta-handle{font-size:11px;font-weight:400;letter-spacing:.1em;color:rgba(232,226,216,0.7);}
+  .insta-sub{font-size:7.5px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.3);text-transform:uppercase;margin-top:.2rem;}
+  .insta-follow{font-size:8px;font-weight:400;letter-spacing:.3em;color:#e8e2d8;text-decoration:none;text-transform:uppercase;border:1px solid rgba(232,226,216,0.2);padding:.5rem 1.3rem;transition:border-color .3s;}
+  .insta-follow:hover{border-color:rgba(232,226,216,0.6);}
+  .insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;}
+  @media(max-width:700px){.insta-grid{grid-template-columns:repeat(2,1fr);}}
+  .insta-cell{aspect-ratio:1/1;overflow:hidden;cursor:pointer;position:relative;}
+  .insta-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.23,1,.32,1),filter .5s;filter:grayscale(15%);}
+  .insta-cell:hover img{transform:scale(1.06);filter:grayscale(0%);}
+  .insta-cell-ov{position:absolute;inset:0;background:rgba(14,12,10,.75);opacity:0;transition:opacity .4s;display:flex;align-items:center;justify-content:center;}
+  .insta-cell:hover .insta-cell-ov{opacity:1;}
+  .insta-cell-ov span{font-size:7.5px;letter-spacing:.3em;color:rgba(232,226,216,0.8);text-transform:uppercase;text-align:center;padding:1rem;}
+
+  /* LIGHTBOX */
+  #lb{position:fixed;inset:0;background:rgba(14,12,10,.97);z-index:990;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .5s;}
+  #lb.open{opacity:1;pointer-events:all;}
+  #lb-close{position:absolute;top:1.5rem;right:2rem;font-size:8.5px;letter-spacing:.4em;color:rgba(232,226,216,0.5);cursor:pointer;text-transform:uppercase;transition:color .3s;}
+  #lb-close:hover{color:#e8e2d8;}
+  #lb-img{max-width:88vw;max-height:78vh;object-fit:contain;border:1px solid rgba(232,226,216,0.08);}
+  #lb-cap{margin-top:1.2rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:rgba(232,226,216,0.6);letter-spacing:.04em;text-align:center;}
+
+  /* REVEAL */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .85s cubic-bezier(.23,1,.32,1),transform .85s cubic-bezier(.23,1,.32,1);}
+  .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+  .rv.in{opacity:1;transform:translateY(0);}
+
+  /* FOOTER */
+  footer{border-top:1px solid rgba(232,226,216,0.06);background:#0a0907;padding:2.2rem 2.5rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;}
+  @media(max-width:700px){footer{grid-template-columns:1fr;gap:1rem;text-align:center;padding:2rem 1.4rem;}}
+  .fc{font-size:.68rem;font-weight:300;color:rgba(232,226,216,0.2);letter-spacing:.04em;line-height:1.8;}
+  .fc a{color:rgba(232,226,216,0.2);text-decoration:none;transition:color .3s;}
+  .fc a:hover{color:rgba(232,226,216,0.5);}
+  .fm{font-family:'Playfair Display',serif;font-size:10px;letter-spacing:.45em;color:rgba(232,226,216,0.18);text-transform:uppercase;text-align:center;}
+  .fs{display:flex;justify-content:flex-end;gap:1.6rem;}
+  @media(max-width:700px){.fs{justify-content:center;}}
+  .fs a{font-size:.68rem;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.2);text-decoration:none;text-transform:uppercase;transition:color .3s;}
+  .fs a:hover{color:rgba(232,226,216,0.5);}
   </style>
 </head>
-<body class="bg-brand-charcoal text-brand-cream overflow-x-hidden selection:bg-brand-cream selection:text-brand-charcoal antialiased">
+<body>
 
-<!-- Custom Desktop Pointer -->
-<div id="cursor-dot" class="custom-cursor fixed w-2 h-2 bg-brand-cream rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 hidden md:block"></div>
-<div id="cursor-ring" class="custom-cursor fixed w-10 h-10 border border-brand-cream/30 rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 transition-[width,height,border-color] duration-300 hidden md:block"></div>
+<div class="grain"></div>
+<div id="cur"></div>
+<div id="cur-ring"></div>
 
-<!-- Film Grain Overlay -->
-<div class="fixed inset-0 pointer-events-none z-40 opacity-[0.035] bg-[radial-gradient(rgba(232,226,216,0.15)_1px,transparent_1px)] [background-size:16px_16px]"></div>
-
-<!-- Premium Navigation Header -->
-<nav class="fixed top-0 left-0 w-full z-40 bg-brand-charcoal/80 backdrop-blur-md border-b border-brand-cream/5 transition-all duration-300" id="main-nav">
-  <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-    <a href="index.html" class="font-serif text-sm tracking-[0.35em] uppercase text-brand-cream/80 hover:text-brand-cream transition-colors duration-300">Abbasverse</a>
-    <div class="flex items-center gap-8">
-      <a href="index.html" class="font-sans text-[10px] tracking-[0.25em] uppercase text-brand-cream/60 hover:text-brand-cream transition-colors duration-300">Back to gateway</a>
-      <a href="index.html#hire" class="font-sans text-[10px] tracking-[0.25em] uppercase border border-brand-cream/20 px-4 py-2 hover:border-brand-cream/60 transition-colors duration-300">Get in touch</a>
-    </div>
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Abbasverse</a>
+  <div class="nav-r">
+    <span class="hide-mob"><a href="index.html">Home</a></span>
+    <a href="index.html#filmmaker">Film</a>
+    <a href="index.html#writer">Writing</a>
+    <a href="index.html#hire" class="nav-hire">Hire me</a>
   </div>
 </nav>
 
-<!-- Main Header / Exhibition Intro -->
-<header class="pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
-  <div class="reveal">
-    <span class="font-sans text-[10px] tracking-[0.4em] uppercase text-brand-cream/40 block mb-3">Online Exhibition Portfolio</span>
-    <h1 class="font-serif text-5xl md:text-8xl font-normal leading-tight tracking-tight text-brand-cream/90">
-      Selected<br><span class="italic text-brand-cream/50">Photographs</span>
-    </h1>
-    <p class="font-sans font-light text-xs md:text-sm text-brand-cream/55 leading-relaxed max-w-lg mt-6">
-      A deliberate curated log organizing visual archives into thematic geometric lines. Formed of fashion, editorial compositions, industrial records, and unposed captures shot on location in Germany and Pakistan.
-    </p>
-  </div>
+<!-- PAGE HEADER -->
+<header class="page-header rv">
+  <p class="page-eyebrow">Photography Archive</p>
+  <h1 class="page-title">Selected<br><em>Photographs</em></h1>
+  <p class="page-intro">A curated archive of visual work across fashion, editorial, documentary, and fine art photography — shot across Germany and Pakistan since 2017.</p>
 </header>
 
-<main class="max-w-7xl mx-auto px-6 md:px-12 pb-24 space-y-32">
+<main>
 
-  <!-- SECTION 1: FASHION & EDITORIAL -->
-  <section class="space-y-12">
-    <div class="border-b border-brand-cream/10 pb-4 reveal">
-      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Theme 01</span>
-      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Fashion & Editorial</h2>
+  <!-- ══════════════════════════════════════
+       SECTION 1 — FASHION & EDITORIAL
+  ══════════════════════════════════════ -->
+  <section class="ph-section rv">
+    <div class="ph-section-header">
+      <div>
+        <p class="theme-label">Theme 01</p>
+        <h2 class="theme-title">Fashion & Editorial</h2>
+      </div>
+      <span class="theme-count">06 Photographs</span>
     </div>
 
-    <!-- Group A: 3 Vertical Pictures -->
-    <div class="space-y-4 reveal">
-      <span class="font-sans text-[9px] tracking-[0.2em] uppercase text-brand-cream/30">Layout Phase A — Vertical Frames</span>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Vertical Image 1 -->
-        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[2/3]" onclick="openLightbox('assets/fashion_v1.jpg', 'Editorial study — Phase I')">
-          <img src="assets/fashion_v1.jpg" alt="Editorial Frame 1" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x900/1c1917/e8e2d8?text=fashion_v1.jpg+Missing'">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 01 — Visual Texture</span>
-          </div>
-        </div>
-        <!-- Vertical Image 2 -->
-        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[2/3]" onclick="openLightbox('assets/fashion_v2.jpg', 'Portrait concept — Darmstadt')">
-          <img src="assets/fashion_v2.jpg" alt="Editorial Frame 2" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x900/1c1917/e8e2d8?text=fashion_v2.jpg+Missing'">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 02 — High Contrast</span>
-          </div>
-        </div>
-        <!-- Vertical Image 3 -->
-        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[2/3]" onclick="openLightbox('assets/fashion_v3.jpg', 'Geometric study — Structural form')">
-          <img src="assets/fashion_v3.jpg" alt="Editorial Frame 3" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x900/1c1917/e8e2d8?text=fashion_v3.jpg+Missing'">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 03 — Shadow Lines</span>
-          </div>
-        </div>
+    <!-- Group A: 3 vertical -->
+    <div class="grid-3v" style="margin-bottom:4px;">
+      <div class="ph-card ar-2-3 rv" onclick="lb('assets/fashion_v1.jpg','Fashion Editorial — I')">
+        <img src="assets/fashion_v1.jpg" alt="Fashion Editorial 1" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%231c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>fashion_v1.jpg</text></svg>'">
+        <div class="ph-card-overlay"><span class="ph-card-label">Plate 01</span></div>
+      </div>
+      <div class="ph-card ar-2-3 rv d1" onclick="lb('assets/fashion_v2.jpg','Fashion Editorial — II')">
+        <img src="assets/fashion_v2.jpg" alt="Fashion Editorial 2" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%231c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>fashion_v2.jpg</text></svg>'">
+        <div class="ph-card-overlay"><span class="ph-card-label">Plate 02</span></div>
+      </div>
+      <div class="ph-card ar-2-3 rv d2" onclick="lb('assets/fashion_v3.jpg','Fashion Editorial — III')">
+        <img src="assets/fashion_v3.jpg" alt="Fashion Editorial 3" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%231c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>fashion_v3.jpg</text></svg>'">
+        <div class="ph-card-overlay"><span class="ph-card-label">Plate 03</span></div>
       </div>
     </div>
 
-    <!-- Group B: Mix of 3 Vertical & Horizontal Pictures -->
-    <div class="space-y-4 reveal">
-      <span class="font-sans text-[9px] tracking-[0.2em] uppercase text-brand-cream/30">Layout Phase B — Dynamic Mix</span>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-        <!-- Horizontal Image (Widescreen layout) -->
-        <div class="md:col-span-8 relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/10]" onclick="openLightbox('assets/fashion_mix2.jpg', 'Industrial symmetry narrative')">
-          <img src="assets/fashion_mix2.jpg" alt="Horizontal Mix Frame" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/1200x750/1c1917/e8e2d8?text=fashion_mix2.jpg+Missing'">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 04 — Asymmetric Space</span>
-          </div>
-        </div>
-        <!-- Vertical Image Side-A -->
-        <div class="md:col-span-4 relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[2/3]" onclick="openLightbox('assets/fashion_mix1.jpg', 'Studio composition with contrast lighting')">
-          <img src="assets/fashion_mix1.jpg" alt="Vertical Mix Frame 1" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x900/1c1917/e8e2d8?text=fashion_mix1.jpg+Missing'">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 05 — Soft Focus</span>
-          </div>
-        </div>
+    <!-- Group B: wide + vertical mix -->
+    <div class="grid-mix rv d1" style="margin-bottom:4px;">
+      <div class="ph-card ar-16-9" onclick="lb('assets/fashion_mix2.jpg','Fashion — Wide Frame')">
+        <img src="assets/fashion_mix2.jpg" alt="Fashion Wide" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22500%22><rect fill=%22%231c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>fashion_mix2.jpg</text></svg>'">
+        <div class="ph-card-overlay"><span class="ph-card-label">Plate 04</span></div>
+      </div>
+      <div class="ph-card ar-2-3" onclick="lb('assets/fashion_mix1.jpg','Fashion — Vertical Study')">
+        <img src="assets/fashion_mix1.jpg" alt="Fashion Vertical" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%231c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>fashion_mix1.jpg</text></svg>'">
+        <div class="ph-card-overlay"><span class="ph-card-label">Plate 05</span></div>
       </div>
     </div>
 
-    <!-- Group C: 3 Horizontal Pictures -->
-    <div class="space-y-4 reveal">
-      <span class="font-sans text-[9px] tracking-[0.2em] uppercase text-brand-cream/30">Layout Phase C — Landscape Frames</span>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Horizontal Image 1 -->
-        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/10]" onclick="openLightbox('assets/fashion_h1.jpg', 'Cinema mood study')">
-          <img src="assets/fashion_h1.jpg" alt="Horizontal Frame 1" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/900x600/1c1917/e8e2d8?text=fashion_h1.jpg+Missing'">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 06 — Cinematic Gaze</span>
-          </div>
-        </div>
-        <!-- Horizontal Image 2 -->
-        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/10]" onclick="openLightbox('assets/fashion_h2.jpg', 'Atmosphere & dust reflection')">
-          <img src="assets/fashion_h2.jpg" alt="Horizontal Frame 2" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/900x600/1c1917/e8e2d8?text=fashion_h2.jpg+Missing'">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 07 — Linear Perspective</span>
-          </div>
-        </div>
-        <!-- Horizontal Image 3 -->
-        <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/10]" onclick="openLightbox('assets/fashion_h3.jpg', 'Widescreen depth study')">
-          <img src="assets/fashion_h3.jpg" alt="Horizontal Frame 3" class="w-full h-full object-cover filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-[1.2s] ease-out" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/900x600/1c1917/e8e2d8?text=fashion_h3.jpg+Missing'">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex items-end">
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 08 — Structural Depth</span>
-          </div>
-        </div>
+    <!-- Group C: 3 horizontal — NEW slots -->
+    <div class="grid-3v rv d2">
+      <div class="ph-card ar-16-9" onclick="lb('assets/fashion_h1.jpg','Fashion — Landscape I')">
+        <img src="assets/fashion_h1.jpg" alt="Fashion Landscape 1" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22500%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>fashion_h1.jpg</text></svg>'">
+        <div class="ph-card-overlay"><span class="ph-card-label">Plate 06 — Add: fashion_h1.jpg</span></div>
+      </div>
+      <div class="ph-card ar-16-9" onclick="lb('assets/fashion_h2.jpg','Fashion — Landscape II')">
+        <img src="assets/fashion_h2.jpg" alt="Fashion Landscape 2" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22500%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>fashion_h2.jpg</text></svg>'">
+        <div class="ph-card-overlay"><span class="ph-card-label">Plate 07 — Add: fashion_h2.jpg</span></div>
+      </div>
+      <div class="ph-card ar-16-9" onclick="lb('assets/fashion_h3.jpg','Fashion — Landscape III')">
+        <img src="assets/fashion_h3.jpg" alt="Fashion Landscape 3" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22500%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>fashion_h3.jpg</text></svg>'">
+        <div class="ph-card-overlay"><span class="ph-card-label">Plate 08 — Add: fashion_h3.jpg</span></div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 2: COMMERCIAL PROJECTS -->
-  <section class="space-y-12">
-    <div class="border-b border-brand-cream/10 pb-4 reveal">
-      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Theme 02</span>
-      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Commercial Projects</h2>
+  <!-- ══════════════════════════════════════
+       SECTION 2 — COMMERCIAL
+  ══════════════════════════════════════ -->
+  <section class="ph-section rv">
+    <div class="ph-section-header">
+      <div>
+        <p class="theme-label">Theme 02</p>
+        <h2 class="theme-title">Commercial Projects</h2>
+      </div>
+      <span class="theme-count">09 Photographs</span>
     </div>
-
-    <!-- 9 Photo Grid (Balanced structure) -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
-      <!-- Item 1 -->
-      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/commercial_1.jpg', 'Brand Editorial - Commission 01')">
-        <img src="assets/commercial_1.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=commercial_1.jpg+Missing'">
-        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
-          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Berlin Campaign</span>
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 09 // Outer Texture</span>
-        </div>
-      </div>
-      <!-- Item 2 -->
-      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/commercial_2.jpg', 'Product Lookbook - Commission 02')">
-        <img src="assets/commercial_2.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=commercial_2.jpg+Missing'">
-        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
-          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Studio Product</span>
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 10 // Object Symmetry</span>
-        </div>
-      </div>
-      <!-- Item 3 -->
-      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/commercial_3.jpg', 'Brand Identity - Commission 03')">
-        <img src="assets/commercial_3.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=commercial_3.jpg+Missing'">
-        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
-          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Brand Capsule</span>
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 11 // Contrast Silhouette</span>
-        </div>
-      </div>
-      <!-- Item 4 -->
-      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/commercial_4.jpg', 'Symmetry & Frame Architecture')">
-        <img src="assets/commercial_4.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=commercial_4.jpg+Missing'">
-        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
-          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Darmstadt Architecture</span>
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 12 // Geometric Form</span>
-        </div>
-      </div>
-      <!-- Item 5 -->
-      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/commercial_5.jpg', 'Textured Surface Depth')">
-        <img src="assets/commercial_5.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=commercial_5.jpg+Missing'">
-        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
-          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Luxury Editorial</span>
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 13 // Surface Contrast</span>
-        </div>
-      </div>
-      <!-- Item 6 -->
-      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/commercial_6.jpg', 'Material Reflection Structure')">
-        <img src="assets/commercial_6.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=commercial_6.jpg+Missing'">
-        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
-          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Visual Design</span>
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 14 // Light Reflection</span>
-        </div>
-      </div>
-      <!-- Item 7 -->
-      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/commercial_7.jpg', 'Studio Shadow Experiment')">
-        <img src="assets/commercial_7.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=commercial_7.jpg+Missing'">
-        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
-          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Creative Experiment</span>
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 15 // Minimalist Frame</span>
-        </div>
-      </div>
-      <!-- Item 8 -->
-      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/commercial_8.jpg', 'Creative Campaign Mockup')">
-        <img src="assets/commercial_8.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=commercial_8.jpg+Missing'">
-        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
-          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Creative Campaign</span>
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 16 // Modern Lines</span>
-        </div>
-      </div>
-      <!-- Item 9 -->
-      <div class="relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-square" onclick="openLightbox('assets/commercial_9.jpg', 'Aesthetic Editorial Close-up')">
-        <img src="assets/commercial_9.jpg" class="w-full h-full object-cover filter group-hover:scale-[1.03] transition-transform duration-[1s]" decoding="async" loading="lazy" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=commercial_9.jpg+Missing'">
-        <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex flex-col justify-between">
-          <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/50">Brand Editorial</span>
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream">Plate 17 // Textural Form</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3: SOCIAL CAMPAIGNS FOR JOBS -->
-  <section class="space-y-12">
-    <div class="border-b border-brand-cream/10 pb-4 reveal">
-      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Theme 03</span>
-      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Social & Campaigns</h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 reveal">
-      <!-- Social Post 1 -->
-      <div class="bg-brand-darkGray border border-brand-cream/5 overflow-hidden rounded-md flex flex-col">
-        <div class="aspect-square w-full relative overflow-hidden group cursor-pointer" onclick="openLightbox('assets/job_1.jpg', 'Social Layout 01')">
-          <img src="assets/job_1.jpg" class="w-full h-full object-cover filter grayscale-[20%] group-hover:scale-[1.03] group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=job_1.jpg+Missing'" loading="lazy">
-        </div>
-        <div class="p-4 flex flex-col justify-between flex-grow space-y-3 bg-brand-charcoal/50">
-          <div class="space-y-1">
-            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/40">Digital Delivery</span>
-            <p class="font-sans text-xs font-medium text-brand-cream">Client Launch Campaign</p>
-          </div>
-          <span class="font-sans text-[8px] tracking-[0.1em] text-brand-cream/50">Delivered: 4K Editorial Deliverables</span>
-        </div>
-      </div>
-      <!-- Social Post 2 -->
-      <div class="bg-brand-darkGray border border-brand-cream/5 overflow-hidden rounded-md flex flex-col">
-        <div class="aspect-square w-full relative overflow-hidden group cursor-pointer" onclick="openLightbox('assets/job_2.jpg', 'Social Layout 02')">
-          <img src="assets/job_2.jpg" class="w-full h-full object-cover filter grayscale-[20%] group-hover:scale-[1.03] group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=job_2.jpg+Missing'" loading="lazy">
-        </div>
-        <div class="p-4 flex flex-col justify-between flex-grow space-y-3 bg-brand-charcoal/50">
-          <div class="space-y-1">
-            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/40">Content Architecture</span>
-            <p class="font-sans text-xs font-medium text-brand-cream">Minimalist Brand Grids</p>
-          </div>
-          <span class="font-sans text-[8px] tracking-[0.1em] text-brand-cream/50">Format: Instagram Reels & Posts</span>
-        </div>
-      </div>
-      <!-- Social Post 3 -->
-      <div class="bg-brand-darkGray border border-brand-cream/5 overflow-hidden rounded-md flex flex-col">
-        <div class="aspect-square w-full relative overflow-hidden group cursor-pointer" onclick="openLightbox('assets/job_3.jpg', 'Social Layout 03')">
-          <img src="assets/job_3.jpg" class="w-full h-full object-cover filter grayscale-[20%] group-hover:scale-[1.03] group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=job_3.jpg+Missing'" loading="lazy">
-        </div>
-        <div class="p-4 flex flex-col justify-between flex-grow space-y-3 bg-brand-charcoal/50">
-          <div class="space-y-1">
-            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/40">Creative Curation</span>
-            <p class="font-sans text-xs font-medium text-brand-cream">Aesthetic Identity Kit</p>
-          </div>
-          <span class="font-sans text-[8px] tracking-[0.1em] text-brand-cream/50">Scope: Photography + Direction</span>
-        </div>
-      </div>
-      <!-- Social Post 4 -->
-      <div class="bg-brand-darkGray border border-brand-cream/5 overflow-hidden rounded-md flex flex-col">
-        <div class="aspect-square w-full relative overflow-hidden group cursor-pointer" onclick="openLightbox('assets/job_4.jpg', 'Social Layout 04')">
-          <img src="assets/job_4.jpg" class="w-full h-full object-cover filter grayscale-[20%] group-hover:scale-[1.03] group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=job_4.jpg+Missing'" loading="lazy">
-        </div>
-        <div class="p-4 flex flex-col justify-between flex-grow space-y-3 bg-brand-charcoal/50">
-          <div class="space-y-1">
-            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/40">Production Design</span>
-            <p class="font-sans text-xs font-medium text-brand-cream">Interactive Digital Ads</p>
-          </div>
-          <span class="font-sans text-[8px] tracking-[0.1em] text-brand-cream/50">Layout: Asymmetric Grid Delivery</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4: DOCUMENTING LIFE AS IT IS -->
-  <section class="space-y-12">
-    <div class="border-b border-brand-cream/10 pb-4 reveal">
-      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Theme 04</span>
-      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Documenting Life</h2>
-    </div>
-
-    <!-- Editorial raw layout for street/documentary -->
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal">
-      <div class="md:col-span-4 space-y-6 flex flex-col justify-center">
-        <span class="font-sans text-[8px] tracking-[0.3em] uppercase text-brand-cream/40">Street & Life Records</span>
-        <h3 class="font-serif text-3xl font-normal leading-snug">Capturing unscripted, raw parameters.</h3>
-        <p class="font-sans font-light text-xs text-brand-cream/50 leading-relaxed">
-          The street does not pause. Documenting moments as they occur naturally in Germany and Pakistan—relying entirely on available light, real-world context, and natural expressions.
-        </p>
-      </div>
-      <div class="md:col-span-8 relative group overflow-hidden bg-brand-darkGray border border-brand-cream/5 cursor-pointer aspect-[16/9]" onclick="openLightbox('assets/doc_1.jpg', 'Documentary capture — Germany / Pakistan')">
-        <img src="assets/doc_1.jpg" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-1000" onerror="this.src='https://placehold.co/1200x675/1c1917/e8e2d8?text=doc_1.jpg+Missing'" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 p-6 flex items-end">
-          <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-brand-cream/80">Plate 18 — Unscripted Human Frame</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5: INSTAGRAM LIVE INTEGRATION -->
-  <section class="space-y-12">
-    <div class="border-b border-brand-cream/10 pb-4 reveal">
-      <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/40">Social Channel Sync</span>
-      <h2 class="font-serif text-2xl md:text-4xl text-brand-cream mt-1 font-normal italic">Instagram Bridge</h2>
-    </div>
-
-    <!-- Live simulated Grid connected to actual profile -->
-    <div class="bg-brand-darkGray/40 border border-brand-cream/5 p-6 md:p-12 rounded-lg space-y-8 reveal">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-brand-cream/10">
-        <!-- Profile Info -->
-        <div class="flex items-center gap-4">
-          <div class="w-16 h-16 rounded-full border border-brand-cream/20 p-[2px] overflow-hidden">
-            <!-- fallback placeholder portrait -->
-            <img src="assets/portrait.jpg" alt="Ghulam Abbas Profile Portrait" class="w-full h-full object-cover rounded-full" onerror="this.src='https://placehold.co/150/1c1917/e8e2d8?text=GAK'">
-          </div>
-          <div>
-            <h3 class="font-sans font-medium text-sm text-brand-cream">@ghulamabbasphotography</h3>
-            <span class="font-sans text-[9px] tracking-[0.1em] text-brand-cream/50">Director of Narratives · Visual Artist</span>
-          </div>
-        </div>
-        <!-- Channel Link Button -->
-        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="font-sans text-[9px] tracking-[0.3em] uppercase bg-brand-cream text-brand-charcoal font-medium px-6 py-3 hover:bg-brand-cream/80 hover:text-brand-charcoal transition-all duration-300">
-          Follow daily journey
-        </a>
-      </div>
-
-      <!-- Feed Grid (Pre-rendering with a selection of uploaded photos as visual fallbacks) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <!-- Live Post 1 -->
-        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="group relative overflow-hidden aspect-square border border-brand-cream/5 bg-brand-charcoal">
-          <img src="assets/fashion_v1.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Instagram+Post+1'" loading="lazy">
-          <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/80 text-center">View Post on Instagram →</span>
-          </div>
-        </a>
-        <!-- Live Post 2 -->
-        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="group relative overflow-hidden aspect-square border border-brand-cream/5 bg-brand-charcoal">
-          <img src="assets/fashion_v2.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Instagram+Post+2'" loading="lazy">
-          <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/80 text-center">View Post on Instagram →</span>
-          </div>
-        </a>
-        <!-- Live Post 3 -->
-        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="group relative overflow-hidden aspect-square border border-brand-cream/5 bg-brand-charcoal">
-          <img src="assets/fashion_v3.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Instagram+Post+3'" loading="lazy">
-          <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/80 text-center">View Post on Instagram →</span>
-          </div>
-        </a>
-        <!-- Live Post 4 -->
-        <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="group relative overflow-hidden aspect-square border border-brand-cream/5 bg-brand-charcoal">
-          <img src="assets/fashion_h1.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/1c1917/e8e2d8?text=Instagram+Post+4'" loading="lazy">
-          <div class="absolute inset-0 bg-brand-charcoal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-            <span class="font-sans text-[8px] tracking-[0.2em] uppercase text-brand-cream/80 text-center">View Post on Instagram →</span>
-          </div>
-        </a>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+      <div class="ph-card ar-sq rv"    onclick="lb('assets/commercial_1.jpg','Commercial — 01')"><img src="assets/commercial_1.jpg" loading="lazy" alt="" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>commercial_1.jpg</text></svg>'"><div class="ph-card-overlay"><span class="ph-card-label">Plate 09</span></div></div>
+      <div class="ph-card ar-sq rv d1" onclick="lb('assets/commercial_2.jpg','Commercial — 02')"><img src="assets/commercial_2.jpg" loading="lazy" alt="" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>commercial_2.jpg</text></svg>'"><div class="ph-card-overlay"><span class="ph-card-label">Plate 10</span></div></div>
+      <div class="ph-card ar-sq rv d2" onclick="lb('assets/commercial_3.jpg','Commercial — 03')"><img src="assets/commercial_3.jpg" loading="lazy" alt="" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>commercial_3.jpg</text></svg>'"><div class="ph-card-overlay"><span class="ph-card-label">Plate 11</span></div></div>
+      <div class="ph-card ar-sq rv"    onclick="lb('assets/commercial_4.jpg','Commercial — 04')"><img src="assets/commercial_4.jpg" loading="lazy" alt="" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>commercial_4.jpg</text></svg>'"><div class="ph-card-overlay"><span class="ph-card-label">Plate 12</span></div></div>
+      <div class="ph-card ar-sq rv d1" onclick="lb('assets/commercial_5.jpg','Commercial — 05')"><img src="assets/commercial_5.jpg" loading="lazy" alt="" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>commercial_5.jpg</text></svg>'"><div class="ph-card-overlay"><span class="ph-card-label">Plate 13</span></div></div>
+      <div class="ph-card ar-sq rv d2" onclick="lb('assets/commercial_6.jpg','Commercial — 06')"><img src="assets/commercial_6.jpg" loading="lazy" alt="" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>commercial_6.jpg</text></svg>'"><div class="ph-card-overlay"><span class="ph-card-label">Plate 14</span></div></div>
+      <div class="ph-card ar-sq rv"    onclick="lb('assets/commercial_7.jpg','Commercial — 07')"><img src="assets/commercial_7.jpg" loading="lazy" alt="" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>commercial_7.jpg</text></svg>'"><div class="ph-card-overlay"><span class="ph-card-label">Plate 15</span></div></div>
+      <div class="ph-card ar-sq rv d1" onclick="lb('assets/commercial_8.jpg','Commercial — 08')"><img src="assets/commercial_8.jpg" loading="lazy" alt="" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>commercial_8.jpg</text></svg>'"><div class="ph-card-overlay"><span class="ph-card-label">Plate 16</span></div></div>
+      <div class="ph-card ar-sq rv d2" onclick="lb('assets/commercial_9.jpg','Commercial — 09')"><img src="assets/commercial_9.jpg" loading="lazy" alt="" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%221c1917%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(232,226,216,0.15)%22 font-family=%22sans-serif%22 font-size=%2212%22 text-anchor=%22middle%22 dy=%22.3em%22>commercial_9.jpg</text></svg>'"><div class="ph-card-overlay"><span class="ph-card-label">Plate 17</span></div></div>
     </div>
   </section>
 
 </main>
 
-<!-- FULLSCREEN LIGHTBOX MODAL -->
-<div id="lightbox" class="fixed inset-0 bg-brand-charcoal/95 z-50 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 ease-out" onclick="closeLightbox()">
-  <div class="absolute top-6 right-6 flex items-center gap-4">
-    <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-cream/60 cursor-pointer hover:text-brand-cream transition-colors">Close // ESC</span>
+<!-- ══════════════════════════════════════════════
+     WERKSCHAU SECTION — light gallery feel
+     "Where I Was Standing"
+     Hochschule Darmstadt Werkschau 2025
+══════════════════════════════════════════════ -->
+<section id="werkschau">
+  <div class="werkschau-inner">
+
+    <div class="werkschau-header rv">
+      <p class="ws-eyebrow">Hochschule Darmstadt · Werkschau · Media Campus · 2025</p>
+      <h2 class="ws-title">Where I Was<br><em>Standing</em></h2>
+      <div class="ws-meta">
+        <span class="ws-meta-item">Photographic Series & Soundscapes</span>
+        <span class="ws-meta-item">7 Works</span>
+        <span class="ws-meta-item">Germany</span>
+        <span class="ws-meta-item">Ghulam Abbas Khan Soomro</span>
+      </div>
+    </div>
+
+    <!-- Artist statement + project text -->
+    <div class="ws-text-grid rv d1">
+      <div>
+        <p class="ws-artist-label">Artist</p>
+        <p class="ws-artist-text">Ghulam Abbas Khan Soomro is a Pakistani filmmaker, photographer, writer, and media artist currently pursuing a Master's degree in International Media Cultural Work at Hochschule Darmstadt. With over ten years of experience in Pakistan's film and television industry, he has worked as an assistant director while also writing, directing, and producing his own short films. His practice extends across photography, poetry, and short fiction, reflecting an ongoing interest in storytelling through different media. Whether working with moving images, sound, photographs, or text, he explores themes of memory, identity, belonging, and everyday human experience.</p>
+      </div>
+      <div>
+        <p class="ws-project-text">Where I Was Standing is a photographic series accompanied by location-based soundscapes recorded at the exact places where each photograph was taken. The work explores moments of observation, presence, and detachment through everyday scenes. While the photographs appear quiet, still, and composed, the accompanying soundscapes introduce a different experience. Built from the original recordings of each location and intentionally left raw with layered ambient sounds, they create a subtle sense of chaos and unease.<br><br>Rather than simply documenting a place, the sound evokes an emotional atmosphere that may suggest what remains unseen or unspoken. This contrast between the calm image and the restless sound creates a dialogue between presence and absence, external reality and inner perception. Together, image and sound invite viewers to question how connection is experienced, imagined, or lost.</p>
+      </div>
+    </div>
+
+    <!-- Exhibition gallery — 7 vertical photographs, all named after German cities -->
+
+    <!-- Row 1: Warnemünde · Pfungstadt · Dieburg -->
+    <div class="ws-gallery-row1 rv d1">
+      <div class="ws-card ar-2-3" onclick="lb('assets/ws_warnemuende.jpg','Where I Was Standing — Warnemünde')">
+        <img src="assets/ws_warnemuende.jpg" alt="Where I Was Standing — Warnemünde" loading="lazy"
+          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%23d8d2ca%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(26,23,20,0.3)%22 font-family=%22sans-serif%22 font-size=%2211%22 text-anchor=%22middle%22 dy=%22.3em%22>ws_warnemuende.jpg</text></svg>'">
+        <div class="ws-card-info">
+          <span class="ws-city">Warnemünde</span>
+          <span class="ws-plate">I · 7</span>
+        </div>
+      </div>
+      <div class="ws-card ar-2-3" onclick="lb('assets/ws_pfungstadt.jpg','Where I Was Standing — Pfungstadt')">
+        <img src="assets/ws_pfungstadt.jpg" alt="Where I Was Standing — Pfungstadt" loading="lazy"
+          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%23d8d2ca%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(26,23,20,0.3)%22 font-family=%22sans-serif%22 font-size=%2211%22 text-anchor=%22middle%22 dy=%22.3em%22>ws_pfungstadt.jpg</text></svg>'">
+        <div class="ws-card-info">
+          <span class="ws-city">Pfungstadt</span>
+          <span class="ws-plate">II · 7</span>
+        </div>
+      </div>
+      <div class="ws-card ar-2-3" onclick="lb('assets/ws_dieburg.jpg','Where I Was Standing — Dieburg')">
+        <img src="assets/ws_dieburg.jpg" alt="Where I Was Standing — Dieburg" loading="lazy"
+          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%23d8d2ca%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(26,23,20,0.3)%22 font-family=%22sans-serif%22 font-size=%2211%22 text-anchor=%22middle%22 dy=%22.3em%22>ws_dieburg.jpg</text></svg>'">
+        <div class="ws-card-info">
+          <span class="ws-city">Dieburg</span>
+          <span class="ws-plate">III · 7</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Friedrichshafen (wider) · Neustrelitz -->
+    <div class="ws-gallery-row2 rv d2">
+      <div class="ws-card ar-2-3" onclick="lb('assets/ws_friedrichshafen.jpg','Where I Was Standing — Friedrichshafen')">
+        <img src="assets/ws_friedrichshafen.jpg" alt="Where I Was Standing — Friedrichshafen" loading="lazy"
+          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%23d8d2ca%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(26,23,20,0.3)%22 font-family=%22sans-serif%22 font-size=%2211%22 text-anchor=%22middle%22 dy=%22.3em%22>ws_friedrichshafen.jpg</text></svg>'">
+        <div class="ws-card-info">
+          <span class="ws-city">Friedrichshafen</span>
+          <span class="ws-plate">IV · 7</span>
+        </div>
+      </div>
+      <div class="ws-card ar-2-3" onclick="lb('assets/ws_neustrelitz.jpg','Where I Was Standing — Neustrelitz')">
+        <img src="assets/ws_neustrelitz.jpg" alt="Where I Was Standing — Neustrelitz" loading="lazy"
+          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%23d8d2ca%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(26,23,20,0.3)%22 font-family=%22sans-serif%22 font-size=%2211%22 text-anchor=%22middle%22 dy=%22.3em%22>ws_neustrelitz.jpg</text></svg>'">
+        <div class="ws-card-info">
+          <span class="ws-city">Neustrelitz</span>
+          <span class="ws-plate">V · 7</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: Esslingen · Darmstadt -->
+    <div class="ws-gallery-row3 rv d3">
+      <div class="ws-card ar-2-3" onclick="lb('assets/ws_esslingen.jpg','Where I Was Standing — Esslingen')">
+        <img src="assets/ws_esslingen.jpg" alt="Where I Was Standing — Esslingen" loading="lazy"
+          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%23d8d2ca%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(26,23,20,0.3)%22 font-family=%22sans-serif%22 font-size=%2211%22 text-anchor=%22middle%22 dy=%22.3em%22>ws_esslingen.jpg</text></svg>'">
+        <div class="ws-card-info">
+          <span class="ws-city">Esslingen</span>
+          <span class="ws-plate">VI · 7</span>
+        </div>
+      </div>
+      <div class="ws-card ar-2-3" onclick="lb('assets/ws_darmstadt.jpg','Where I Was Standing — Darmstadt')">
+        <img src="assets/ws_darmstadt.jpg" alt="Where I Was Standing — Darmstadt" loading="lazy"
+          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22600%22><rect fill=%22%23d8d2ca%22 width=%22100%25%22 height=%22100%25%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22rgba(26,23,20,0.3)%22 font-family=%22sans-serif%22 font-size=%2211%22 text-anchor=%22middle%22 dy=%22.3em%22>ws_darmstadt.jpg</text></svg>'">
+        <div class="ws-card-info">
+          <span class="ws-city">Darmstadt</span>
+          <span class="ws-plate">VII · 7</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sound note -->
+    <div class="ws-sound-note rv d3">
+      <p class="ws-sound-label">On the soundscapes</p>
+      <p class="ws-sound-text">Each photograph in this series is accompanied by a location-based soundscape recorded at the exact place where the image was taken. Intentionally left raw — layered, unedited ambient recordings — they introduce a quiet sense of unease beneath the stillness of each frame. The sound is not illustration; it is the other side of the image. In the exhibition space, visitors experience both simultaneously.</p>
+    </div>
+
   </div>
-  
-  <div class="relative max-w-5xl max-h-[75vh] px-4" onclick="event.stopPropagation()">
-    <img id="lightbox-img" src="" alt="Wide View" class="max-w-full max-h-[70vh] object-contain border border-brand-cream/10 rounded-sm shadow-2xl">
-  </div>
-  
-  <div class="mt-6 text-center px-4" onclick="event.stopPropagation()">
-    <p id="lightbox-caption" class="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-cream/80"></p>
-  </div>
+</section>
+
+<!-- back to dark for Instagram bridge -->
+<main style="padding-top:0">
+  <!-- ══════════════════════════════════════
+       INSTAGRAM BRIDGE
+  ══════════════════════════════════════ -->
+  <section id="insta-bridge" class="rv" style="padding:0 2.5rem;max-width:1400px;margin:5rem auto 6rem;">
+    <div class="insta-header">
+      <div class="insta-profile">
+        <div class="insta-avatar">
+          <img src="assets/portrait.jpg" alt="Ghulam Abbas" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <p class="insta-handle">@ghulamabbasphotography</p>
+          <p class="insta-sub">Director of Narratives · Visual Artist</p>
+        </div>
+      </div>
+      <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" rel="noopener" class="insta-follow">Follow on Instagram →</a>
+    </div>
+    <div class="insta-grid">
+      <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" rel="noopener" class="insta-cell">
+        <img src="assets/fashion_v1.jpg" loading="lazy" alt="">
+        <div class="insta-cell-ov"><span>View on Instagram →</span></div>
+      </a>
+      <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" rel="noopener" class="insta-cell">
+        <img src="assets/fashion_v2.jpg" loading="lazy" alt="">
+        <div class="insta-cell-ov"><span>View on Instagram →</span></div>
+      </a>
+      <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" rel="noopener" class="insta-cell">
+        <img src="assets/fashion_v3.jpg" loading="lazy" alt="">
+        <div class="insta-cell-ov"><span>View on Instagram →</span></div>
+      </a>
+      <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" rel="noopener" class="insta-cell">
+        <img src="assets/fashion_mix1.jpg" loading="lazy" alt="">
+        <div class="insta-cell-ov"><span>View on Instagram →</span></div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- LIGHTBOX -->
+<div id="lb" onclick="closeLb()">
+  <span id="lb-close" onclick="closeLb()">Close · ESC</span>
+  <img id="lb-img" src="" alt="">
+  <p id="lb-cap"></p>
 </div>
 
-<!-- Footer Panel -->
-<footer class="border-t border-brand-cream/10 bg-brand-charcoal py-8 px-6 md:px-12">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <span class="font-sans text-[9px] tracking-wider text-brand-cream/30">&copy; 2026 Ghulam Abbas Khan Soomro. All Rights Reserved.</span>
-    <span class="font-serif text-xs text-brand-cream/40 italic">Abbasverse</span>
-    <div class="flex items-center gap-6">
-      <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" class="font-sans text-[9px] tracking-wider text-brand-cream/40 hover:text-brand-cream transition-colors">Instagram</a>
-      <a href="index.html" class="font-sans text-[9px] tracking-wider text-brand-cream/40 hover:text-brand-cream transition-colors">Home Gateway</a>
-    </div>
+<!-- FOOTER -->
+<footer>
+  <div class="fc">
+    <div>&copy; 2025 Ghulam Abbas Khan Soomro</div>
+    <div><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="impressum.html">Impressum</a></div>
+  </div>
+  <div class="fm">Abbasverse</div>
+  <div class="fs">
+    <a href="https://www.instagram.com/ghulamabbasphotography/" target="_blank" rel="noopener">Instagram</a>
+    <a href="index.html">Home</a>
+    <a href="index.html#hire">Contact</a>
   </div>
 </footer>
 
 <script>
-  // Dynamic Scroll Header Reveal
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('main-nav');
-    if (window.scrollY > 40) {
-      nav.classList.add('bg-brand-charcoal/95', 'border-brand-cream/10');
-      nav.classList.remove('bg-brand-charcoal/80', 'border-brand-cream/5');
-    } else {
-      nav.classList.add('bg-brand-charcoal/80', 'border-brand-cream/5');
-      nav.classList.remove('bg-brand-charcoal/95', 'border-brand-cream/10');
-    }
+// Cursor
+if(window.matchMedia('(hover:hover)').matches){
+  const c=document.getElementById('cur'),r=document.getElementById('cur-ring');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;c.style.left=mx+'px';c.style.top=my+'px';});
+  (function t(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;r.style.left=rx+'px';r.style.top=ry+'px';requestAnimationFrame(t);})();
+  document.querySelectorAll('a,[onclick],.ws-card,.ph-card,.insta-cell').forEach(el=>{
+    el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+    el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
   });
+}
 
-  // Customized Cursor Tracking
-  const dot = document.getElementById('cursor-dot');
-  const ring = document.getElementById('cursor-ring');
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
+// Lightbox
+function lb(src,cap){
+  document.getElementById('lb-img').src=src;
+  document.getElementById('lb-cap').textContent=cap;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLb(){
+  document.getElementById('lb').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
 
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    
-    // Update simple dot position
-    dot.style.left = `${mouseX}px`;
-    dot.style.top = `${mouseY}px`;
-  });
-
-  // Frame Interpolation for smooth lag cursor loop
-  function cursorAnimate() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-    
-    ring.style.left = `${ringX}px`;
-    ring.style.top = `${ringY}px`;
-    
-    requestAnimationFrame(cursorAnimate);
-  }
-  cursorAnimate();
-
-  // Hover States Configuration
-  const interactives = document.querySelectorAll('a, button, [onclick]');
-  interactives.forEach(element => {
-    element.addEventListener('mouseenter', () => {
-      ring.style.width = '60px';
-      ring.style.height = '60px';
-      ring.style.borderColor = 'rgba(232, 226, 216, 0.7)';
-    });
-    element.addEventListener('mouseleave', () => {
-      ring.style.width = '40px';
-      ring.style.height = '40px';
-      ring.style.borderColor = 'rgba(232, 226, 216, 0.3)';
-    });
-  });
-
-  // Scroll Reveal Intersection Observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  }, {
-    threshold: 0.05
-  });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Lightbox Open & Close Functions
-  function openLightbox(src, captionText) {
-    const lightbox = document.getElementById('lightbox');
-    const img = document.getElementById('lightbox-img');
-    const caption = document.getElementById('lightbox-caption');
-    
-    img.src = src;
-    caption.innerText = captionText;
-    
-    lightbox.classList.remove('pointer-events-none', 'opacity-0');
-    lightbox.classList.add('opacity-100');
-    document.body.style.overflow = 'hidden'; // Freeze background scroll
-  }
-
-  function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.classList.add('opacity-0', 'pointer-events-none');
-    lightbox.classList.remove('opacity-100');
-    document.body.style.overflow = ''; // Unfreeze scroll
-  }
-
-  // Bind Escape Key to Close Lightbox
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeLightbox();
-    }
-  });
+// Scroll reveal
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.06});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
