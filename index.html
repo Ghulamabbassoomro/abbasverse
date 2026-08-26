@@ -109,13 +109,13 @@ h1.hero-name em{display:block;font-style:italic;font-weight:400;color:rgba(232,2
 @media(max-width:700px){.sec{padding:4rem 1.4rem;}}
 .sec-big{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,9vw,11rem);font-weight:900;line-height:.85;letter-spacing:-.02em;color:#e8e2d8;opacity:.88;}
 .sec-big em{font-style:italic;font-weight:400;color:rgba(232,226,216,0.3);}
-.sec-label{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:.5em;color:rgba(232,226,216,0.35);text-transform:uppercase;display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem;}
-.sec-label::before{content:'';width:18px;height:1px;background:rgba(232,226,216,0.3);}
-.body-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.75);}
+.sec-label{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:.5em;color:rgba(232,226,216,0.55);text-transform:uppercase;display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem;}
+.sec-label::before{content:'';width:18px;height:1px;background:rgba(232,226,216,0.4);}
+.body-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.88);}
 .body-text p+p{margin-top:1rem;}
-.cta-link{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.8rem;font-size:9px;font-weight:400;letter-spacing:.32em;color:rgba(232,226,216,0.45);text-decoration:none;text-transform:uppercase;transition:color .3s,gap .3s;}
-.cta-link .cl{width:20px;height:1px;background:rgba(232,226,216,0.3);transition:width .4s cubic-bezier(.23,1,.32,1);}
-.cta-link:hover{color:rgba(232,226,216,0.85);}
+.cta-link{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.8rem;font-size:10px;font-weight:400;letter-spacing:.32em;color:rgba(232,226,216,0.6);text-decoration:none;text-transform:uppercase;transition:color .3s,gap .3s;}
+.cta-link .cl{width:20px;height:1px;background:rgba(232,226,216,0.4);transition:width .4s cubic-bezier(.23,1,.32,1);}
+.cta-link:hover{color:rgba(232,226,216,0.95);}
 .cta-link:hover .cl{width:38px;}
 hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,rgba(232,226,216,0.08) 20%,rgba(232,226,216,0.08) 80%,transparent);}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
@@ -126,7 +126,7 @@ hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,
 .who-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:4rem;align-items:center;}
 @media(max-width:700px){.who-grid{grid-template-columns:1fr;gap:2.5rem;}}
 .who-title{font-family:'Playfair Display',serif;font-size:clamp(4.5rem,12vw,13rem);font-weight:900;line-height:.82;letter-spacing:-.03em;color:#e8e2d8;margin-bottom:1rem;}
-.who-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;color:rgba(232,226,216,0.6);line-height:1.3;margin-bottom:1.6rem;}
+.who-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;color:rgba(232,226,216,0.75);line-height:1.3;margin-bottom:1.6rem;}
 .who-portrait{width:100%;aspect-ratio:3/4;overflow:hidden;position:relative;}
 .who-portrait img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:grayscale(10%);transition:filter .6s;}
 .who-portrait:hover img{filter:grayscale(0%);}
@@ -138,7 +138,7 @@ hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,
 .photo-header{padding:0 2.5rem 2.5rem;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
 .sec-big-dark{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,10vw,12rem);font-weight:900;line-height:.85;letter-spacing:-.02em;color:#1a1714;opacity:.88;}
 .sec-big-dark em{font-style:italic;font-weight:400;color:rgba(26,23,20,0.3);}
-.photo-note{max-width:260px;text-align:right;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;font-weight:300;line-height:1.8;color:rgba(26,23,20,0.6);}
+.photo-note{max-width:260px;text-align:right;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;font-weight:300;line-height:1.8;color:rgba(26,23,20,0.78);}
 /* Exhibition grid */
 .photo-exhibition{display:grid;grid-template-columns:1fr 1fr;gap:3px;height:560px;}
 @media(max-width:700px){.photo-exhibition{grid-template-columns:1fr;height:auto;}}
@@ -182,19 +182,19 @@ hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,
 .fest-badge::before{content:'✦';color:rgba(180,50,35,0.7);font-size:.7rem;}
 .film-split{display:grid;grid-template-columns:1.1fr 1fr;gap:3.5rem;margin-top:3.5rem;align-items:start;}
 @media(max-width:700px){.film-split{grid-template-columns:1fr;gap:2rem;}}
-.film-sec-label{font-size:7.5px;font-weight:400;letter-spacing:.42em;color:rgba(232,226,216,0.22);text-transform:uppercase;margin-bottom:1.3rem;}
+.film-sec-label{font-size:8.5px;font-weight:400;letter-spacing:.42em;color:rgba(232,226,216,0.45);text-transform:uppercase;margin-bottom:1.3rem;}
 .film-list{list-style:none;}
 .fli{display:grid;grid-template-columns:2.2rem 1fr;gap:.7rem;align-items:start;padding:.9rem 0;border-bottom:1px solid rgba(180,50,35,0.1);cursor:pointer;transition:padding-left .3s cubic-bezier(.23,1,.32,1);}
 .fli:first-child{border-top:1px solid rgba(180,50,35,0.1);}
 .fli:hover{padding-left:.6rem;}
 .fli:hover .fli-t{color:#c0392b;}
 .fli-n{font-size:7.5px;font-weight:300;letter-spacing:.18em;color:rgba(180,50,35,0.4);padding-top:.1rem;}
-.fli-cat{font-size:7px;font-weight:600;letter-spacing:.3em;color:rgba(180,50,35,0.48);text-transform:uppercase;display:block;margin-bottom:.15rem;}
-.fli-t{font-family:'Playfair Display',serif;font-size:.92rem;font-weight:400;color:rgba(232,226,216,0.82);transition:color .3s;display:block;margin-bottom:.18rem;}
-.fli-meta{font-size:7px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.28);text-transform:uppercase;display:flex;gap:.7rem;flex-wrap:wrap;}
+.fli-cat{font-size:7.5px;font-weight:600;letter-spacing:.3em;color:rgba(180,50,35,0.55);text-transform:uppercase;display:block;margin-bottom:.15rem;}
+.fli-t{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:rgba(232,226,216,0.9);transition:color .3s;display:block;margin-bottom:.18rem;}
+.fli-meta{font-size:7.5px;font-weight:300;letter-spacing:.2em;color:rgba(232,226,216,0.45);text-transform:uppercase;display:flex;gap:.7rem;flex-wrap:wrap;}
 .fli-thumb{width:72px;height:40px;object-fit:cover;flex-shrink:0;border:1px solid rgba(180,50,35,0.2);}
 .fli-inner{display:flex;align-items:center;gap:.9rem;width:100%;}
-.yt-note{font-size:7.5px;font-weight:300;letter-spacing:.3em;color:rgba(232,226,216,0.2);text-transform:uppercase;margin-bottom:.9rem;}
+.yt-note{font-size:8px;font-weight:300;letter-spacing:.3em;color:rgba(232,226,216,0.38);text-transform:uppercase;margin-bottom:.9rem;}
 .yt-embed{width:100%;aspect-ratio:16/9;background:rgba(255,255,255,0.02);border:1px solid rgba(180,50,35,0.18);position:relative;overflow:hidden;}
 .yt-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
 .imdb-badge{display:inline-flex;align-items:center;gap:.8rem;background:rgba(245,197,24,0.07);border:1px solid rgba(245,197,24,0.28);padding:.7rem 1.5rem;text-decoration:none;transition:background .3s;margin-top:1.5rem;}
@@ -216,7 +216,7 @@ hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,
 .brand-num{font-size:8px;font-weight:300;letter-spacing:.3em;color:rgba(210,175,80,0.45);margin-bottom:.9rem;}
 .brand-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:rgba(232,226,216,0.88);margin-bottom:.3rem;line-height:1;}
 .brand-role{font-size:7px;font-weight:400;letter-spacing:.35em;color:rgba(210,175,80,0.45);text-transform:uppercase;margin-bottom:1rem;}
-.brand-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.62);}
+.brand-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:300;line-height:1.8;color:rgba(232,226,216,0.82);}
 .brand-reels{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:1.2rem;}
 .brand-reel{aspect-ratio:9/16;overflow:hidden;background:rgba(232,226,216,0.03);border:1px solid rgba(232,226,216,0.06);}
 .brand-reel video{width:100%;height:100%;object-fit:cover;display:block;}
@@ -227,7 +227,7 @@ hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,
 
 /* ── CINEMATOGRAPHER ── */
 #cine{background:linear-gradient(to bottom,#0e0c0a,#0c0f13 40%,#0c0f13 60%,#0e0c0a);padding:5rem 2.5rem;}
-.cine-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.68);max-width:520px;margin-top:1.2rem;}
+.cine-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;font-weight:300;line-height:1.85;color:rgba(232,226,216,0.82);max-width:520px;margin-top:1.2rem;}
 .cine-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:2.5rem;}
 @media(max-width:700px){.cine-grid{grid-template-columns:1fr;}}
 .cine-cell{aspect-ratio:16/9;overflow:hidden;border:1px solid rgba(90,130,175,0.08);}
@@ -244,7 +244,7 @@ hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,
 .ma-project-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:700;color:rgba(232,226,216,0.88);margin-bottom:.5rem;line-height:1.05;}
 .ma-project-title em{font-style:italic;font-weight:400;color:rgba(120,180,200,0.5);}
 .ma-project-meta{font-size:7.5px;font-weight:300;letter-spacing:.3em;color:rgba(120,180,200,0.45);text-transform:uppercase;margin-bottom:1.4rem;display:flex;flex-wrap:wrap;gap:.8rem;}
-.ma-project-body{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.7);}
+.ma-project-body{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.12rem;font-weight:300;line-height:1.9;color:rgba(232,226,216,0.82);}
 .ma-project-body p+p{margin-top:.9rem;}
 .ma-grid-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;margin-top:2rem;align-items:start;}
 @media(max-width:700px){.ma-grid-inner{grid-template-columns:1fr;gap:1.5rem;}}
@@ -268,8 +268,8 @@ hr.rule{border:none;height:.5px;background:linear-gradient(to right,transparent,
 
 /* ── WRITER ── */
 #writer{background:linear-gradient(to bottom,#0e0c0a,#2b2419 14%,#2b2419 86%,#0e0c0a);padding:5rem 2.5rem;}
-.poetry-label{font-size:7.5px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.6);text-transform:uppercase;margin-bottom:.9rem;}
-.poetry-box{background:rgba(232,226,216,0.03);border:1px solid rgba(232,226,216,0.09);border-left:2px solid rgba(200,170,95,0.4);padding:2rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;font-weight:300;line-height:1.95;color:rgba(232,226,216,0.8);white-space:pre-line;}
+.poetry-label{font-size:8px;font-weight:400;letter-spacing:.45em;color:rgba(200,170,95,0.7);text-transform:uppercase;margin-bottom:.9rem;}
+.poetry-box{background:rgba(232,226,216,0.03);border:1px solid rgba(232,226,216,0.09);border-left:2px solid rgba(200,170,95,0.4);padding:2rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.12rem;font-weight:300;line-height:1.95;color:rgba(232,226,216,0.88);white-space:pre-line;}
 
 /* ── ACTOR ── */
 #actor{background:linear-gradient(to bottom,#0e0c0a,#111010);padding:5rem 2.5rem;}
@@ -337,7 +337,7 @@ footer{background:#0a0907;padding:2.2rem 2.5rem;display:grid;grid-template-colum
   <a href="#" class="nav-logo">Abbasverse</a>
   <div class="nav-r">
     <div class="nav-links-wrap" style="display:flex;align-items:center;gap:1.8rem;">
-      <a href="#photography">Photography</a>
+      <a href="photography.html">Photography</a>
       <a href="#filmmaker">Film</a>
       <a href="#writer">Writing</a>
     </div>
@@ -432,6 +432,31 @@ footer{background:#0a0907;padding:2.2rem 2.5rem;display:grid;grid-template-colum
   <div class="ex-panel"><img src="assets/slide3.jpg" alt="Portrait" loading="lazy"><span class="ex-label">Portrait</span></div>
   <div class="ex-panel"><img src="assets/slide5.jpg" alt="Abstract" loading="lazy"><span class="ex-label">Abstract</span></div>
   <div class="ex-panel"><img src="assets/slide7.jpg" alt="Documentary" loading="lazy"><span class="ex-label">Documentary</span></div>
+</section>
+
+<!-- WHERE I WAS STANDING TEASER -->
+<section style="background:linear-gradient(to bottom,#0e0c0a,#ede8e0 8%,#ede8e0 92%,#0e0c0a);padding:5rem 2.5rem;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:center;" class="rv">
+    <!-- 3 vertical photo previews -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
+      <div style="aspect-ratio:2/3;overflow:hidden;background:#d8d2ca;">
+        <img src="assets/ws_warnemuende.jpg" alt="Where I Was Standing — Warnemünde" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85);transition:filter .5s;" onmouseover="this.style.filter='saturate(1)'" onmouseout="this.style.filter='saturate(.85)'">
+      </div>
+      <div style="aspect-ratio:2/3;overflow:hidden;background:#d8d2ca;">
+        <img src="assets/ws_dieburg.jpg" alt="Where I Was Standing — Dieburg" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85);transition:filter .5s;" onmouseover="this.style.filter='saturate(1)'" onmouseout="this.style.filter='saturate(.85)'">
+      </div>
+      <div style="aspect-ratio:2/3;overflow:hidden;background:#d8d2ca;">
+        <img src="assets/ws_darmstadt.jpg" alt="Where I Was Standing — Darmstadt" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85);transition:filter .5s;" onmouseover="this.style.filter='saturate(1)'" onmouseout="this.style.filter='saturate(.85)'">
+      </div>
+    </div>
+    <!-- Text -->
+    <div>
+      <p style="font-size:8px;font-weight:600;letter-spacing:.55em;color:rgba(26,23,20,0.4);text-transform:uppercase;margin-bottom:1rem;">Hochschule Darmstadt · Werkschau 2025</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,5.5rem);font-weight:900;line-height:.88;letter-spacing:-.02em;color:#1a1714;margin-bottom:1.2rem;">Where I Was<br><em style="font-style:italic;font-weight:400;color:rgba(26,23,20,0.4);">Standing</em></h3>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;font-weight:300;line-height:1.85;color:rgba(26,23,20,0.72);max-width:420px;">A photographic series accompanied by location-based soundscapes recorded at the exact places where each photograph was taken — exploring observation, presence, and detachment through seven everyday scenes across Germany.</p>
+      <a href="photography.html#werkschau" style="display:inline-flex;align-items:center;gap:.7rem;margin-top:1.8rem;font-size:9px;font-weight:400;letter-spacing:.38em;color:rgba(26,23,20,0.5);text-decoration:none;text-transform:uppercase;transition:color .3s;border-bottom:1px solid rgba(26,23,20,0.2);padding-bottom:.2rem;">Enter the exhibition →</a>
+    </div>
+  </div>
 </section>
 
 <hr class="rule">
